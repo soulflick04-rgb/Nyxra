@@ -1,0 +1,9 @@
+node_modules
+.next
+.npm-cache
+out
+.env*.local
+.next-*.log
+npm-debug.log*
+*.log
+*.zip
