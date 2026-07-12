@@ -1,31 +1,50 @@
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nyxra.online";
+
 export const metadata = {
-  title: "Nyxra | Websites That Grow Local Businesses",
+  metadataBase: new URL(siteUrl),
+  title: "Nyxra | Websites, Lead Systems & AI Automation for Small Businesses",
   description:
-    "Nyxra builds modern, fast, and professional websites for local businesses that need trust, visibility, and growth online.",
+    "Nyxra builds professional websites, lead-capture systems, appointment workflows and simple AI-powered automations for small businesses.",
   keywords: [
     "Nyxra",
-    "website development",
-    "local business websites",
-    "landing pages",
+    "AI automation studio",
+    "lead capture systems",
+    "small business websites",
+    "appointment workflows",
+    "CRM setup",
+    "business automation",
     "digital agency",
     "Rishi Srivastav"
   ],
   authors: [{ name: "Rishi Srivastav" }],
   creator: "Nyxra",
+  alternates: {
+    canonical: siteUrl
+  },
   openGraph: {
-    title: "Nyxra | Websites That Grow Local Businesses",
+    title: "Nyxra | Websites, Lead Systems & AI Automation for Small Businesses",
     description:
-      "Premium website design and digital presence setup for local businesses.",
+      "Websites, lead systems and simple automations that help small businesses grow.",
+    url: siteUrl,
     siteName: "Nyxra",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 1200,
+        alt: "Nyxra logo"
+      }
+    ],
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nyxra | Websites That Grow Local Businesses",
+    title: "Nyxra | Websites, Lead Systems & AI Automation",
     description:
-      "Modern, fast, and professional websites for local business growth."
+      "Professional websites, lead-capture systems and simple AI-powered automations for small businesses.",
+    images: ["/logo.png"]
   }
 };
 
@@ -36,14 +55,41 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Nyxra",
+    url: siteUrl,
+    email: "supportnyxra@gmail.com",
+    founder: {
+      "@type": "Person",
+      name: "Rishi Srivastav"
+    },
+    description:
+      "Nyxra builds websites, lead systems and simple automations for growing businesses.",
+    areaServed: "India",
+    serviceType: [
+      "Website development",
+      "Lead capture systems",
+      "CRM setup",
+      "Appointment workflows",
+      "AI content starter systems"
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="/logo.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body>{children}</body>

@@ -2,7 +2,7 @@
 
 :root {
   color-scheme: dark;
-  --background: #001f3f;
+  --background: #020812;
   --foreground: #e9fbff;
   --midnight: #001f3f;
   --teal: #008c8c;
@@ -41,13 +41,17 @@ body::before {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(180deg, rgba(0, 31, 63, 0), rgba(0, 31, 63, 0.88)),
-    radial-gradient(circle at 15% 0%, rgba(0, 191, 255, 0.25), transparent 38%),
-    radial-gradient(circle at 88% 16%, rgba(0, 140, 140, 0.2), transparent 34%);
+    linear-gradient(180deg, rgba(2, 8, 18, 0), rgba(2, 8, 18, 0.9)),
+    radial-gradient(circle at 15% 0%, rgba(0, 191, 255, 0.18), transparent 38%),
+    radial-gradient(circle at 88% 16%, rgba(0, 140, 140, 0.16), transparent 34%);
 }
 
 a {
   text-decoration: none;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
 }
 
 ::selection {
@@ -63,6 +67,10 @@ a {
     ui-sans-serif, system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: 0;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
 
 .hero-title {
@@ -144,6 +152,14 @@ a {
     linear-gradient(90deg, rgba(0, 191, 255, 0.08) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.84), transparent 78%);
+}
+
+.bg-grid-soft {
+  background-image:
+    linear-gradient(rgba(125, 211, 252, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 211, 252, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.86), transparent 82%);
 }
 
 .ambient-plane {
