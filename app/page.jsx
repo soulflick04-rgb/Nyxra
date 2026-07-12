@@ -1155,7 +1155,7 @@ function Contact() {
             <form
               name="nyxra-business-audit"
               method="POST"
-              action="/thank-you"
+              action="/thank-you/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               className="mt-8 grid gap-5"
