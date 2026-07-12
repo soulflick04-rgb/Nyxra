@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   ArrowRight,
@@ -31,6 +31,9 @@ const siteConfig = {
   inquiryFormUrl: process.env.NEXT_PUBLIC_INQUIRY_FORM_URL || "",
   socialLinks: []
 };
+
+const auditFormEndpoint =
+  "https://script.google.com/macros/s/AKfycby9rUlv7CSat0B4j5TLU1TdSChYgMGZSq8vccMM9KT-8Ms25Mh_qbjParGswH84K8nmaw/exec";
 
 const sectionIds = {
   home: "home",
@@ -1125,6 +1128,37 @@ function TextAreaField({ label, name, placeholder, required = false }) {
 }
 
 function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
+  const isSubmittingRef = useRef(false);
+
+  async function handleAuditSubmit(event) {
+    event.preventDefault();
+
+    if (isSubmittingRef.current) {
+      return;
+    }
+
+    isSubmittingRef.current = true;
+    setIsSubmitting(true);
+    setSubmissionError("");
+
+    try {
+      const formData = new FormData(event.currentTarget);
+      await fetch(auditFormEndpoint, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData
+      });
+
+      window.location.href = "/thank-you";
+    } catch (error) {
+      isSubmittingRef.current = false;
+      setIsSubmitting(false);
+      setSubmissionError("Something went wrong. Please try again or email Nyxra directly.");
+    }
+  }
+
   return (
     <section id={sectionIds.contact} className="relative px-5 py-24 sm:px-6 lg:px-8">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/25 to-transparent" />
@@ -1154,19 +1188,18 @@ function Contact() {
             </div>
             <form
               name="nyxra-business-audit"
-              method="POST"
-              action="/thank-you/"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
+              onSubmit={handleAuditSubmit}
               className="mt-8 grid gap-5"
             >
-              <input type="hidden" name="form-name" value="nyxra-business-audit" />
-              <p className="hidden">
-                <label>
-                  Do not fill this field:
-                  <input name="bot-field" tabIndex={-1} autoComplete="off" />
-                </label>
-              </p>
+              {submissionError && (
+                <div
+                  className="rounded-2xl border border-red-300/25 bg-red-500/10 px-4 py-3 text-sm font-semibold text-red-100"
+                  role="alert"
+                  aria-live="assertive"
+                >
+                  {submissionError}
+                </div>
+              )}
 
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field label="Full name" name="full-name" autoComplete="name" required />
@@ -1212,9 +1245,11 @@ function Contact() {
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
+                  aria-busy={isSubmitting}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-teal-300 to-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_16px_46px_rgba(34,211,238,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_60px_rgba(34,211,238,0.34)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
                 >
-                  Submit Audit Request
+                  {isSubmitting ? "Submitting..." : "Submit Audit Request"}
                   <ArrowRight size={17} aria-hidden="true" />
                 </button>
                 <a
