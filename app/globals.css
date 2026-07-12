@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 ::selection {
   background: rgba(0, 191, 255, 0.38);
   color: #e9fbff;

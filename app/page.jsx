@@ -182,7 +182,7 @@ const solutions = [
 const pricingPlans = [
   {
     name: "Digital Launch",
-    price: "Rs. 10,000",
+    price: "₹10,000",
     description: "A professional online presence for small businesses that need clarity and trust.",
     cta: "Launch My Business Online",
     features: [
@@ -198,7 +198,7 @@ const pricingPlans = [
   },
   {
     name: "Lead Growth System",
-    price: "Rs. 15,000",
+    price: "₹15,000",
     description: "The practical starting point for websites plus organised enquiry management.",
     cta: "Build My Lead System",
     popular: true,
@@ -214,7 +214,7 @@ const pricingPlans = [
   },
   {
     name: "AI Business Starter",
-    price: "Rs. 20,000",
+    price: "₹20,000",
     description: "A stronger system for content, customer replies and simple business automation.",
     cta: "Request a Custom Plan",
     features: [
@@ -242,6 +242,7 @@ const demoSystems = [
       "Staff notification",
       "Follow-up status"
     ],
+    strip: ["Website", "Appointment Form", "Lead Record", "Staff Alert", "Follow-up"],
     workflow: "Visitor requests an appointment, the lead is stored, staff are notified and follow-up status is tracked.",
     benefit: "The clinic gets a clearer process without needing a complex enterprise tool."
   },
@@ -256,6 +257,7 @@ const demoSystems = [
       "Counselling follow-up",
       "Admission pipeline"
     ],
+    strip: ["Course Page", "Student Enquiry", "Counselling", "Pipeline", "Admission Status"],
     workflow: "Student chooses a course, submits details, enters a pipeline and receives counselling follow-up.",
     benefit: "Admissions conversations become easier to prioritise and track."
   },
@@ -270,6 +272,7 @@ const demoSystems = [
       "Qualified lead information",
       "Proposal stage"
     ],
+    strip: ["Service Page", "Consultation Form", "Qualification", "Meeting", "Proposal"],
     workflow: "Prospect selects a service, shares context, books a consultation and moves into a proposal stage.",
     benefit: "Better enquiry quality and a cleaner path from interest to proposal."
   }
@@ -361,20 +364,25 @@ const faqs = [
   }
 ];
 
-const auditFields = [
-  "Full name",
-  "Business name",
-  "Business category",
-  "City",
-  "Website or social profile",
-  "Main service or product",
-  "Biggest current problem",
-  "Current enquiry method",
-  "Whether a CRM or lead tracker is already used",
-  "Desired result",
-  "Budget range",
-  "Preferred contact method"
+const businessCategories = [
+  "Clinic or diagnostics",
+  "Coaching or education",
+  "Consultant or freelancer",
+  "Salon, gym or wellness",
+  "Local service business",
+  "Startup",
+  "Other"
 ];
+
+const budgetRanges = [
+  "₹10,000 - ₹15,000",
+  "₹15,000 - ₹20,000",
+  "₹20,000 - ₹35,000",
+  "₹35,000+",
+  "Not sure yet"
+];
+
+const contactMethods = ["Email", "WhatsApp", "Phone call"];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -382,7 +390,7 @@ const fadeUp = {
 };
 
 function getAuditHref() {
-  return siteConfig.inquiryFormUrl || "#contact";
+  return siteConfig.inquiryFormUrl || "#business-audit";
 }
 
 function getExternalProps(href) {
@@ -617,7 +625,7 @@ function Hero() {
               <Sparkles size={15} aria-hidden="true" />
               AI-Powered Digital Growth & Automation Studio
             </div>
-            <h1 className="text-balance text-4xl font-black tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="text-balance text-4xl font-black tracking-tight text-white sm:text-6xl lg:text-6xl 2xl:text-7xl">
               Grow Your Business with Better Websites and Smarter Systems.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-cyan-50/72">
@@ -808,7 +816,7 @@ function Pricing() {
                 Domains, hosting, paid APIs and third-party subscriptions are charged separately when required.
               </p>
               <p className="mt-2 text-sm text-cyan-50/62">
-                Optional care plan: Website and Automation Care - starting from Rs. 1,999/month.
+                Optional care plan: Website and Automation Care - starting from ₹1,999/month.
               </p>
             </div>
             <AuditButton variant="secondary">Discuss Scope</AuditButton>
@@ -820,6 +828,8 @@ function Pricing() {
 }
 
 function DemoSystems() {
+  const [openDemo, setOpenDemo] = useState(null);
+
   return (
     <section id={sectionIds.demos} className="px-5 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -840,6 +850,23 @@ function DemoSystems() {
                   <p className="mt-2 text-sm font-semibold text-cyan-100/72">{demo.business}</p>
                 </div>
                 <div className="grid gap-5 p-5">
+                  <div className="rounded-2xl border border-cyan-200/12 bg-[#020812]/45 p-3">
+                    <p className="mb-3 text-xs font-bold uppercase tracking-[0.22em] text-cyan-200/58">
+                      Workflow
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      {demo.strip.map((step, stepIndex) => (
+                        <div key={step} className="flex items-center gap-2">
+                          <span className="rounded-full border border-cyan-200/16 bg-cyan-300/10 px-3 py-1.5 text-xs font-semibold text-cyan-50">
+                            {step}
+                          </span>
+                          {stepIndex < demo.strip.length - 1 && (
+                            <ArrowRight className="text-cyan-200/42" size={14} aria-hidden="true" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.22em] text-cyan-200/58">Problem</p>
                     <p className="mt-2 text-sm leading-6 text-cyan-50/68">{demo.problem}</p>
@@ -863,7 +890,34 @@ function DemoSystems() {
                     <p className="text-xs font-bold uppercase tracking-[0.22em] text-cyan-200/58">Business benefit</p>
                     <p className="mt-2 text-sm leading-6 text-cyan-50/68">{demo.benefit}</p>
                   </div>
-                  <AuditButton variant="secondary" className="w-full">View System</AuditButton>
+                  <button
+                    type="button"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-200/18 bg-white/[0.035] px-5 py-3 text-sm font-bold text-cyan-50 transition hover:border-cyan-200/35 hover:bg-cyan-200/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
+                    onClick={() => setOpenDemo(openDemo === index ? null : index)}
+                    aria-expanded={openDemo === index}
+                    aria-controls={`demo-workflow-${index}`}
+                  >
+                    View Workflow
+                    <ChevronDown className={`transition ${openDemo === index ? "rotate-180" : ""}`} size={17} aria-hidden="true" />
+                  </button>
+                  {openDemo === index && (
+                    <div
+                      id={`demo-workflow-${index}`}
+                      className="rounded-2xl border border-cyan-200/12 bg-cyan-300/[0.055] p-4 text-sm leading-6 text-cyan-50/72"
+                    >
+                      <p className="font-semibold text-white">Detailed workflow</p>
+                      <ol className="mt-3 grid gap-2">
+                        {demo.strip.map((step, stepIndex) => (
+                          <li key={step} className="flex gap-3">
+                            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-cyan-300/12 text-xs font-bold text-cyan-100">
+                              {stepIndex + 1}
+                            </span>
+                            <span>{step}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  )}
                 </div>
               </article>
             </Reveal>
@@ -926,7 +980,7 @@ function Founder() {
   const [imageReady, setImageReady] = useState(true);
 
   return (
-    <section id={sectionIds.about} className="px-5 py-20 sm:px-6 lg:px-8">
+    <section id={sectionIds.about} className="px-5 pb-12 pt-16 sm:px-6 lg:px-8 lg:pt-20">
       <Reveal>
         <div className="mx-auto grid max-w-6xl gap-8 rounded-3xl border border-cyan-200/14 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(34,211,238,0.035))] p-6 shadow-[0_24px_100px_rgba(0,0,0,0.24)] sm:p-8 lg:grid-cols-[0.55fr_1fr] lg:items-center lg:p-10">
           <div className="flex justify-center lg:justify-start">
@@ -965,7 +1019,7 @@ function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8">
+    <section className="px-5 pb-24 pt-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <SectionHeader
           eyebrow="FAQ"
@@ -1001,9 +1055,76 @@ function FAQ() {
   );
 }
 
-function Contact() {
-  const formConfigured = Boolean(siteConfig.inquiryFormUrl);
+function Field({
+  label,
+  name,
+  type = "text",
+  autoComplete,
+  placeholder,
+  required = false
+}) {
+  return (
+    <label className="grid gap-2 text-sm font-semibold text-cyan-50/82">
+      <span>
+        {label}
+        {required && <span className="text-cyan-200"> *</span>}
+      </span>
+      <input
+        className="min-h-12 rounded-xl border border-cyan-200/14 bg-[#020812]/62 px-4 py-3 text-base text-white outline-none transition placeholder:text-cyan-50/34 focus:border-cyan-200/55 focus:bg-[#041321] focus:ring-2 focus:ring-cyan-200/18"
+        name={name}
+        type={type}
+        autoComplete={autoComplete}
+        placeholder={placeholder}
+        required={required}
+      />
+    </label>
+  );
+}
 
+function SelectField({ label, name, options, required = false }) {
+  return (
+    <label className="grid gap-2 text-sm font-semibold text-cyan-50/82">
+      <span>
+        {label}
+        {required && <span className="text-cyan-200"> *</span>}
+      </span>
+      <select
+        className="min-h-12 rounded-xl border border-cyan-200/14 bg-[#020812]/62 px-4 py-3 text-base text-white outline-none transition focus:border-cyan-200/55 focus:bg-[#041321] focus:ring-2 focus:ring-cyan-200/18"
+        name={name}
+        required={required}
+        defaultValue=""
+      >
+        <option value="" disabled>
+          Select an option
+        </option>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function TextAreaField({ label, name, placeholder, required = false }) {
+  return (
+    <label className="grid gap-2 text-sm font-semibold text-cyan-50/82">
+      <span>
+        {label}
+        {required && <span className="text-cyan-200"> *</span>}
+      </span>
+      <textarea
+        className="min-h-28 rounded-xl border border-cyan-200/14 bg-[#020812]/62 px-4 py-3 text-base text-white outline-none transition placeholder:text-cyan-50/34 focus:border-cyan-200/55 focus:bg-[#041321] focus:ring-2 focus:ring-cyan-200/18"
+        name={name}
+        placeholder={placeholder}
+        required={required}
+      />
+    </label>
+  );
+}
+
+function Contact() {
   return (
     <section id={sectionIds.contact} className="relative px-5 py-24 sm:px-6 lg:px-8">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200/25 to-transparent" />
@@ -1011,11 +1132,11 @@ function Contact() {
         <SectionHeader
           align="left"
           eyebrow="Contact"
-          title="Let's build a simpler system for your business."
-          description="Start with a free audit of your current website, enquiry process and repetitive business tasks."
+          title="Tell us what your business needs."
+          description="Share a few details about your current website, enquiry process or repetitive work. Nyxra will review them and suggest a practical starting point."
         />
         <Reveal>
-          <div className="rounded-3xl border border-cyan-200/14 bg-[#061827]/78 p-6 sm:p-8">
+          <div id="business-audit" className="scroll-mt-28 rounded-3xl border border-cyan-200/14 bg-[#061827]/78 p-6 sm:p-8">
             <div className="grid gap-4 sm:grid-cols-2">
               <a
                 href={`mailto:${siteConfig.email}`}
@@ -1028,32 +1149,82 @@ function Contact() {
               <div className="rounded-2xl border border-cyan-200/12 bg-white/[0.035] p-5">
                 <Gauge className="text-cyan-100" size={22} aria-hidden="true" />
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.22em] text-cyan-200/58">Response</p>
-                <p className="mt-2 text-sm leading-6 text-cyan-50/70">Audit requests are reviewed with a practical scope-first approach.</p>
+                <p className="mt-2 text-sm leading-6 text-cyan-50/70">Your request will be reviewed before we recommend a scope.</p>
               </div>
             </div>
-            <div className="mt-6 rounded-2xl border border-cyan-200/12 bg-cyan-300/[0.055] p-5">
-              <p className="font-bold text-white">Free audit form should collect:</p>
-              <div className="mt-4 grid gap-2 sm:grid-cols-2">
-                {auditFields.map((field) => (
-                  <p key={field} className="flex gap-2 text-sm text-cyan-50/68">
-                    <Check className="mt-0.5 shrink-0 text-teal-200" size={15} aria-hidden="true" />
-                    {field}
-                  </p>
-                ))}
+            <form
+              name="nyxra-business-audit"
+              method="POST"
+              action="/thank-you"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              className="mt-8 grid gap-5"
+            >
+              <input type="hidden" name="form-name" value="nyxra-business-audit" />
+              <p className="hidden">
+                <label>
+                  Do not fill this field:
+                  <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                </label>
+              </p>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Field label="Full name" name="full-name" autoComplete="name" required />
+                <Field label="Business name" name="business-name" autoComplete="organization" required />
+                <Field label="Email" name="email" type="email" autoComplete="email" required />
+                <Field label="WhatsApp or phone number" name="phone" type="tel" autoComplete="tel" required />
+                <SelectField label="Business category" name="business-category" options={businessCategories} required />
+                <Field label="City" name="city" autoComplete="address-level2" required />
               </div>
-            </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <AuditButton className="sm:flex-1">Get My Free Audit</AuditButton>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-cyan-200/18 bg-white/[0.035] px-5 py-3 text-sm font-bold text-cyan-50 transition hover:border-cyan-200/35 hover:bg-cyan-200/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200 sm:flex-1"
-              >
-                Email Nyxra
-              </a>
-            </div>
-            <p className="mt-5 text-sm leading-6 text-cyan-50/58">
-              Business availability: project discussions are handled by email and scheduled audit requests. {formConfigured ? "The audit form opens from the CTA buttons." : "Add NEXT_PUBLIC_INQUIRY_FORM_URL to make audit buttons open your external form."}
-            </p>
+
+              <Field
+                label="Website or social profile"
+                name="website-or-social"
+                type="url"
+                autoComplete="url"
+                placeholder="https://"
+              />
+
+              <TextAreaField
+                label="Main current problem"
+                name="main-current-problem"
+                required
+                placeholder="Example: enquiries are scattered, website is outdated, follow-up is hard to manage..."
+              />
+              <TextAreaField
+                label="Desired result"
+                name="desired-result"
+                required
+                placeholder="Example: better website, organised leads, appointment requests, simple automation..."
+              />
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <SelectField label="Budget range" name="budget-range" options={budgetRanges} required />
+                <SelectField label="Preferred contact method" name="preferred-contact-method" options={contactMethods} required />
+              </div>
+
+              <TextAreaField
+                label="Optional message"
+                name="message"
+                placeholder="Share anything else that helps us understand your business."
+              />
+
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-teal-300 to-cyan-300 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_16px_46px_rgba(34,211,238,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_60px_rgba(34,211,238,0.34)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
+                >
+                  Submit Audit Request
+                  <ArrowRight size={17} aria-hidden="true" />
+                </button>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-cyan-200/18 bg-white/[0.035] px-6 py-3 text-sm font-bold text-cyan-50 transition hover:border-cyan-200/35 hover:bg-cyan-200/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
+                >
+                  Email Nyxra
+                </a>
+              </div>
+            </form>
           </div>
         </Reveal>
       </div>
