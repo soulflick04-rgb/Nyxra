@@ -236,6 +236,7 @@ const pricingPlans = [
 const demoSystems = [
   {
     title: "Clinic Appointment and Lead System",
+    href: "/demos/clinic",
     business: "Clinic or diagnostic centre",
     problem: "Appointment requests and follow-ups are scattered across calls and messages.",
     components: [
@@ -893,16 +894,26 @@ function DemoSystems() {
                     <p className="text-xs font-bold uppercase tracking-[0.22em] text-cyan-200/58">Business benefit</p>
                     <p className="mt-2 text-sm leading-6 text-cyan-50/68">{demo.benefit}</p>
                   </div>
-                  <button
-                    type="button"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-200/18 bg-white/[0.035] px-5 py-3 text-sm font-bold text-cyan-50 transition hover:border-cyan-200/35 hover:bg-cyan-200/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
-                    onClick={() => setOpenDemo(openDemo === index ? null : index)}
-                    aria-expanded={openDemo === index}
-                    aria-controls={`demo-workflow-${index}`}
-                  >
-                    View Workflow
-                    <ChevronDown className={`transition ${openDemo === index ? "rotate-180" : ""}`} size={17} aria-hidden="true" />
-                  </button>
+                  {demo.href ? (
+                    <a
+                      href={demo.href}
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-200/18 bg-white/[0.035] px-5 py-3 text-sm font-bold text-cyan-50 transition hover:border-cyan-200/35 hover:bg-cyan-200/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
+                    >
+                      Open Live Demo
+                      <ArrowRight size={17} aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cyan-200/18 bg-white/[0.035] px-5 py-3 text-sm font-bold text-cyan-50 transition hover:border-cyan-200/35 hover:bg-cyan-200/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-200"
+                      onClick={() => setOpenDemo(openDemo === index ? null : index)}
+                      aria-expanded={openDemo === index}
+                      aria-controls={`demo-workflow-${index}`}
+                    >
+                      View Workflow
+                      <ChevronDown className={`transition ${openDemo === index ? "rotate-180" : ""}`} size={17} aria-hidden="true" />
+                    </button>
+                  )}
                   {openDemo === index && (
                     <div
                       id={`demo-workflow-${index}`}
