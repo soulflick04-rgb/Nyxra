@@ -23,6 +23,18 @@ export const metadata = {
   alternates: {
     canonical: siteUrl
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: {
+      url: "/apple-touch-icon.png",
+      sizes: "180x180",
+      type: "image/png"
+    }
+  },
   openGraph: {
     title: "Nyxra | Websites, Lead Systems & AI Automation for Small Businesses",
     description:
@@ -82,7 +94,6 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="icon" href="/logo.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
