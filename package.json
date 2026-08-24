@@ -4,9 +4,9 @@
   "private": true,
   "description": "Nyxra - Websites, Lead Systems & AI Automation for Small Businesses",
   "scripts": {
-    "dev": "npx -y serve . -p 3000",
-    "build": "node build.js",
-    "start": "npx -y serve . -p 3000"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000"
   },
   "dependencies": {
     "next": "latest",
