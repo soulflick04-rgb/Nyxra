@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Header from "../components/Header";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError("");
 
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -37,31 +37,16 @@ export default function ContactPage() {
 
   return (
     <>
-      <nav id="main-nav" className="bg-surface border-b border-outline z-50 sticky top-0 w-full transition-all duration-300">
-        <div className="flex justify-between items-center w-full px-gutter py-3.5 max-w-container-max mx-auto">
-          <a className="flex items-center gap-3" href="/">
-            <img src="/logo.png" alt="Nyxra" className="h-10 w-10 object-contain rounded-lg border border-outline bg-surface-container-low p-1" />
-            <span className="font-headline-lg text-headline-lg-mobile tracking-tighter text-on-surface uppercase hover:text-primary transition-colors">NYXRA</span>
-          </a>
-          <ul className="hidden lg:flex gap-7 items-center font-label-caps text-label-caps uppercase">
-            <li><a className="text-on-surface-variant hover:text-primary" href="/">Home</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary" href="/services">Services</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary" href="/pricing">Pricing</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary" href="/portfolio">Demo Systems</a></li>
-            <li><a className="text-on-surface-variant hover:text-primary" href="/about">About</a></li>
-            <li><a className="text-primary border-b-2 border-primary pb-1" href="/contact">Audit & Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+      <Header />
 
-      <main className="px-gutter max-w-container-max mx-auto py-16">
+      <main className="px-gutter max-w-container-max mx-auto py-12 sm:py-16">
         <div className="mb-10">
           <p className="font-label-caps text-xs text-primary uppercase font-bold tracking-widest mb-2">Initiate Contact</p>
-          <h1 className="font-display-xl text-[40px] sm:text-[60px] md:text-display-xl uppercase tracking-tighter text-on-surface leading-none md:w-3/4 break-words">
+          <h1 className="font-display-xl text-[38px] sm:text-[60px] md:text-display-xl uppercase tracking-tighter text-on-surface leading-none md:w-3/4 break-words">
             Tell Us What Your <br />
             <span className="text-primary relative inline-block scribble-underline">Business Needs.</span>
           </h1>
-          <p className="font-body-md text-base sm:text-lg text-on-surface-variant mt-5 max-w-2xl">
+          <p className="font-body-md text-sm sm:text-lg text-on-surface-variant mt-5 max-w-2xl leading-relaxed">
             Share a few details about your current website, enquiry process, or repetitive tasks. Every submission sends an instant notification directly to our founder's inbox at <strong className="text-on-surface">supportnyxra@gmail.com</strong>.
           </p>
         </div>
@@ -94,7 +79,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Business Category *</label>
-                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="business-category" required defaultValue="">
+                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" name="business-category" required defaultValue="">
                     <option value="" disabled>Select an option</option>
                     <option value="Clinic or diagnostics">Clinic or diagnostics</option>
                     <option value="Coaching or education">Coaching or education</option>
@@ -129,7 +114,7 @@ export default function ContactPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Budget Range *</label>
-                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="budget-range" required defaultValue="">
+                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" name="budget-range" required defaultValue="">
                     <option value="" disabled>Select Budget Range</option>
                     <option value="₹10,000 - ₹15,000">₹10,000 - ₹15,000 (Digital Launch)</option>
                     <option value="₹15,000 - ₹20,000">₹15,000 - ₹20,000 (Lead Growth System)</option>
@@ -139,7 +124,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Preferred Contact Method *</label>
-                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="preferred-contact-method" required defaultValue="WhatsApp">
+                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" name="preferred-contact-method" required defaultValue="WhatsApp">
                     <option value="WhatsApp">WhatsApp Message</option>
                     <option value="Email">Email</option>
                     <option value="Phone call">Phone Call</option>
@@ -162,12 +147,31 @@ export default function ContactPage() {
                 supportnyxra@gmail.com
               </a>
             </div>
+
+            <div className="p-6 bg-surface-container-high border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b]">
+              <span className="font-label-caps text-xs text-primary uppercase font-bold block mb-2">Review Process</span>
+              <h3 className="font-headline-lg text-lg text-on-surface mb-3">What Happens Next:</h3>
+              <ul className="text-xs space-y-3 text-on-surface">
+                <li className="flex items-start gap-2">
+                  <span className="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
+                  <span><strong>1. Instant Email Dispatch:</strong> Form sends full parameters directly to supportnyxra@gmail.com.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
+                  <span><strong>2. Founder Review:</strong> Rishi Srivastav reviews your bottlenecks and enquiry flow.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
+                  <span><strong>3. Direct Reply:</strong> You receive a tailored scope & timeline proposal within 24 hours.</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </main>
 
       <footer className="bg-on-surface text-surface border-t border-outline-variant py-12 text-center text-xs">
-        <p>© 2026 NYXRA. All rights reserved. <a href="/" className="underline text-secondary-container">Back to Home</a></p>
+        <p>© 2026 NYXRA. All rights reserved. <Link href="/" className="underline text-secondary-container">Back to Home</Link></p>
       </footer>
     </>
   );

@@ -1,43 +1,26 @@
 "use client";
 
+import Header from "../components/Header";
+import Link from "next/link";
+
 export default function ServicesPage() {
   return (
     <>
-      <header id="main-nav" className="bg-surface sticky top-0 z-40 border-b border-outline w-full transition-all duration-300">
-        <div className="flex justify-between items-center w-full px-gutter py-3.5 max-w-container-max mx-auto">
-          <a className="flex items-center gap-3" href="/">
-            <img src="/logo.png" alt="Nyxra" className="h-10 w-10 object-contain rounded-lg border border-outline bg-surface-container-low p-1" />
-            <span className="font-headline-lg text-headline-lg-mobile tracking-tighter text-on-surface uppercase hover:text-primary transition-colors">NYXRA</span>
-          </a>
-          <nav className="hidden lg:flex items-center space-x-7 font-label-caps text-label-caps uppercase">
-            <a className="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/">Home</a>
-            <a className="text-primary border-b-2 border-primary pb-1" href="/services">Services</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/pricing">Pricing</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/portfolio">Demo Systems</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/about">About</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors duration-200" href="/contact">Audit & Contact</a>
-          </nav>
-          <div className="hidden lg:block">
-            <a className="bg-on-surface text-surface font-button text-button px-6 py-3 rounded-none hover:bg-primary hover:text-white transition-colors duration-200 shadow-[2px_2px_0px_#1c1b1b]" href="/contact">
-              Free Business Audit
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main>
-        <section className="px-gutter pt-16 pb-12 max-w-container-max mx-auto relative overflow-hidden">
+        <section className="px-gutter pt-12 sm:pt-16 pb-12 max-w-container-max mx-auto relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
             <div className="md:col-span-8 z-10">
               <p className="font-label-caps text-label-caps text-primary mb-3 tracking-widest uppercase">Our Core Capabilities</p>
-              <h1 className="font-display-xl text-[44px] sm:text-[64px] md:text-display-xl text-on-surface leading-tight relative">
+              <h1 className="font-display-xl text-[40px] sm:text-[60px] md:text-display-xl text-on-surface leading-tight relative">
                 Practical Systems.<br />
                 <span className="italic text-primary">Organised</span><br />
                 Growth.
               </h1>
             </div>
             <div className="md:col-span-4 z-10">
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-sm">
+              <p className="font-body-lg text-sm sm:text-body-lg text-on-surface-variant max-w-sm">
                 Start with a high-converting website, then connect the simple systems that keep your sales pipeline and enquiries organised.
               </p>
             </div>
@@ -45,15 +28,15 @@ export default function ServicesPage() {
         </section>
 
         {/* Service 1 */}
-        <section className="px-gutter py-16 max-w-container-max mx-auto border-t border-outline">
+        <section className="px-gutter py-14 sm:py-16 max-w-container-max mx-auto border-t border-outline">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
             <div className="md:col-span-6 order-2 md:order-1">
               <div className="flex items-center space-x-4 mb-3">
                 <span className="font-headline-lg text-3xl text-primary font-bold">01</span>
                 <div className="h-px bg-on-surface flex-grow"></div>
               </div>
-              <h2 className="font-headline-xl text-3xl md:text-5xl text-on-surface mb-4">Websites & Landing Pages</h2>
-              <p className="font-body-md text-base text-on-surface-variant mb-6 leading-relaxed">
+              <h2 className="font-headline-xl text-2xl sm:text-3xl md:text-5xl text-on-surface mb-4">Websites & Landing Pages</h2>
+              <p className="font-body-md text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">
                 Fast, mobile-first websites designed to explain your business clearly and convert visitors into active enquiries.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
@@ -76,9 +59,9 @@ export default function ServicesPage() {
                   </ul>
                 </div>
               </div>
-              <a href="/contact" className="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3 hover:bg-primary transition-colors">
+              <Link href="/contact" className="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3 hover:bg-primary transition-colors">
                 Start Website Project <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+              </Link>
             </div>
             <div className="md:col-span-6 order-1 md:order-2">
               <div className="relative bg-surface p-4 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b]">
@@ -89,7 +72,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Service 2 */}
-        <section className="px-gutter py-16 max-w-container-max mx-auto border-t border-outline bg-surface-container-low">
+        <section className="px-gutter py-14 sm:py-16 max-w-container-max mx-auto border-t border-outline bg-surface-container-low">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
             <div className="md:col-span-6">
               <div className="relative bg-surface p-4 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b]">
@@ -101,8 +84,8 @@ export default function ServicesPage() {
                 <span className="font-headline-lg text-3xl text-primary font-bold">02</span>
                 <div className="h-px bg-on-surface flex-grow"></div>
               </div>
-              <h2 className="font-headline-xl text-3xl md:text-5xl text-on-surface mb-4">Lead Capture Systems</h2>
-              <p className="font-body-md text-base text-on-surface-variant mb-6 leading-relaxed">
+              <h2 className="font-headline-xl text-2xl sm:text-3xl md:text-5xl text-on-surface mb-4">Lead Capture Systems</h2>
+              <p className="font-body-md text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">
                 Turn website visitors and social media interest into organised enquiries that are easy to qualify and follow up.
               </p>
               <ul className="space-y-3 font-body-md text-sm text-on-surface mb-6">
@@ -110,18 +93,18 @@ export default function ServicesPage() {
                 <li className="flex items-center hairline-border-b pb-2"><span className="material-symbols-outlined text-primary mr-3 text-sm">table_rows</span> Google Sheets or CRM real-time connection</li>
                 <li className="flex items-center hairline-border-b pb-2"><span className="material-symbols-outlined text-primary mr-3 text-sm">notifications</span> Instant lead email & WhatsApp notifications</li>
               </ul>
-              <a href="/contact" className="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3 hover:bg-primary transition-colors">
+              <Link href="/contact" className="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3 hover:bg-primary transition-colors">
                 Set Up Lead Capture <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
         {/* 5-Step Process */}
-        <section className="py-20 px-gutter max-w-container-max mx-auto border-t border-outline">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+        <section className="py-16 sm:py-20 px-gutter max-w-container-max mx-auto border-t border-outline">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
             <p className="font-label-caps text-label-caps text-primary uppercase mb-2 tracking-widest font-bold">How We Work</p>
-            <h2 className="font-headline-lg text-3xl md:text-headline-lg">A clear path from audit to launch.</h2>
+            <h2 className="font-headline-lg text-2xl sm:text-3xl md:text-headline-lg">A clear path from audit to launch.</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <div className="p-5 bg-surface border border-outline">
@@ -144,7 +127,7 @@ export default function ServicesPage() {
               <h4 className="font-button text-sm uppercase mb-2">Launch & Handover</h4>
               <p className="text-xs text-on-surface-variant leading-relaxed">The project is deployed with client-owned accounts and clear handover guidance.</p>
             </div>
-            <div className="p-5 bg-surface border border-outline">
+            <div className="p-5 bg-surface border border-outline sm:col-span-2 lg:col-span-1">
               <span className="font-headline-lg text-2xl text-primary font-bold block mb-2">05</span>
               <h4 className="font-button text-sm uppercase mb-2">Support & Growth</h4>
               <p className="text-xs text-on-surface-variant leading-relaxed">Ongoing care plan available to update content, tracking, and automation over time.</p>
@@ -154,7 +137,7 @@ export default function ServicesPage() {
       </main>
 
       <footer className="bg-on-surface text-surface border-t border-outline-variant py-12 text-center text-xs">
-        <p>© 2026 NYXRA. All rights reserved. <a href="/" className="underline text-secondary-container">Back to Home</a></p>
+        <p>© 2026 NYXRA. All rights reserved. <Link href="/" className="underline text-secondary-container">Back to Home</Link></p>
       </footer>
     </>
   );

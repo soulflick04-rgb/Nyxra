@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Header from "../components/Header";
+import Link from "next/link";
 
 export default function ClinicDemoPage() {
   const [leads, setLeads] = useState([]);
@@ -33,12 +35,14 @@ export default function ClinicDemoPage() {
 
   return (
     <>
-      <div className="bg-primary text-white px-gutter py-2 text-xs font-label-caps text-center flex items-center justify-between">
-        <a href="/portfolio" className="flex items-center gap-1 hover:underline font-bold">
-          <span className="material-symbols-outlined text-sm">arrow_back</span> Back to Demo Systems
-        </a>
+      <Header />
+
+      <div className="bg-primary text-white px-gutter py-2.5 text-xs font-label-caps text-center flex items-center justify-between">
+        <Link href="/portfolio" className="flex items-center gap-1 hover:underline font-bold">
+          <span className="material-symbols-outlined text-sm">arrow_back</span> Back to Demos
+        </Link>
         <span className="uppercase font-bold tracking-widest hidden sm:inline">NYXRA CONCEPT DEMO • CLINIC WORKFLOW SIMULATOR</span>
-        <a href="/contact" className="underline font-bold">Request Similar System →</a>
+        <Link href="/contact" className="underline font-bold">Request Scope →</Link>
       </div>
 
       <main className="max-w-container-max mx-auto px-gutter py-8">
