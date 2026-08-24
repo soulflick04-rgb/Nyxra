@@ -1,13 +1,50 @@
 [build]
-  command = "npm run build"
-  publish = "out"
+  publish = "."
 
-[build.environment]
-  NEXT_STATIC_EXPORT = "1"
-  NEXT_PUBLIC_LOGO_SRC = "logo.png"
-  NEXT_PUBLIC_FOUNDER_IMAGE_SRC = "founder.jpg"
-  NEXT_TELEMETRY_DISABLED = "1"
-  NODE_VERSION = "22"
+[[redirects]]
+  from = "/demos/clinic"
+  to = "/clinic-demo.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/pricing"
+  to = "/pricing.html"
+  status = 200
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/portfolio.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 200
 
 [[headers]]
   for = "/*"

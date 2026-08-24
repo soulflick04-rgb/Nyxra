@@ -1,34 +1,31 @@
-# Nyxra Website
+# NYXRA — Websites, Lead Systems & AI Automation
 
-Premium one-page website for Nyxra, built with Next.js, React, Tailwind CSS, and Framer Motion.
+Official repository for [NYXRA](https://nyxra.online/) — AI-Powered Digital Growth & Automation Studio for small businesses, clinics, coaching institutes, consultants, and local brands.
 
-## Assets
+## 🚀 Live Site & Deployment
+- **Production Domain**: [https://nyxra.online](https://nyxra.online)
+- **Deployment Platform**: Netlify / GitHub Pages
 
-Place your provided assets in `public/`:
+## 📂 Site Structure & Pages
+- `index.html` — Main Homepage (Hero, Problems Solved, Core Services, Solutions By Industry, Pricing Packages, Founder Rishi Srivastav, FAQ Accordion, Audit CTAs)
+- `services.html` — Detailed breakdown of 5 Core Services & 5-Step Process
+- `pricing.html` — Productised Packages (Digital Launch ₹10,000, Lead Growth ₹15,000, AI Business Starter ₹20,000, Website Care Plan ₹1,999/mo)
+- `portfolio.html` — Concept Demo Systems (Clinic, Coaching, Consultant)
+- `clinic-demo.html` — Live Interactive Clinic Appointment Simulator & Real-time Staff Dashboard
+- `about.html` — About Founder Rishi Srivastav & 7 Core Principles
+- `contact.html` — Free Business Audit Form (Dual-dispatch to `supportnyxra@gmail.com` and Google Apps Script)
+- `thank-you.html` — Audit submission confirmation
+- `privacy.html` & `terms.html` — Legal and Client Terms
 
-- `public/logo.png`
-- `public/founder.jpg`
-
-Set the inquiry form link before launch:
-
+## 💻 Local Development
 ```bash
-NEXT_PUBLIC_INQUIRY_FORM_URL="https://your-form-link"
-```
-
-Until that link is set, the `Get Started` buttons scroll to the contact section.
-
-Optional domain setting for deployment metadata:
-
-```bash
-NEXT_PUBLIC_SITE_URL="https://your-domain"
-```
-
-## Run
-
-```bash
+# Start local server
 npm run dev
+# or
+npx serve . -p 3000
 ```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-On Windows, you can also double-click `open-nyxra-site.cmd` to start the preview and open the site.
-
-If the local server does not open, double-click `open-nyxra-offline.cmd`. It builds an offline preview and opens `out/index.html` directly, with no server required.
+## 📬 Contact
+- **Email**: supportnyxra@gmail.com
+- **Founder**: Rishi Srivastav

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services & Solutions - Nyxra | Web Architecture & AI Automation</title>
+<meta name="description" content="Nyxra provides websites, landing pages, lead capture systems, CRM setup, appointment workflows, and AI content starter systems for small businesses.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased selection:bg-primary-container selection:text-on-primary-container bg-surface text-on-surface overflow-x-hidden">
+<div class="texture-overlay"></div>
+
+<!-- Top Navigation -->
+<header id="main-nav" class="bg-surface sticky top-0 z-40 border-b border-outline w-full transition-all duration-300">
+<div class="flex justify-between items-center w-full px-gutter py-3.5 max-w-container-max mx-auto">
+<a class="flex items-center gap-3" href="index.html">
+<img src="logo.png" alt="Nyxra" class="h-10 w-10 object-contain rounded-lg border border-outline bg-surface-container-low p-1" onerror="this.style.display='none'">
+<span class="font-headline-lg text-headline-lg-mobile tracking-tighter text-on-surface uppercase hover:text-primary transition-colors">NYXRA</span>
+</a>
+<nav class="hidden lg:flex items-center space-x-7 font-label-caps text-label-caps uppercase">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="services.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="pricing.html">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="portfolio.html">Demo Systems</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="contact.html">Audit & Contact</a>
+</nav>
+<div class="hidden lg:block">
+<a class="bg-on-surface text-surface font-button text-button px-6 py-3 rounded-none hover:bg-primary hover:text-white transition-colors duration-200 shadow-[2px_2px_0px_#1c1b1b]" href="contact.html">
+Free Business Audit
+</a>
+</div>
+<button id="mobile-menu-btn" class="lg:hidden text-on-surface p-2" aria-label="Open menu">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-outline">
+<div class="flex flex-col px-gutter py-6 gap-3 font-label-caps text-label-caps uppercase">
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="index.html">Home</a>
+<a class="text-primary py-2 border-b border-outline-variant" href="services.html">Services</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="pricing.html">Pricing</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="portfolio.html">Demo Systems</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="about.html">About & Founder</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="contact.html">Audit & Contact</a>
+<a href="contact.html" class="bg-on-surface text-surface px-6 py-3 font-button text-button uppercase text-center mt-3 hover:bg-primary transition-colors">Get Free Audit</a>
+</div>
+</div>
+</header>
+
+<main>
+<!-- Hero Header -->
+<section class="px-gutter pt-16 pb-12 max-w-container-max mx-auto relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-8 z-10 animate-fade-in-up">
+<p class="font-label-caps text-label-caps text-primary mb-3 tracking-widest uppercase">Our Core Capabilities</p>
+<h1 class="font-display-xl text-[44px] sm:text-[64px] md:text-display-xl text-on-surface leading-tight relative">
+Practical Systems.<br/>
+<span class="italic text-primary">Organised</span><br/>
+Growth.
+</h1>
+</div>
+<div class="md:col-span-4 z-10 animate-fade-in-right">
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-sm">
+Start with a high-converting website, then connect the simple systems that keep your sales pipeline and enquiries organised.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Service 1: Websites & Landing Pages -->
+<section class="px-gutter py-16 max-w-container-max mx-auto border-t border-outline">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<div class="md:col-span-6 order-2 md:order-1 scroll-animate">
+<div class="flex items-center space-x-4 mb-3">
+<span class="font-headline-lg text-3xl text-primary font-bold">01</span>
+<div class="h-px bg-on-surface flex-grow"></div>
+</div>
+<h2 class="font-headline-xl text-3xl md:text-5xl text-on-surface mb-4">Websites & Landing Pages</h2>
+<p class="font-body-md text-base text-on-surface-variant mb-6 leading-relaxed">
+Fast, mobile-first websites designed to explain your business clearly and convert visitors into active enquiries.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+<div class="p-3 bg-surface-container-high border border-outline">
+<strong class="font-button text-xs uppercase text-primary block mb-1">Inclusions:</strong>
+<ul class="text-xs space-y-1.5 text-on-surface">
+<li>• Custom business website</li>
+<li>• Targeted landing pages</li>
+<li>• Mobile-first architecture</li>
+<li>• Interactive contact forms</li>
+</ul>
+</div>
+<div class="p-3 bg-surface-container-high border border-outline">
+<strong class="font-button text-xs uppercase text-primary block mb-1">Integrations:</strong>
+<ul class="text-xs space-y-1.5 text-on-surface">
+<li>• WhatsApp click-to-chat</li>
+<li>• Google Maps integration</li>
+<li>• Basic on-page SEO</li>
+<li>• Google Analytics setup</li>
+</ul>
+</div>
+</div>
+<a href="contact.html" class="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3 hover:bg-primary transition-colors">
+Start Website Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-6 order-1 md:order-2 scroll-animate">
+<div class="relative bg-surface p-4 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b]">
+<img src="sample-1.png" alt="Nyxra Website Mockup" class="w-full h-auto object-cover border border-outline" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBt7mm0Ve_D7C8ByHzv_PjcqqtEMUjcopXKffT9oPEdXuCSQ2z3Qbl7jwIasnBdI02OjCj_A2n0V2pi-s7ItPpC6zlq_OUSKqlppCJ1MwRgY93KuDLFDF3Uxhd3DKP8KrjYjpECDsQO8J5hxDoV7rBdG62mC45TjnmCPOqZdy9w6XGkPpsTDpjYsi0IzvpkYNrjdTZ5D5kX7czOoWJqBh1jnwodV_UPDmgRQejzY47fTG6kc0y_LIFCLw'">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Service 2: Lead Capture Systems -->
+<section class="px-gutter py-16 max-w-container-max mx-auto border-t border-outline bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<div class="md:col-span-6 scroll-animate">
+<div class="relative bg-surface p-4 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b]">
+<img src="sample-2.png" alt="Lead Capture Dashboard" class="w-full h-auto object-cover border border-outline" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuDZayV3k19dbZypEKmiihds2JuVA8JQtmbl_gOYVdcKqBlEuYdnzGO_hVOYfQT-xB0TkyiZLKqhoqSrjjTQjVX77R4OqBzFuJMIQhMmVCu_JedaAqefL76gYBv_uor0ps9j_erL2uKZ2XYqKdQ1PT8tQXesF41MVNXKGVSrrHw9XisuqEz-aMxjgfUvOfeSfH1GpLz20EHiATukUBpauTtOQ3ZK0I_l0vCZHK5avD8evwaw5gzirCZ3-A'">
+</div>
+</div>
+<div class="md:col-span-6 scroll-animate">
+<div class="flex items-center space-x-4 mb-3">
+<span class="font-headline-lg text-3xl text-primary font-bold">02</span>
+<div class="h-px bg-on-surface flex-grow"></div>
+</div>
+<h2 class="font-headline-xl text-3xl md:text-5xl text-on-surface mb-4">Lead Capture Systems</h2>
+<p class="font-body-md text-base text-on-surface-variant mb-6 leading-relaxed">
+Turn website visitors and social media interest into organised enquiries that are easy to qualify and follow up.
+</p>
+<ul class="space-y-3 font-body-md text-sm text-on-surface mb-6">
+<li class="flex items-center hairline-border-b pb-2"><span class="material-symbols-outlined text-primary mr-3 text-sm">filter_alt</span> Custom high-intent enquiry forms</li>
+<li class="flex items-center hairline-border-b pb-2"><span class="material-symbols-outlined text-primary mr-3 text-sm">table_rows</span> Google Sheets or CRM real-time connection</li>
+<li class="flex items-center hairline-border-b pb-2"><span class="material-symbols-outlined text-primary mr-3 text-sm">notifications</span> Instant lead email & WhatsApp notifications</li>
+<li class="flex items-center hairline-border-b pb-2"><span class="material-symbols-outlined text-primary mr-3 text-sm">timeline</span> Lead status tracking & follow-up dates</li>
+</ul>
+<a href="contact.html" class="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3 hover:bg-primary transition-colors">
+Set Up Lead Capture <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Service 3 & 4 Grid: CRM Setup & Appointment Workflows -->
+<section class="px-gutter py-16 max-w-container-max mx-auto border-t border-outline">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- CRM Setup -->
+<div class="p-8 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
+<div class="flex items-center space-x-3 mb-4">
+<span class="font-headline-lg text-2xl text-primary font-bold">03</span>
+<h3 class="font-headline-lg text-2xl">CRM & Lead Management</h3>
+</div>
+<p class="text-sm text-on-surface-variant mb-6">
+Keep prospect details, follow-up dates, customer notes, and sales status in one clean, organised place.
+</p>
+<ul class="space-y-2.5 text-xs text-on-surface mb-6">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Configured lead stages (New, Contacted, Qualified, Closed)</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Contact history, priority tags & internal notes</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Next-action assignment & follow-up calendar</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Simple reporting dashboard for owners</li>
+</ul>
+<a href="contact.html" class="text-xs uppercase font-label-caps text-primary font-bold hover:underline">Discuss CRM Setup →</a>
+</div>
+
+<!-- Appointment Workflows -->
+<div class="p-8 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
+<div class="flex items-center space-x-3 mb-4">
+<span class="font-headline-lg text-2xl text-primary font-bold">04</span>
+<h3 class="font-headline-lg text-2xl">Appointment & Booking</h3>
+</div>
+<p class="text-sm text-on-surface-variant mb-6">
+Make it effortless for customers to book an appointment, request a consultation, or schedule a callback.
+</p>
+<ul class="space-y-2.5 text-xs text-on-surface mb-6">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Custom service booking & date/time selection form</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Calendar sync (Google Calendar / Outlook)</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Automated confirmation email & staff alert</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Check live sample: <a href="clinic-demo.html" class="text-primary font-bold underline">Clinic Demo</a></li>
+</ul>
+<a href="contact.html" class="text-xs uppercase font-label-caps text-primary font-bold hover:underline">Build Booking Flow →</a>
+</div>
+</div>
+</section>
+
+<!-- Service 5: AI Content Starter System -->
+<section class="px-gutter py-16 max-w-container-max mx-auto border-t border-outline bg-secondary-container text-on-secondary-container">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<div class="md:col-span-8 scroll-animate">
+<span class="font-label-caps text-xs uppercase tracking-widest font-bold block mb-2">Service 05</span>
+<h2 class="font-display-lg text-3xl md:text-5xl mb-4">AI Content Starter Systems</h2>
+<p class="font-body-lg text-base max-w-2xl mb-6">
+Give your business a reusable, structured system for creating consistent marketing content and responding accurately to customer questions.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-medium">
+<div class="p-3 bg-surface text-on-surface border border-on-surface">
+<strong class="block mb-1 font-bold font-button uppercase">Content Bank</strong>
+30-day content calendar, caption bank & post ideas tailored to your niche.
+</div>
+<div class="p-3 bg-surface text-on-surface border border-on-surface">
+<strong class="block mb-1 font-bold font-button uppercase">Prompt Library</strong>
+Customized ChatGPT/Claude business prompts for sales copy, blogs & emails.
+</div>
+<div class="p-3 bg-surface text-on-surface border border-on-surface">
+<strong class="block mb-1 font-bold font-button uppercase">Response System</strong>
+Standardized customer reply templates, review responses & FAQ automation.
+</div>
+</div>
+</div>
+<div class="md:col-span-4 flex justify-end scroll-animate">
+<a href="contact.html" class="bg-on-secondary-container text-secondary-container px-8 py-4 font-button text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-colors">
+Get AI Starter System
+</a>
+</div>
+</div>
+</section>
+
+<!-- 5-Step Process Section -->
+<section class="py-20 px-gutter max-w-container-max mx-auto border-t border-outline">
+<div class="text-center max-w-3xl mx-auto mb-14 scroll-animate">
+<p class="font-label-caps text-label-caps text-primary uppercase mb-2 tracking-widest font-bold">How We Work</p>
+<h2 class="font-headline-lg text-3xl md:text-headline-lg">A clear path from audit to launch.</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="p-5 bg-surface border border-outline scroll-animate">
+<span class="font-headline-lg text-2xl text-primary font-bold block mb-2">01</span>
+<h4 class="font-button text-sm uppercase mb-2">Free Business Audit</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">We review your website, enquiry flow, and repetitive tasks to identify improvements.</p>
+</div>
+<div class="p-5 bg-surface border border-outline scroll-animate">
+<span class="font-headline-lg text-2xl text-primary font-bold block mb-2">02</span>
+<h4 class="font-button text-sm uppercase mb-2">Simple Project Plan</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">You receive a clear scope with recommended pages, forms, tools, and timeline.</p>
+</div>
+<div class="p-5 bg-surface border border-outline scroll-animate">
+<span class="font-headline-lg text-2xl text-primary font-bold block mb-2">03</span>
+<h4 class="font-button text-sm uppercase mb-2">Build & Test</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Nyxra builds the systems and verifies mobile layouts, forms, and notification flows.</p>
+</div>
+<div class="p-5 bg-surface border border-outline scroll-animate">
+<span class="font-headline-lg text-2xl text-primary font-bold block mb-2">04</span>
+<h4 class="font-button text-sm uppercase mb-2">Launch & Handover</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">The project is deployed with client-owned accounts and clear handover guidance.</p>
+</div>
+<div class="p-5 bg-surface border border-outline scroll-animate">
+<span class="font-headline-lg text-2xl text-primary font-bold block mb-2">05</span>
+<h4 class="font-button text-sm uppercase mb-2">Support & Growth</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Ongoing care plan available to update content, tracking, and automation over time.</p>
+</div>
+</div>
+</section>
+
+<!-- Scrolling Marquee -->
+<section class="py-6 bg-on-surface text-surface border-y-2 border-primary overflow-hidden">
+<div class="marquee-container font-display-lg text-2xl md:text-4xl uppercase tracking-tighter">
+<div class="marquee-content flex items-center space-x-12">
+<span>Practical Systems Over Complexity</span>
+<span class="text-primary">*</span>
+<span>Websites, Lead Systems & AI Automation</span>
+<span class="text-primary">*</span>
+<span>Built For Small Businesses</span>
+<span class="text-primary">*</span>
+<span>Client-Owned Tool Accounts</span>
+<span class="text-primary">*</span>
+<span>Practical Systems Over Complexity</span>
+<span class="text-primary">*</span>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-on-surface text-surface border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg w-full px-gutter py-16 max-w-container-max mx-auto">
+<div>
+<a class="font-display-lg text-2xl text-surface block mb-3" href="index.html">NYXRA</a>
+<p class="font-body-md text-xs text-surface-variant max-w-xs">
+Websites, lead-capture systems and simple automations for small businesses.
+</p>
+<p class="mt-3 text-xs text-secondary-container">supportnyxra@gmail.com</p>
+</div>
+<div>
+<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Pages</h4>
+<ul class="space-y-2 text-xs text-surface-variant">
+<li><a class="hover:text-secondary" href="index.html">Home</a></li>
+<li><a class="hover:text-secondary font-bold text-secondary-container" href="services.html">Services</a></li>
+<li><a class="hover:text-secondary" href="pricing.html">Pricing</a></li>
+<li><a class="hover:text-secondary" href="portfolio.html">Demo Systems</a></li>
+<li><a class="hover:text-secondary" href="about.html">About & Founder</a></li>
+<li><a class="hover:text-secondary" href="contact.html">Audit & Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Core Systems</h4>
+<ul class="space-y-2 text-xs text-surface-variant">
+<li><a class="hover:text-secondary" href="services.html">Web Development</a></li>
+<li><a class="hover:text-secondary" href="services.html">Lead Capture Setup</a></li>
+<li><a class="hover:text-secondary" href="services.html">CRM Management</a></li>
+<li><a class="hover:text-secondary" href="services.html">Appointment Systems</a></li>
+<li><a class="hover:text-secondary" href="services.html">AI Content Starters</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Legal</h4>
+<ul class="space-y-2 text-xs text-surface-variant">
+<li><a class="hover:text-secondary" href="privacy.html">Privacy Policy</a></li>
+<li><a class="hover:text-secondary" href="terms.html">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
