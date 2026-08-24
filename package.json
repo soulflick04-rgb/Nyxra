@@ -5,7 +5,7 @@
   "description": "Nyxra - Websites, Lead Systems & AI Automation for Small Businesses",
   "scripts": {
     "dev": "npx -y serve . -p 3000",
-    "build": "echo 'Website ready for deployment'",
+    "build": "node build.js",
     "start": "npx -y serve . -p 3000"
   },
   "keywords": [

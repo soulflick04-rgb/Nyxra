@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Clinic Appointment & Lead System (Interactive Concept Demo) - Nyxra</title>
+<meta name="description" content="Interactive concept demo of a medical clinic appointment booking and lead management workflow designed by Nyxra.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-surface-container-low text-on-surface font-body-md antialiased min-h-screen">
+<div class="texture-overlay"></div>
+
+<!-- Demo Top Notice Bar -->
+<div class="bg-primary text-white px-gutter py-2 text-xs font-label-caps text-center flex items-center justify-between">
+<a href="portfolio.html" class="flex items-center gap-1 hover:underline font-bold">
+<span class="material-symbols-outlined text-sm">arrow_back</span> Back to Demo Systems
+</a>
+<span class="uppercase font-bold tracking-widest hidden sm:inline">NYXRA CONCEPT DEMO • CLINIC WORKFLOW SIMULATOR</span>
+<a href="contact.html" class="underline font-bold">Request Similar System →</a>
+</div>
+
+<!-- Main Clinic Header -->
+<header class="bg-surface border-b border-outline sticky top-0 z-40">
+<div class="flex justify-between items-center px-gutter py-3 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 bg-primary text-white flex items-center justify-center font-bold font-headline-lg text-lg">
+<span class="material-symbols-outlined text-xl">medical_services</span>
+</div>
+<div>
+<span class="font-headline-lg text-lg text-on-surface uppercase tracking-tight block">Apex Health Clinic</span>
+<span class="text-[10px] font-label-caps uppercase text-on-surface-variant">General & Preventive Care</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-xs font-label-caps uppercase">
+<span class="hidden md:flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">location_on</span> Metro City Center
+</span>
+<span class="hidden sm:flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">call</span> +91 98765 43210
+</span>
+<a href="#book-form" class="bg-on-surface text-surface px-4 py-2 hover:bg-primary transition-colors">
+Book Appointment
+</a>
+</div>
+</div>
+</header>
+
+<main class="max-w-container-max mx-auto px-gutter py-8">
+<!-- Workflow Step Indicator -->
+<div class="p-4 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] mb-8">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-xs uppercase font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">tune</span> How This Nyxra System Operates
+</span>
+<span class="text-[10px] font-label-caps uppercase text-on-surface-variant">Zero complex enterprise software required</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-[11px] font-label-caps uppercase text-center">
+<div class="p-2 bg-surface-container-high border border-outline">1. Patient Views Site</div>
+<div class="p-2 bg-secondary-container font-bold border border-on-surface">2. Submits Booking</div>
+<div class="p-2 bg-surface-container-high border border-outline">3. Auto Lead Record</div>
+<div class="p-2 bg-surface-container-high border border-outline">4. Staff Alert</div>
+<div class="p-2 bg-surface-container-high border border-outline">5. Follow-Up Trigger</div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left: Live Patient Booking Form -->
+<div class="lg:col-span-6 bg-surface p-6 sm:p-8 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b]" id="book-form">
+<div class="flex items-center gap-2 mb-2 text-primary font-label-caps text-xs uppercase font-bold">
+<span class="material-symbols-outlined text-base">edit_calendar</span> Patient Booking Flow
+</div>
+<h2 class="font-headline-lg text-2xl md:text-3xl text-on-surface mb-2">Request an Appointment</h2>
+<p class="text-xs text-on-surface-variant mb-6">Select your required service and preferred date. Our reception staff will confirm via call/WhatsApp.</p>
+
+<form id="clinic-appointment-form" class="space-y-4">
+<div>
+<label class="font-label-caps text-xs uppercase text-on-surface-variant block mb-1">Select Service *</label>
+<select id="patient-service" class="w-full bg-surface-container-low border border-outline px-3 py-2.5 text-sm focus:border-primary outline-none" required>
+<option value="General Consultation">General Health Consultation</option>
+<option value="Dental Checkup">Dental Checkup & Cleaning</option>
+<option value="Skin & Dermatology">Skin & Dermatology Consultation</option>
+<option value="Child Health Care">Pediatric / Child Healthcare</option>
+<option value="Full Diagnostic Health Checkup">Full Body Diagnostic Package</option>
+</select>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-xs uppercase text-on-surface-variant block mb-1">Patient Full Name *</label>
+<input id="patient-name" type="text" placeholder="e.g. Rahul Sharma" class="w-full bg-surface-container-low border border-outline px-3 py-2.5 text-sm focus:border-primary outline-none" required>
+</div>
+<div>
+<label class="font-label-caps text-xs uppercase text-on-surface-variant block mb-1">Phone / WhatsApp *</label>
+<input id="patient-phone" type="tel" placeholder="e.g. +91 98765 00000" class="w-full bg-surface-container-low border border-outline px-3 py-2.5 text-sm focus:border-primary outline-none" required>
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="font-label-caps text-xs uppercase text-on-surface-variant block mb-1">Preferred Date *</label>
+<input id="patient-date" type="date" class="w-full bg-surface-container-low border border-outline px-3 py-2.5 text-sm focus:border-primary outline-none" required>
+</div>
+<div>
+<label class="font-label-caps text-xs uppercase text-on-surface-variant block mb-1">Preferred Time Slot *</label>
+<select id="patient-slot" class="w-full bg-surface-container-low border border-outline px-3 py-2.5 text-sm focus:border-primary outline-none" required>
+<option value="09:30 AM - Morning">09:30 AM (Morning)</option>
+<option value="11:30 AM - Morning">11:30 AM (Morning)</option>
+<option value="02:00 PM - Afternoon">02:00 PM (Afternoon)</option>
+<option value="04:30 PM - Evening">04:30 PM (Evening)</option>
+<option value="06:30 PM - Evening">06:30 PM (Evening)</option>
+</select>
+</div>
+</div>
+
+<div>
+<label class="font-label-caps text-xs uppercase text-on-surface-variant block mb-1">Symptoms or Special Requests (Optional)</label>
+<textarea id="patient-notes" rows="2" placeholder="Brief note about the health consultation required..." class="w-full bg-surface-container-low border border-outline px-3 py-2.5 text-sm focus:border-primary outline-none resize-none"></textarea>
+</div>
+
+<button type="submit" id="book-submit-btn" class="w-full bg-primary text-white py-3.5 font-button text-xs uppercase tracking-widest hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#1c1b1b] flex items-center justify-center gap-2">
+<span>Confirm Appointment Request</span>
+<span class="material-symbols-outlined text-sm">check_circle</span>
+</button>
+</form>
+
+<!-- Confirmation Banner after submission -->
+<div id="booking-success-box" class="hidden mt-4 p-4 bg-surface-container-high border-2 border-primary text-xs">
+<div class="flex items-center gap-2 text-primary font-bold mb-1">
+<span class="material-symbols-outlined text-lg">check_circle</span> Appointment Request Submitted!
+</div>
+<p class="text-on-surface-variant">Your appointment request has been added directly to the clinic management simulator on the right. Staff has been notified.</p>
+</div>
+</div>
+
+<!-- Right: Real-time Staff Lead Management Simulator -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Staff Alert Simulator Box -->
+<div class="bg-surface p-6 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b]">
+<div class="flex items-center justify-between border-b border-outline pb-3 mb-4">
+<div class="flex items-center gap-2">
+<span class="inline-block w-3 h-3 rounded-full bg-green-600 animate-ping"></span>
+<h3 class="font-headline-lg text-lg text-on-surface uppercase">Staff Notification & Lead View</h3>
+</div>
+<span class="text-[10px] font-mono uppercase bg-primary-container text-on-primary-container px-2 py-0.5 font-bold">REAL-TIME SIMULATOR</span>
+</div>
+
+<p class="text-xs text-on-surface-variant mb-4">
+When a patient books on your website, your staff immediately sees the organized lead record and receives instant notifications (Email/WhatsApp/Google Sheets).
+</p>
+
+<!-- Live Leads Table -->
+<div class="border border-outline overflow-x-auto">
+<table class="w-full text-left text-xs">
+<thead class="bg-surface-container-high border-b border-outline font-label-caps text-[10px] uppercase text-on-surface">
+<tr>
+<th class="p-2.5">Patient / Phone</th>
+<th class="p-2.5">Service</th>
+<th class="p-2.5">Date & Slot</th>
+<th class="p-2.5">Status</th>
+</tr>
+</thead>
+<tbody id="clinic-leads-tbody" class="divide-y divide-outline">
+<!-- Dynamic entries will be inserted here -->
+<tr class="bg-surface hover:bg-surface-container-low">
+<td class="p-2.5">
+<strong class="block text-on-surface font-button">Dr. Ananya Roy</strong>
+<span class="text-on-surface-variant font-mono text-[10px]">+91 98765 11223</span>
+</td>
+<td class="p-2.5 text-on-surface">Dental Checkup</td>
+<td class="p-2.5 text-on-surface-variant text-[11px]">Tomorrow • 11:30 AM</td>
+<td class="p-2.5">
+<span class="px-2 py-0.5 bg-green-100 text-green-800 text-[10px] font-bold uppercase rounded">Confirmed</span>
+</td>
+</tr>
+<tr class="bg-surface hover:bg-surface-container-low">
+<td class="p-2.5">
+<strong class="block text-on-surface font-button">Vikram Mehta</strong>
+<span class="text-on-surface-variant font-mono text-[10px]">+91 98111 22334</span>
+</td>
+<td class="p-2.5 text-on-surface">Full Diagnostic Health Checkup</td>
+<td class="p-2.5 text-on-surface-variant text-[11px]">28 Aug • 09:30 AM</td>
+<td class="p-2.5">
+<span class="px-2 py-0.5 bg-yellow-100 text-yellow-800 text-[10px] font-bold uppercase rounded">Follow-Up Pending</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="mt-4 pt-3 border-t border-outline flex justify-between items-center text-[11px] text-on-surface-variant font-label-caps">
+<span>Storage: Client-Owned Google Sheet / CRM</span>
+<button id="clear-demo-leads" class="text-primary hover:underline">Reset Demo Data</button>
+</div>
+</div>
+
+<!-- Why this matters for small businesses -->
+<div class="p-6 bg-secondary-container border-2 border-on-surface text-on-secondary-container shadow-[4px_4px_0px_#1c1b1b]">
+<h4 class="font-headline-lg text-lg mb-2">Why This System Wins:</h4>
+<ul class="text-xs space-y-2 font-medium">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-0.5">check</span>
+<strong>No Lost Enquiries:</strong> Every patient interaction is logged with timestamp, service requested, and follow-up status.
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-0.5">check</span>
+<strong>Lightweight & Economical:</strong> Works seamlessly with Google Sheets, WhatsApp Business, and basic website infrastructure.
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-0.5">check</span>
+<strong>Full Client Ownership:</strong> You own the form, the database, and the notification webhooks.
+</li>
+</ul>
+<a href="contact.html" class="mt-4 inline-block bg-on-secondary-container text-secondary-container font-button text-xs uppercase px-5 py-2.5 tracking-wider hover:bg-primary hover:text-white transition-colors">
+Get This Built For Your Clinic
+</a>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="mt-12 bg-on-surface text-surface py-8 border-t border-outline text-center text-xs font-label-caps text-surface-variant">
+<p>© 2026 NYXRA. Concept Demo built to showcase practical small-business workflows.</p>
+<p class="mt-2"><a href="portfolio.html" class="text-secondary-container hover:underline">Back to Demo Systems</a> • <a href="contact.html" class="text-secondary-container hover:underline">Request Free Audit</a></p>
+</footer>
+
+<script>
+// Clinic Demo Specific Script
+document.addEventListener('DOMContentLoaded', () => {
+    const today = new Date().toISOString().split('T')[0];
+    const dateInput = document.getElementById('patient-date');
+    if (dateInput) {
+        dateInput.min = today;
+        dateInput.value = today;
+    }
+
+    const form = document.getElementById('clinic-appointment-form');
+    const successBox = document.getElementById('booking-success-box');
+    const tbody = document.getElementById('clinic-leads-tbody');
+    const clearBtn = document.getElementById('clear-demo-leads');
+
+    // Load stored leads
+    const STORAGE_KEY = 'nyxra_clinic_demo_leads';
+    function loadLeads() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) {
+            try {
+                const leads = JSON.parse(stored);
+                leads.forEach(lead => prependLeadRow(lead));
+            } catch(e){}
+        }
+    }
+
+    function prependLeadRow(lead) {
+        const tr = document.createElement('tr');
+        tr.className = 'bg-yellow-50 hover:bg-yellow-100 transition-colors animate-fade-in-up';
+        tr.innerHTML = `
+            <td class="p-2.5">
+                <strong class="block text-on-surface font-button">${lead.name}</strong>
+                <span class="text-on-surface-variant font-mono text-[10px]">${lead.phone}</span>
+            </td>
+            <td class="p-2.5 text-on-surface">${lead.service}</td>
+            <td class="p-2.5 text-on-surface-variant text-[11px]">${lead.date} • ${lead.slot}</td>
+            <td class="p-2.5">
+                <span class="px-2 py-0.5 bg-primary text-white text-[10px] font-bold uppercase rounded">New Alert</span>
+            </td>
+        `;
+        tbody.prepend(tr);
+    }
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newLead = {
+                name: document.getElementById('patient-name').value.trim(),
+                phone: document.getElementById('patient-phone').value.trim(),
+                service: document.getElementById('patient-service').value,
+                date: document.getElementById('patient-date').value,
+                slot: document.getElementById('patient-slot').value,
+                notes: document.getElementById('patient-notes').value.trim()
+            };
+
+            prependLeadRow(newLead);
+
+            // Save to localStorage
+            const stored = localStorage.getItem(STORAGE_KEY);
+            let leads = stored ? JSON.parse(stored) : [];
+            leads.unshift(newLead);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(leads));
+
+            // Feedback
+            successBox.classList.remove('hidden');
+            form.reset();
+            dateInput.value = today;
+
+            setTimeout(() => {
+                successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        });
+    }
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            localStorage.removeItem(STORAGE_KEY);
+            window.location.reload();
+        });
+    }
+
+    loadLeads();
+});
+</script>
+</body>
+</html>

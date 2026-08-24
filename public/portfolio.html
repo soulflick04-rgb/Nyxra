@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Demo Systems & Concept Workflows - Nyxra</title>
+<meta name="description" content="Explore Nyxra's concept demo systems for clinic appointments, coaching admissions, and consultant bookings.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="tailwind.config.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md relative min-h-screen flex flex-col overflow-x-hidden">
+<div class="texture-overlay"></div>
+
+<!-- Top Navigation -->
+<nav id="main-nav" class="bg-surface border-b border-outline top-0 z-50 sticky transition-all duration-300 w-full">
+<div class="flex justify-between items-center w-full px-gutter py-3.5 max-w-container-max mx-auto">
+<a class="flex items-center gap-3" href="index.html">
+<img src="logo.png" alt="Nyxra" class="h-10 w-10 object-contain rounded-lg border border-outline bg-surface-container-low p-1" onerror="this.style.display='none'">
+<span class="font-headline-lg text-headline-lg-mobile tracking-tighter text-on-surface uppercase hover:text-primary transition-colors">NYXRA</span>
+</a>
+<ul class="hidden lg:flex gap-7 items-center font-label-caps text-label-caps uppercase">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="services.html">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="pricing.html">Pricing</a></li>
+<li><a class="text-primary border-b-2 border-primary pb-1" href="portfolio.html">Demo Systems</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="about.html">About</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="contact.html">Audit & Contact</a></li>
+</ul>
+<a class="hidden lg:inline-block bg-on-surface text-surface px-6 py-3 font-button text-button uppercase hover:bg-primary transition-colors duration-300 shadow-[2px_2px_0px_#1c1b1b]" href="contact.html">
+Free Business Audit
+</a>
+<button id="mobile-menu-btn" class="lg:hidden text-on-surface p-2" aria-label="Open menu">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-outline">
+<div class="flex flex-col px-gutter py-6 gap-3 font-label-caps text-label-caps uppercase">
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="index.html">Home</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="services.html">Services</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="pricing.html">Pricing</a>
+<a class="text-primary py-2 border-b border-outline-variant" href="portfolio.html">Demo Systems</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="about.html">About & Founder</a>
+<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="contact.html">Audit & Contact</a>
+<a href="contact.html" class="bg-on-surface text-surface px-6 py-3 font-button text-button uppercase text-center mt-3 hover:bg-primary transition-colors">Get Free Audit</a>
+</div>
+</div>
+</nav>
+
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Header -->
+<section class="w-full max-w-container-max mx-auto px-gutter pt-16 pb-12 relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-8 z-20 animate-fade-in-up">
+<p class="font-label-caps text-label-caps text-primary mb-3 uppercase tracking-widest font-bold">Concept Workflows</p>
+<h1 class="font-display-xl text-[44px] sm:text-[64px] md:text-display-xl tracking-tighter leading-none relative">
+Demo<br/>
+<span class="italic text-primary font-light">systems</span>.
+</h1>
+</div>
+<div class="md:col-span-4 z-10 flex justify-start md:justify-end animate-fade-in-right">
+<div class="max-w-xs border-l-2 border-primary pl-4">
+<p class="font-body-md text-sm text-on-surface-variant">
+These are concept demos showing how Nyxra designs practical enquiry, booking, and lead workflows for small businesses.
+</p>
+<p class="text-[11px] font-label-caps uppercase text-primary font-bold mt-2">
+Interactive Demo Available
+</p>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-outline mt-8"></div>
+</section>
+
+<!-- Demo 1: Clinic Appointment & Lead System (With Live Interactive Demo Link) -->
+<section id="clinic" class="w-full max-w-container-max mx-auto px-gutter pb-16">
+<article class="p-8 bg-surface border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b] scroll-animate">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center">
+<div class="lg:col-span-7">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-secondary-container text-on-secondary-container font-label-caps text-xs px-3 py-1 uppercase font-bold">Concept Demo 01</span>
+<span class="font-label-caps text-xs text-primary font-bold uppercase">Healthcare & Wellness</span>
+</div>
+<h2 class="font-headline-xl text-3xl md:text-4xl mb-3">Clinic Appointment & Lead System</h2>
+<p class="text-sm font-bold text-on-surface mb-4">Designed for: Clinics, diagnostic centres, dental practices, & wellness centres</p>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+<strong>Problem:</strong> Appointment requests and medical report enquiries often arrive through scattered phone calls, WhatsApp messages, and front-desk walk-ins.
+</p>
+
+<!-- Workflow Strip -->
+<div class="p-4 bg-surface-container-high border border-outline mb-6">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant block mb-2 font-bold">End-to-End System Workflow:</span>
+<div class="flex flex-wrap items-center gap-2 text-xs font-label-caps uppercase">
+<span class="px-2.5 py-1 bg-surface border border-outline">1. Website</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">2. Appointment Form</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">3. Lead Record</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">4. Staff Alert</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-secondary-container text-on-secondary-container font-bold">5. Follow-Up</span>
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs">
+<div>
+<strong class="font-button uppercase text-primary block mb-1">Key Components:</strong>
+<ul class="space-y-1 text-on-surface-variant">
+<li>• Clean responsive clinic homepage</li>
+<li>• Custom service & slot booking form</li>
+<li>• Structured patient lead storage</li>
+</ul>
+</div>
+<div>
+<strong class="font-button uppercase text-primary block mb-1">Business Outcome:</strong>
+<ul class="space-y-1 text-on-surface-variant">
+<li>• Patients know exact next steps</li>
+<li>• Staff follow up with zero confusion</li>
+<li>• No expensive software required</li>
+</ul>
+</div>
+</div>
+
+<div class="flex flex-wrap gap-4">
+<a href="clinic-demo.html" class="inline-flex items-center gap-2 font-button text-xs uppercase bg-primary text-white px-6 py-3.5 hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#1c1b1b]">
+Launch Live Interactive Demo <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+<a href="contact.html" class="inline-flex items-center gap-2 font-button text-xs uppercase border-2 border-on-surface px-6 py-3.5 hover:bg-surface-container-high transition-colors">
+Discuss Clinic System
+</a>
+</div>
+</div>
+
+<div class="lg:col-span-5">
+<div class="bg-surface-container-high p-4 border border-outline shadow-[4px_4px_0px_#1c1b1b]">
+<img src="sample-1.png" alt="Clinic Demo Preview" class="w-full h-auto object-cover border border-outline" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCi7N_LU_mRM-DiXdinRu3zSUpHytE89bCwUZyaeAToDVpeyXEXcihPyb-tzXRgHAJP2fMAeOsLZ2JFGvj8g-NZcM0ZE2jJPoM6RBSeEy19PMzJsaxrKeVM4GyeZoLCq3Snh6Pd1n4_baEqvQE19G6Xj8LtLiveNTQv31MWiLBB4N7D7hPIIb1gL1TNgxFhzkc4i78--KLyZAb0t95Zka9mphZ8wM-B2DDXmfKQHUOu3p4tFYJaD-YKLA'">
+<div class="mt-3 flex justify-between items-center text-xs font-label-caps text-on-surface-variant">
+<span>Interactive Patient Booking</span>
+<span class="text-primary font-bold">READY TO TEST</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+
+<!-- Demo 2: Coaching Admission Pipeline -->
+<section id="coaching" class="w-full max-w-container-max mx-auto px-gutter pb-16">
+<article class="p-8 bg-surface border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b] scroll-animate">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="bg-surface-container-high p-4 border border-outline shadow-[4px_4px_0px_#1c1b1b]">
+<img src="sample-2.png" alt="Coaching Admission Preview" class="w-full h-auto object-cover border border-outline" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuCW_IvdsRouVuGSk0CKIbjbiNnJGm2UeQ9JU5n7pw_BHG6uW2sFqfJL__W1yHDkAd_gwg2emFYwYcPcTRnfh1ZY0zUTBTIxxlWkHhKEWDYLeCv4ysNFT1tFfhjEOJfNsHKTjsa2iQMnDw-gMvFqSTVstefjEUqvD1v5Q315WI_RzP7uRlTaPd6zkmgOBfU-kJubWIpd5kCkFjVhGwXub8eS-GZH3lFQ-86aU1DNcOJ2XQY8c-tc2d6LyQ'">
+</div>
+</div>
+
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-secondary-container text-on-secondary-container font-label-caps text-xs px-3 py-1 uppercase font-bold">Concept Demo 02</span>
+<span class="font-label-caps text-xs text-primary font-bold uppercase">Education & Coaching</span>
+</div>
+<h2 class="font-headline-xl text-3xl md:text-4xl mb-3">Coaching Admission Enquiry System</h2>
+<p class="text-sm font-bold text-on-surface mb-4">Designed for: Coaching institutes, test prep academies, & skill trainers</p>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+<strong>Problem:</strong> Student interest is hard to qualify and convert when course details, counsellor notes, and admission follow-ups are handled in disjointed WhatsApp chats.
+</p>
+
+<!-- Workflow Strip -->
+<div class="p-4 bg-surface-container-high border border-outline mb-6">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant block mb-2 font-bold">End-to-End System Workflow:</span>
+<div class="flex flex-wrap items-center gap-2 text-xs font-label-caps uppercase">
+<span class="px-2.5 py-1 bg-surface border border-outline">Course Page</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">Student Enquiry</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">Counselling</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">Pipeline</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-secondary-container text-on-secondary-container font-bold">Admission Status</span>
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs">
+<div>
+<strong class="font-button uppercase text-primary block mb-1">Key Components:</strong>
+<ul class="space-y-1 text-on-surface-variant">
+<li>• Course curriculum landing page</li>
+<li>• Target course selection & batch form</li>
+<li>• Automated admission status tracking</li>
+</ul>
+</div>
+<div>
+<strong class="font-button uppercase text-primary block mb-1">Business Outcome:</strong>
+<ul class="space-y-1 text-on-surface-variant">
+<li>• Counsellors prioritize hot leads</li>
+<li>• Parents receive clear course context</li>
+<li>• Higher conversion from enquiry to seat</li>
+</ul>
+</div>
+</div>
+
+<a href="contact.html" class="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3.5 hover:bg-primary transition-colors">
+Discuss Education Setup <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+
+<!-- Demo 3: Consultant Booking & Qualification -->
+<section id="consultant" class="w-full max-w-container-max mx-auto px-gutter pb-16">
+<article class="p-8 bg-surface border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b] scroll-animate">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center">
+<div class="lg:col-span-7">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-secondary-container text-on-secondary-container font-label-caps text-xs px-3 py-1 uppercase font-bold">Concept Demo 03</span>
+<span class="font-label-caps text-xs text-primary font-bold uppercase">Professional Services</span>
+</div>
+<h2 class="font-headline-xl text-3xl md:text-4xl mb-3">Consultant Booking & Qualification Flow</h2>
+<p class="text-sm font-bold text-on-surface mb-4">Designed for: Independent consultants, agency founders, & high-ticket freelancers</p>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+<strong>Problem:</strong> Unclear and low-intent enquiries waste hours of phone time before a meaningful consultation or proposal can begin.
+</p>
+
+<!-- Workflow Strip -->
+<div class="p-4 bg-surface-container-high border border-outline mb-6">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant block mb-2 font-bold">End-to-End System Workflow:</span>
+<div class="flex flex-wrap items-center gap-2 text-xs font-label-caps uppercase">
+<span class="px-2.5 py-1 bg-surface border border-outline">Service Page</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">Consultation Form</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">Qualification</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-surface border border-outline">Meeting</span>
+<span class="material-symbols-outlined text-xs text-primary">arrow_forward</span>
+<span class="px-2.5 py-1 bg-secondary-container text-on-secondary-container font-bold">Proposal</span>
+</div>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs">
+<div>
+<strong class="font-button uppercase text-primary block mb-1">Key Components:</strong>
+<ul class="space-y-1 text-on-surface-variant">
+<li>• Personal-brand credibility page</li>
+<li>• Strategic questionnaire before booking</li>
+<li>• Direct calendar meeting confirmation</li>
+</ul>
+</div>
+<div>
+<strong class="font-button uppercase text-primary block mb-1">Business Outcome:</strong>
+<ul class="space-y-1 text-on-surface-variant">
+<li>• Zero tyre-kicking calls</li>
+<li>• Clients arrive pre-sold on your value</li>
+<li>• Seamless transition into proposal stage</li>
+</ul>
+</div>
+</div>
+
+<a href="contact.html" class="inline-flex items-center gap-2 font-button text-xs uppercase bg-on-surface text-surface px-6 py-3.5 hover:bg-primary transition-colors">
+Discuss Consultant Setup <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+
+<div class="lg:col-span-5">
+<div class="bg-surface-container-high p-4 border border-outline shadow-[4px_4px_0px_#1c1b1b]">
+<img src="sample-1.png" alt="Consultant System Mockup" class="w-full h-auto object-cover border border-outline" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBONh0BGKGMmTHkZTSYczPFs0RexcV6mzUxCKmkkQF_D8i_dON_FQ8JkLZ52yrAl7AUjNI49WBZTGQ1PkRSuV1v1uWgsqPi50gFo112Wb4wRruLDhanJDeUJpf2OK6feezOA0n80SrGbTwWnQqqmd8UFuPuEKDhs539cYQM9CFZJTJvXAmfpJSM7nNsLS_Se6IG9QU8Rrg9trQhqpa0zeNHyU71uLR8J7jcY4n5Wcq2nJwOWDFUi-oJWQ'">
+</div>
+</div>
+</div>
+</article>
+</section>
+
+<!-- Call to Action -->
+<section class="w-full bg-on-surface text-surface py-12 border-t-4 border-primary">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h2 class="font-display-lg text-3xl md:text-5xl mb-4">Want a custom system for your business?</h2>
+<p class="text-sm text-surface-variant max-w-lg mx-auto mb-6">
+Share your current workflow challenges. We'll design a lightweight, client-owned system tailored to your exact business operations.
+</p>
+<a class="inline-block bg-primary text-white px-8 py-4 font-button text-xs uppercase tracking-widest hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#ffffff]" href="contact.html">
+Request Free Business Audit
+</a>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-on-surface text-surface border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg w-full px-gutter py-16 max-w-container-max mx-auto">
+<div>
+<a class="font-display-lg text-2xl text-surface block mb-3" href="index.html">NYXRA</a>
+<p class="font-body-md text-xs text-surface-variant">© 2026 Nyxra. All rights reserved.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Navigation</h4>
+<ul class="space-y-2 text-xs text-surface-variant">
+<li><a class="hover:text-secondary" href="index.html">Home</a></li>
+<li><a class="hover:text-secondary" href="services.html">Services</a></li>
+<li><a class="hover:text-secondary" href="pricing.html">Pricing</a></li>
+<li><a class="hover:text-secondary font-bold text-secondary-container" href="portfolio.html">Demo Systems</a></li>
+<li><a class="hover:text-secondary" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Demos</h4>
+<ul class="space-y-2 text-xs text-surface-variant">
+<li><a class="hover:text-secondary" href="clinic-demo.html">Clinic Demo (Interactive)</a></li>
+<li><a class="hover:text-secondary" href="#coaching">Coaching Pipeline</a></li>
+<li><a class="hover:text-secondary" href="#consultant">Consultant Booking</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Contact</h4>
+<p class="text-xs text-surface-variant">supportnyxra@gmail.com</p>
+</div>
+</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
