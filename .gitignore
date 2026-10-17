@@ -7,3 +7,5 @@ out
 npm-debug.log*
 *.log
 *.zip
+
+qa/*.png
