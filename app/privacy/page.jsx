@@ -1,31 +1,65 @@
 "use client";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Link from "next/link";
+import { ArrowLeftIcon } from "../components/Icons";
+
 export default function PrivacyPage() {
   return (
-    <main className="bg-surface text-on-surface antialiased min-h-screen py-16 px-gutter">
-      <div className="max-w-3xl mx-auto">
-        <a href="/" className="font-button text-xs uppercase text-primary hover:underline flex items-center gap-1 mb-8">
-          ← Back to Nyxra Home
-        </a>
-        <h1 className="font-display-xl text-4xl sm:text-5xl text-on-surface mb-4">Privacy Policy</h1>
-        <p className="font-body-md text-sm text-on-surface-variant mb-10 leading-relaxed">
-          This page provides general business-language privacy information for Nyxra. Project scope, costs and third-party services are confirmed in a written proposal.
-        </p>
-        <div className="space-y-6">
-          <div className="p-6 bg-surface-container-low border border-outline">
-            <h2 className="font-headline-lg text-lg mb-2 text-on-surface">Information we collect</h2>
-            <p className="text-xs text-on-surface-variant leading-relaxed">
-              Nyxra may collect information you provide through enquiry forms, email or project discussions, such as your name, business name, contact details, website or social profile, business category, project goals and budget range.
-            </p>
-          </div>
-          <div className="p-6 bg-surface-container-low border border-outline">
-            <h2 className="font-headline-lg text-lg mb-2 text-on-surface">Data ownership</h2>
-            <p className="text-xs text-on-surface-variant leading-relaxed">
-              Where practical, Nyxra recommends client-owned accounts for domains, hosting, analytics, forms and business tools so the client retains 100% access.
-            </p>
+    <>
+      <Header />
+
+      <main className="min-h-screen py-16">
+        <div className="container-significa max-w-4xl">
+          <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand hover:underline mb-8">
+            <ArrowLeftIcon className="w-3.5 h-3.5" />
+            <span>Back to Nyxra Home</span>
+          </Link>
+
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-foreground mb-4">
+            Privacy Policy
+          </h1>
+          <p className="text-base text-foreground-secondary leading-relaxed mb-12">
+            This page provides transparent, plain-language privacy information for Nyxra. Project deliverables, third-party software, and data handling are established in writing prior to project kickoff.
+          </p>
+
+          <div className="space-y-6 text-sm text-foreground-secondary leading-relaxed">
+            <div className="p-8 rounded-2xl border border-border bg-background-panel shadow-xs">
+              <h2 className="text-xl font-bold text-foreground mb-3">1. Information We Collect</h2>
+              <p>
+                Nyxra collects information you choose to provide through our audit request forms, direct emails, and project discovery discussions. This includes your name, business name, phone/WhatsApp number, email address, current website URL, industry category, and project scope requirements.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-2xl border border-border bg-background-panel shadow-xs">
+              <h2 className="text-xl font-bold text-foreground mb-3">2. 100% Client Data Ownership</h2>
+              <p>
+                Where practical, Nyxra deploys systems directly onto client-owned accounts (e.g. your own domain registrar, your Google Drive / Sheets account, your Meta WhatsApp business manager, and your hosting provider). You retain 100% ownership and administrative access to all customer records and data at all times.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-2xl border border-border bg-background-panel shadow-xs">
+              <h2 className="text-xl font-bold text-foreground mb-3">3. How Information is Used</h2>
+              <p>
+                Your inquiry data is used solely to evaluate your business requirements, prepare your customized 20-minute video audit, and communicate about project proposals. We never sell, rent, or monetize your contact or business information to third parties.
+              </p>
+            </div>
+
+            <div className="p-8 rounded-2xl border border-border bg-background-panel shadow-xs">
+              <h2 className="text-xl font-bold text-foreground mb-3">4. Contact & Inquiries</h2>
+              <p>
+                If you have questions regarding our data practices or wish to request the deletion of your enquiry information, you may contact our founder directly at:{" "}
+                <a href="mailto:supportnyxra@gmail.com" className="text-foreground font-mono font-medium hover:underline">
+                  supportnyxra@gmail.com
+                </a>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+
+      <Footer />
+    </>
   );
 }

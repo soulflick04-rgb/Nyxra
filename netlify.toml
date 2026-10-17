@@ -1,49 +1,50 @@
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "out"
 
 [[redirects]]
   from = "/demos/clinic"
-  to = "/clinic-demo.html"
+  to = "/clinic-demo"
   status = 200
 
 [[redirects]]
   from = "/services"
-  to = "/services.html"
+  to = "/services"
   status = 200
 
 [[redirects]]
   from = "/pricing"
-  to = "/pricing.html"
+  to = "/pricing"
   status = 200
 
 [[redirects]]
   from = "/portfolio"
-  to = "/portfolio.html"
+  to = "/portfolio"
   status = 200
 
 [[redirects]]
   from = "/about"
-  to = "/about.html"
+  to = "/about"
   status = 200
 
 [[redirects]]
   from = "/contact"
-  to = "/contact.html"
+  to = "/contact"
   status = 200
 
 [[redirects]]
   from = "/privacy"
-  to = "/privacy.html"
+  to = "/privacy"
   status = 200
 
 [[redirects]]
   from = "/terms"
-  to = "/terms.html"
+  to = "/terms"
   status = 200
 
 [[redirects]]
   from = "/thank-you"
-  to = "/thank-you.html"
+  to = "/thank-you"
   status = 200
 
 [[headers]]

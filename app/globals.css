@@ -1,76 +1,195 @@
-/* Material Symbols Config */
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    vertical-align: middle;
+/* Significa Sans Font Faces */
+@font-face {
+  font-family: 'Significa Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/significa-regular.woff2') format('woff2');
+  ascent-override: 95%;
 }
 
-/* Scribble Underline Effect */
-.scribble-underline {
-    position: relative;
-}
-.scribble-underline::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="10" viewBox="0 0 100 10" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 5 Q 25 0, 50 5 T 100 5" stroke="%23b02f00" fill="none" stroke-width="2.5" stroke-linecap="round"/></svg>');
-    background-size: 100% 100%;
-    z-index: -1;
+@font-face {
+  font-family: 'Significa Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/significa-medium.woff2') format('woff2');
+  ascent-override: 95%;
 }
 
-/* Paper Texture Overlay */
-.texture-overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.12;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    mix-blend-mode: multiply;
+@font-face {
+  font-family: 'Significa Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/significa-semibold.woff2') format('woff2');
+  ascent-override: 95%;
 }
 
-.hairline-border-b { border-bottom: 1px solid #1c1b1b; }
-.hairline-border-t { border-top: 1px solid #1c1b1b; }
-.hairline-border-r { border-right: 1px solid #1c1b1b; }
+/* Significa Exact Theme Tokens */
+:root,
+[data-theme='light'],
+.theme-light {
+  --color-background: 0deg 0% 97%;
+  --color-background-panel: 0deg 0% 100%;
+  --color-background-offset: 0deg 0% 93%;
 
-.marquee-container {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
+  --color-foreground: 0deg 0% 9%;
+  --color-foreground-secondary: 240deg 1% 44%;
+  --color-foreground-tertiary: 240deg 2% 78%;
+  --color-foreground-accent: 220deg 100% 50%;
+
+  --color-border: 0deg 0% 91%;
+  --color-border-active: 48deg 100% 57%;
+
+  --color-brand: 48deg 100% 57%;
+  --color-outline: 48deg 99% 73%;
+  --color-outline-error: 353deg 93% 89%;
+  --color-error: 353deg 80% 48%;
+  --color-success: 166deg 90% 27%;
+  --color-selection: 0deg 0% 9%;
+  --color-drawing: 232deg 100% 30%;
+
+  --topnav-height: 76px;
 }
 
-.marquee-content {
-    display: inline-block;
-    animation: marquee 22s linear infinite;
+[data-theme='dark'],
+.theme-dark {
+  --color-background: 0deg 0% 9%;
+  --color-background-panel: 0deg 0% 12%;
+  --color-background-offset: 0deg 0% 14%;
+
+  --color-foreground: 0deg 0% 93%;
+  --color-foreground-secondary: 240deg 1% 63%;
+  --color-foreground-tertiary: 240deg 1% 31%;
+  --color-foreground-accent: 48deg 100% 57%;
+
+  --color-border: 0deg 0% 18%;
+  --color-border-active: 48deg 100% 32%;
+
+  --color-brand: 48deg 100% 57%;
+  --color-outline: 49deg 89% 18%;
+  --color-outline-error: 0deg 30% 27%;
+  --color-error: 355deg 85% 58%;
+  --color-success: 166deg 100% 30%;
+  --color-selection: 48deg 100% 57%;
+  --color-drawing: 0deg 0% 93%;
+
+  --topnav-height: 76px;
 }
 
-@keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+[data-theme='yellow'],
+.theme-yellow {
+  --color-background: 48deg 100% 57%;
+  --color-background-panel: 48deg 100% 49%;
+  --color-background-offset: 48deg 100% 50%;
+
+  --color-foreground: 48deg 28% 15%;
+  --color-foreground-secondary: 48deg 100% 20%;
+  --color-foreground-tertiary: 48deg 100% 10%;
+  --color-foreground-accent: 232deg 100% 30%;
+
+  --color-border: 48deg 100% 46%;
+  --color-border-active: 49deg 100% 40%;
+
+  --color-brand: 48deg 100% 57%;
+  --color-outline: 48deg 100% 46%;
+  --color-outline-error: 40deg 83% 53%;
+  --color-error: 0deg 66% 41%;
+  --color-success: 158deg 41% 28%;
+  --color-selection: 49deg 100% 14%;
+  --color-drawing: 49deg 28% 15%;
+
+  --topnav-height: 76px;
 }
 
-.accordion-content {
-    transition: max-height 0.35s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    margin-top: 0;
+/* Global Text and Background */
+html {
+  font-family: 'Significa Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  scroll-behavior: smooth;
 }
-.accordion-item.active .accordion-content {
-    max-height: 400px;
-    opacity: 1;
-    margin-top: 0.75rem;
-}
-.accordion-item.active .accordion-icon {
-    transform: rotate(45deg);
-}
-.accordion-icon {
-    transition: transform 0.3s ease;
+
+body {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 ::selection {
-    background-color: #febf1e;
-    color: #6d4f00;
+  color: hsl(var(--color-background));
+  background-color: hsl(var(--color-foreground));
+}
+
+[data-theme='dark'] ::selection {
+  color: #171717;
+  background-color: hsl(var(--color-brand));
+}
+
+/* Material Symbols Config */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Cubic Bezier Motion Helpers */
+.ease-motion {
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.ease-smooth {
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+/* Significa Container utility */
+.container-significa {
+  width: 100%;
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 5vw, 3rem);
+  padding-right: clamp(1rem, 5vw, 3rem);
+}
+
+/* Significa Elevated Links */
+.elevated-links {
+  position: relative;
+}
+
+.elevated-links a[href] {
+  position: static;
+  z-index: 1;
+}
+
+.elevated-links a.elevated-link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--color-background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--color-foreground-tertiary));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--color-foreground-secondary));
 }

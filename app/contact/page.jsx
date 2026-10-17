@@ -2,36 +2,57 @@
 
 import { useState } from "react";
 import Header from "../components/Header";
-import Link from "next/link";
+import Footer from "../components/Footer";
+import SignificaButton from "../components/SignificaButton";
+import { CheckCircleIcon } from "../components/Icons";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    businessName: "",
+    email: "",
+    phone: "",
+    category: "Clinic or diagnostics",
+    city: "",
+    websiteUrl: "",
+    primaryGoal: "Website + Lead Capture System",
+    budgetRange: "₹15,000 - ₹25,000 ($180 - $300)",
+    notes: ""
+  });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const dataObj = {};
-    formData.forEach((value, key) => { dataObj[key] = value; });
-    dataObj['_subject'] = `New Nyxra Business Audit Request from ${dataObj['full-name'] || 'Lead'}`;
+    const payload = {
+      "full-name": formData.fullName,
+      "business-name": formData.businessName,
+      email: formData.email,
+      phone: formData.phone,
+      "business-category": formData.category,
+      city: formData.city,
+      "website-url": formData.websiteUrl,
+      "primary-goal": formData.primaryGoal,
+      "budget-range": formData.budgetRange,
+      notes: formData.notes,
+      _subject: `New Nyxra Business Audit Request from ${formData.fullName} (${formData.businessName})`
+    };
 
     try {
       await fetch("https://formsubmit.co/ajax/supportnyxra@gmail.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(dataObj)
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload)
       });
-      await fetch("https://script.google.com/macros/s/AKfycby9rUlv7CSat0B4j5TLU1TdSChYgMGZSq8vccMM9KT-8Ms25Mh_qbjParGswH84K8nmaw/exec", {
-        method: "POST",
-        mode: "no-cors",
-        body: formData
-      });
-      window.location.href = "/thank-you";
+      setSubmitted(true);
     } catch (err) {
       console.error(err);
-      window.location.href = "/thank-you";
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -39,140 +60,276 @@ export default function ContactPage() {
     <>
       <Header />
 
-      <main className="px-gutter max-w-container-max mx-auto py-12 sm:py-16">
-        <div className="mb-10">
-          <p className="font-label-caps text-xs text-primary uppercase font-bold tracking-widest mb-2">Initiate Contact</p>
-          <h1 className="font-display-xl text-[38px] sm:text-[60px] md:text-display-xl uppercase tracking-tighter text-on-surface leading-none md:w-3/4 break-words">
-            Tell Us What Your <br />
-            <span className="text-primary relative inline-block scribble-underline">Business Needs.</span>
-          </h1>
-          <p className="font-body-md text-sm sm:text-lg text-on-surface-variant mt-5 max-w-2xl leading-relaxed">
-            Share a few details about your current website, enquiry process, or repetitive tasks. Every submission sends an instant notification directly to our founder's inbox at <strong className="text-on-surface">supportnyxra@gmail.com</strong>.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-start">
-          <div className="lg:col-span-8 bg-surface p-6 sm:p-10 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b]">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Your Full Name *</label>
-                  <input className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="full-name" placeholder="e.g. Rishi Srivastav" type="text" required />
-                </div>
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Business / Brand Name *</label>
-                  <input className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="business-name" placeholder="e.g. Apex Health / Studio X" type="text" required />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Your Email Address *</label>
-                  <input className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="email" placeholder="e.g. you@business.com" type="email" required />
-                </div>
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">WhatsApp or Phone Number *</label>
-                  <input className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="phone" placeholder="e.g. +91 98765 43210" type="tel" required />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Business Category *</label>
-                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" name="business-category" required defaultValue="">
-                    <option value="" disabled>Select an option</option>
-                    <option value="Clinic or diagnostics">Clinic or diagnostics</option>
-                    <option value="Coaching or education">Coaching or education</option>
-                    <option value="Consultant or freelancer">Consultant or freelancer</option>
-                    <option value="Salon, gym or wellness">Salon, gym or wellness</option>
-                    <option value="Local service business">Local service business</option>
-                    <option value="Startup">Early-stage Startup</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">City / Location *</label>
-                  <input className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="city" placeholder="e.g. Mumbai, Delhi, Bengaluru" type="text" required />
-                </div>
-              </div>
-
-              <div>
-                <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Current Website or Social URL (Optional)</label>
-                <input className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none" name="website-or-social" placeholder="https://instagram.com/yourbusiness" type="text" />
-              </div>
-
-              <div>
-                <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Main Problem / Bottleneck *</label>
-                <textarea className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none resize-none" name="main-current-problem" placeholder="Example: enquiries are scattered across WhatsApp messages..." rows={3} required></textarea>
-              </div>
-
-              <div>
-                <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Desired Result / Goals *</label>
-                <textarea className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none resize-none" name="desired-result" placeholder="Example: high-converting website, automated lead capture..." rows={3} required></textarea>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Budget Range *</label>
-                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" name="budget-range" required defaultValue="">
-                    <option value="" disabled>Select Budget Range</option>
-                    <option value="₹10,000 - ₹15,000">₹10,000 - ₹15,000 (Digital Launch)</option>
-                    <option value="₹15,000 - ₹20,000">₹15,000 - ₹20,000 (Lead Growth System)</option>
-                    <option value="₹20,000 - ₹35,000">₹20,000 - ₹35,000 (AI Business Starter)</option>
-                    <option value="₹35,000+">₹35,000+ (Custom Scope)</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold">Preferred Contact Method *</label>
-                  <select className="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" name="preferred-contact-method" required defaultValue="WhatsApp">
-                    <option value="WhatsApp">WhatsApp Message</option>
-                    <option value="Email">Email</option>
-                    <option value="Phone call">Phone Call</option>
-                  </select>
-                </div>
-              </div>
-
-              <button disabled={isSubmitting} className="w-full sm:w-auto font-button text-xs bg-primary text-white px-8 py-4 uppercase tracking-widest hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#1c1b1b] flex items-center justify-center gap-2 cursor-pointer" type="submit">
-                <span>{isSubmitting ? "Sending..." : "Submit Audit & Send To Email"}</span>
-                <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </button>
-            </form>
-          </div>
-
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            <div className="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b]">
-              <span className="font-label-caps text-xs text-primary uppercase font-bold block mb-2">Direct Inbox</span>
-              <h3 className="font-headline-lg text-xl text-on-surface mb-2">Founder Direct Email</h3>
-              <a className="font-mono text-sm font-bold text-primary hover:underline block break-all p-2.5 bg-surface-container-high border border-outline" href="mailto:supportnyxra@gmail.com">
-                supportnyxra@gmail.com
-              </a>
+      <main className="min-h-screen">
+        {/* Page Hero */}
+        <section className="pt-12 sm:pt-20 pb-16">
+          <div className="container-significa">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-offset border border-border text-xs font-semibold uppercase tracking-wider text-foreground mb-6">
+              <span className="w-2 h-2 rounded-full bg-brand" />
+              <span>Complimentary Video Audit & Proposal</span>
             </div>
 
-            <div className="p-6 bg-surface-container-high border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b]">
-              <span className="font-label-caps text-xs text-primary uppercase font-bold block mb-2">Review Process</span>
-              <h3 className="font-headline-lg text-lg text-on-surface mb-3">What Happens Next:</h3>
-              <ul className="text-xs space-y-3 text-on-surface">
-                <li className="flex items-start gap-2">
-                  <span className="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
-                  <span><strong>1. Instant Email Dispatch:</strong> Form sends full parameters directly to supportnyxra@gmail.com.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
-                  <span><strong>2. Founder Review:</strong> Rishi Srivastav reviews your bottlenecks and enquiry flow.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
-                  <span><strong>3. Direct Reply:</strong> You receive a tailored scope & timeline proposal within 24 hours.</span>
-                </li>
-              </ul>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 border-b border-border">
+              <div className="lg:col-span-8">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.08]">
+                  Tell us what your <br />
+                  <span className="text-foreground-secondary">business needs.</span>
+                </h1>
+              </div>
+              <div className="lg:col-span-4">
+                <p className="text-base text-foreground-secondary leading-relaxed">
+                  Share a few details about your current customer flow, bottlenecks, or website requirements. Rishi Srivastav personally reviews every submission and sends a 20-minute action video within 24 hours.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Contact Form & Studio Meta */}
+        <section className="py-12">
+          <div className="container-significa">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              {/* Left Form */}
+              <div className="lg:col-span-8">
+                {submitted ? (
+                  <div className="p-8 sm:p-14 rounded-3xl border-2 border-brand bg-background-panel text-center shadow-sm">
+                    <div className="w-16 h-16 rounded-full bg-brand/20 text-foreground flex items-center justify-center mx-auto mb-5">
+                      <CheckCircleIcon className="w-8 h-8 text-brand" />
+                    </div>
+                    <h2 className="text-3xl font-bold text-foreground mb-3">
+                      Audit Request Received!
+                    </h2>
+                    <p className="text-base text-foreground-secondary leading-relaxed mb-6 max-w-lg mx-auto">
+                      Thank you, <strong className="text-foreground">{formData.fullName}</strong>. Your details have been sent directly to Rishi Srivastav at <strong className="text-foreground">supportnyxra@gmail.com</strong>.
+                    </p>
+                    <p className="text-sm text-foreground-secondary mb-8">
+                      We will review your business and deliver a tailored video audit with fixed scope options within 24 hours.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      <SignificaButton href="/" variant="secondary" size="md">
+                        Back to Home
+                      </SignificaButton>
+                      <SignificaButton href="https://wa.me/919876543210" variant="brand" size="md" arrow>
+                        Chat on WhatsApp
+                      </SignificaButton>
+                    </div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="p-8 sm:p-12 rounded-3xl border border-border bg-background-panel shadow-xs space-y-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground mb-1">
+                        Submit Audit Request
+                      </h3>
+                      <p className="text-xs text-foreground-secondary">
+                        Fill in as much detail as you have. All fields marked with * are required.
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="e.g. Rishi Srivastav"
+                          value={formData.fullName}
+                          onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                          className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                          Business / Brand Name *
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="e.g. Apex Health Clinic"
+                          value={formData.businessName}
+                          onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
+                          className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          placeholder="e.g. contact@business.com"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                          WhatsApp / Phone Number *
+                        </label>
+                        <input
+                          type="tel"
+                          placeholder="e.g. +91 98765 43210"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                          Business Industry *
+                        </label>
+                        <select
+                          value={formData.category}
+                          onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                          className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"
+                        >
+                          <option value="Clinic or diagnostics">Clinic or diagnostics</option>
+                          <option value="Coaching or education">Coaching or education</option>
+                          <option value="Consultant or freelancer">Consultant or freelancer</option>
+                          <option value="Salon, gym or wellness">Salon, gym or wellness</option>
+                          <option value="Local service business">Local service business</option>
+                          <option value="Startup">Early-stage Startup</option>
+                          <option value="Other">Other Business</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                          City / State
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="e.g. Mumbai, Bengaluru, Global"
+                          value={formData.city}
+                          onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                          className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                        Current Website or Social URL (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. https://instagram.com/mybusiness or None"
+                        value={formData.websiteUrl}
+                        onChange={(e) => setFormData({ ...formData, websiteUrl: e.target.value })}
+                        className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">
+                        Tell Us About Your Goals & Current Bottleneck
+                      </label>
+                      <textarea
+                        rows={3}
+                        placeholder="What is your biggest operational pain point? (e.g. losing leads on WhatsApp, manual scheduling, no modern website...)"
+                        value={formData.notes}
+                        onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                        className="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors resize-none"
+                      />
+                    </div>
+
+                    <SignificaButton
+                      type="submit"
+                      variant="brand"
+                      size="lg"
+                      arrow
+                      disabled={isSubmitting}
+                      className="w-full text-base"
+                    >
+                      {isSubmitting ? "Submitting Request..." : "Submit Business Audit Request"}
+                    </SignificaButton>
+                  </form>
+                )}
+              </div>
+
+              {/* Right: Studio Direct Contact & Deliverables */}
+              <div className="lg:col-span-4 space-y-6">
+                <div className="p-6 rounded-2xl border border-border bg-background-panel shadow-xs space-y-6">
+                  <div>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-brand block mb-1">
+                      Direct Communication
+                    </span>
+                    <h4 className="text-xl font-bold text-foreground">Studio Contact</h4>
+                  </div>
+
+                  <div className="space-y-4 text-xs">
+                    <div>
+                      <span className="text-foreground-secondary block">Founder:</span>
+                      <strong className="text-foreground text-sm">Rishi Srivastav</strong>
+                    </div>
+                    <div>
+                      <span className="text-foreground-secondary block">Direct Email:</span>
+                      <a href="mailto:supportnyxra@gmail.com" className="text-foreground hover:underline font-mono text-sm">
+                        supportnyxra@gmail.com
+                      </a>
+                    </div>
+                    <div>
+                      <span className="text-foreground-secondary block">Location:</span>
+                      <span className="text-foreground font-medium">India &bull; Global Remote Services</span>
+                    </div>
+                    <div>
+                      <span className="text-foreground-secondary block">Response Time:</span>
+                      <span className="text-foreground font-medium">Guaranteed under 24 hours</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-border">
+                    <SignificaButton
+                      href="mailto:supportnyxra@gmail.com"
+                      variant="secondary"
+                      size="sm"
+                      className="w-full"
+                    >
+                      Open Email Client
+                    </SignificaButton>
+                  </div>
+                </div>
+
+                {/* What you receive card */}
+                <div className="p-6 rounded-2xl border border-border bg-background-panel shadow-xs">
+                  <h4 className="text-sm font-bold text-foreground uppercase tracking-wider mb-3">
+                    What You Receive in the Audit:
+                  </h4>
+                  <ul className="space-y-2.5 text-xs text-foreground-secondary">
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand font-bold">&bull;</span>
+                      <span>20-minute tailored video Loom analysis of your current presence</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand font-bold">&bull;</span>
+                      <span>Identification of 3 specific friction points losing you enquiries</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand font-bold">&bull;</span>
+                      <span>Proposed system architecture diagram with fixed pricing scope</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-brand font-bold">&bull;</span>
+                      <span>100% free with zero obligation to hire</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="bg-on-surface text-surface border-t border-outline-variant py-12 text-center text-xs">
-        <p>© 2026 NYXRA. All rights reserved. <Link href="/" className="underline text-secondary-container">Back to Home</Link></p>
-      </footer>
+      <Footer />
     </>
   );
 }

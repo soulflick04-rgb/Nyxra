@@ -1,684 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Nyxra | Websites, Lead Systems & AI Automation for Small Businesses</title>
-<meta name="description" content="Nyxra builds professional websites, lead-capture systems, appointment workflows and simple AI-powered automations that help small businesses grow.">
-<meta name="keywords" content="Nyxra, AI automation studio, lead capture systems, small business websites, appointment workflows, CRM setup, business automation, digital agency, Rishi Srivastav">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Great+Vibes&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script src="tailwind.config.js"></script>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container antialiased">
-<div class="texture-overlay"></div>
-
-<!-- Top Navigation -->
-<nav id="main-nav" class="bg-surface border-b border-outline w-full sticky top-0 z-50 transition-all duration-300">
-<div class="flex justify-between items-center w-full px-gutter py-3.5 max-w-container-max mx-auto">
-<a class="flex items-center gap-3 group" href="index.html">
-<img src="logo.png" alt="Nyxra Logo" class="h-10 w-10 object-contain rounded-lg border border-outline bg-surface-container-low p-1" onerror="this.style.display='none'">
-<span class="font-headline-lg text-headline-lg-mobile tracking-tighter text-on-surface uppercase group-hover:text-primary transition-colors">NYXRA</span>
-</a>
-
-<!-- Desktop Navigation Links -->
-<ul class="hidden lg:flex gap-7 items-center">
-<li><a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps uppercase" href="index.html">Home</a></li>
-<li><a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-primary transition-colors duration-200" href="services.html">Services</a></li>
-<li><a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-primary transition-colors duration-200" href="pricing.html">Pricing</a></li>
-<li><a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-primary transition-colors duration-200" href="portfolio.html">Demo Systems</a></li>
-<li><a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-primary transition-colors duration-200" href="about.html">About</a></li>
-<li><a class="text-on-surface-variant font-label-caps text-label-caps uppercase hover:text-primary transition-colors duration-200" href="contact.html">Audit & Contact</a></li>
-</ul>
-
-<!-- Trailing CTA -->
-<div class="hidden lg:flex items-center gap-4">
-<a href="contact.html" class="bg-on-surface text-surface px-6 py-3 font-button text-button uppercase tracking-wider hover:bg-primary transition-colors duration-300 shadow-[2px_2px_0px_#1c1b1b]">
-Free Business Audit
-</a>
-</div>
-
-<!-- Mobile Menu Button -->
-<button id="mobile-menu-btn" class="lg:hidden text-on-surface p-2" aria-label="Toggle Menu">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-outline">
-<div class="flex flex-col px-gutter py-6 gap-3 font-label-caps text-label-caps uppercase">
-<a class="text-primary py-2 border-b border-outline-variant" href="index.html">Home</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="services.html">Services</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="pricing.html">Pricing</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="portfolio.html">Demo Systems</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="about.html">About & Founder</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="contact.html">Contact & Audit</a>
-<a href="contact.html" class="bg-on-surface text-surface px-6 py-3 font-button text-button uppercase text-center mt-3 hover:bg-primary transition-colors">
-Get Free Business Audit
-</a>
-</div>
-</div>
-</nav>
-
-<main>
-<!-- Hero Section -->
-<section class="relative pt-16 md:pt-24 pb-section-gap px-gutter max-w-container-max mx-auto overflow-hidden">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center">
-<div class="lg:col-span-7 relative z-10 animate-fade-in-up">
-<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-outline bg-surface-container-high mb-6">
-<span class="material-symbols-outlined text-primary text-sm">auto_awesome</span>
-<span class="font-label-caps text-[11px] uppercase tracking-widest text-on-surface">AI-Powered Digital Growth & Automation Studio</span>
-</div>
-
-<h1 class="font-display-xl text-[48px] sm:text-[68px] lg:text-display-xl leading-[0.95] mb-6 text-on-surface">
-Grow Your <br>
-<span class="text-primary relative scribble-underline">Business</span> <br>
-with Better Websites & Smarter Systems.
-</h1>
-
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8 leading-relaxed">
-Nyxra builds professional websites, lead-capture systems and simple AI-powered automations that help businesses win more enquiries, follow up faster and reduce repetitive work.
-</p>
-
-<div class="flex flex-col sm:flex-row gap-4 mb-6">
-<a href="contact.html" class="inline-flex items-center justify-center bg-secondary-container text-on-secondary-container px-8 py-4 font-button text-button uppercase tracking-wider hover:bg-primary hover:text-white transition-all duration-300 shadow-[4px_4px_0px_#1c1b1b] border-2 border-on-surface active:translate-y-0.5 active:translate-x-0.5 active:shadow-[1px_1px_0px_#1c1b1b]">
-Get a Free Business Audit <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-</a>
-<a href="services.html" class="inline-flex items-center justify-center bg-surface-container-high text-on-surface px-8 py-4 font-button text-button uppercase tracking-wider hover:bg-surface-variant transition-all duration-300 border-2 border-on-surface">
-Explore Solutions
-</a>
-</div>
-
-<p class="text-xs uppercase font-label-caps tracking-widest text-primary flex items-center gap-2">
-<span class="material-symbols-outlined text-sm">verified</span>
-Clear scope. Practical systems. No unnecessary complexity.
-</p>
-</div>
-
-<!-- Hero Graphic & Overlapping Editorial Cards -->
-<div class="lg:col-span-5 relative mt-8 lg:mt-0 animate-fade-in-right">
-<!-- Interactive Systems Preview Stack -->
-<div class="relative bg-surface p-5 border-2 border-on-surface shadow-[8px_8px_0px_#1c1b1b] transform rotate-1 hover:rotate-0 transition-transform duration-500">
-<div class="flex items-center justify-between border-b border-outline pb-3 mb-4">
-<span class="font-label-caps text-xs uppercase tracking-wider font-bold flex items-center gap-2">
-<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-Live System Architecture
-</span>
-<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Nyxra OS</span>
-</div>
-
-<div class="grid grid-cols-2 gap-3 mb-4">
-<div class="p-3 bg-surface-container-low border border-outline">
-<span class="material-symbols-outlined text-primary text-xl mb-1">language</span>
-<p class="font-button text-xs uppercase text-on-surface">1. Website</p>
-<p class="text-[11px] text-on-surface-variant mt-0.5">Clear offer, trust & fast loading</p>
-</div>
-<div class="p-3 bg-surface-container-low border border-outline">
-<span class="material-symbols-outlined text-primary text-xl mb-1">input</span>
-<p class="font-button text-xs uppercase text-on-surface">2. Enquiry Form</p>
-<p class="text-[11px] text-on-surface-variant mt-0.5">Captures customer intent</p>
-</div>
-<div class="p-3 bg-surface-container-low border border-outline">
-<span class="material-symbols-outlined text-primary text-xl mb-1">table_chart</span>
-<p class="font-button text-xs uppercase text-on-surface">3. Lead Tracker</p>
-<p class="text-[11px] text-on-surface-variant mt-0.5">Google Sheets / CRM sync</p>
-</div>
-<div class="p-3 bg-surface-container-low border border-outline">
-<span class="material-symbols-outlined text-primary text-xl mb-1">notifications_active</span>
-<p class="font-button text-xs uppercase text-on-surface">4. Alert & Sync</p>
-<p class="text-[11px] text-on-surface-variant mt-0.5">Instant WhatsApp/Email alert</p>
-</div>
-<div class="col-span-2 p-3 bg-secondary-container/40 border border-on-surface">
-<div class="flex items-center justify-between">
-<div>
-<p class="font-button text-xs uppercase text-on-surface font-bold">5. Automated Follow-up Flow</p>
-<p class="text-[11px] text-on-surface-variant">Simple appointment confirmation & response templates</p>
-</div>
-<span class="material-symbols-outlined text-primary text-2xl">route</span>
-</div>
-</div>
-</div>
-
-<div class="flex items-center justify-between pt-2 border-t border-outline text-[11px] font-label-caps text-on-surface-variant">
-<span>CLIENT-OWNED ACCOUNTS</span>
-<a href="portfolio.html" class="text-primary hover:underline font-bold flex items-center gap-1">SEE DEMOS →</a>
-</div>
-</div>
-
-<!-- Floating Badge -->
-<div class="absolute -bottom-6 -left-6 bg-primary-container text-on-primary-container p-4 rounded-full w-28 h-28 flex flex-col items-center justify-center text-center shadow-lg transform -rotate-12 hover:rotate-0 transition-transform duration-500 border border-on-surface">
-<span class="font-label-caps text-[9px] leading-tight uppercase font-bold">Small Business</span>
-<span class="font-label-caps text-[10px] leading-tight uppercase font-black">Focused</span>
-<span class="material-symbols-outlined text-sm mt-0.5">tune</span>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Problems We Solve Section -->
-<section class="bg-surface-container-highest py-20 px-gutter border-y border-outline-variant relative">
-<div class="max-w-container-max mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-14 scroll-animate">
-<p class="font-label-caps text-label-caps text-primary uppercase mb-3 tracking-widest font-bold">Problems Nyxra Solves</p>
-<h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface">
-Your business may be losing customers before the conversation even starts.
-</h2>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-<!-- Problem 1 -->
-<div class="p-6 bg-surface border border-outline hover:border-primary transition-all duration-300 group scroll-animate">
-<span class="font-headline-lg text-2xl text-primary mb-3 block">01</span>
-<h3 class="font-button text-sm uppercase text-on-surface mb-2 font-bold">No Professional Website</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed">Prospects can't find you or don't trust what they see, losing credibility instantly.</p>
-</div>
-<!-- Problem 2 -->
-<div class="p-6 bg-surface border border-outline hover:border-primary transition-all duration-300 group scroll-animate">
-<span class="font-headline-lg text-2xl text-primary mb-3 block">02</span>
-<h3 class="font-button text-sm uppercase text-on-surface mb-2 font-bold">Scattered Enquiries</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed">Leads lost across random WhatsApp chats, direct messages, and missed phone calls.</p>
-</div>
-<!-- Problem 3 -->
-<div class="p-6 bg-surface border border-outline hover:border-primary transition-all duration-300 group scroll-animate">
-<span class="font-headline-lg text-2xl text-primary mb-3 block">03</span>
-<h3 class="font-button text-sm uppercase text-on-surface mb-2 font-bold">No Booking System</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed">Manual scheduling friction creates hesitation for patients, students, or clients.</p>
-</div>
-<!-- Problem 4 -->
-<div class="p-6 bg-surface border border-outline hover:border-primary transition-all duration-300 group scroll-animate">
-<span class="font-headline-lg text-2xl text-primary mb-3 block">04</span>
-<h3 class="font-button text-sm uppercase text-on-surface mb-2 font-bold">Poor Follow-Up</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed">High-intent leads go cold because there is no organized pipeline or reminder flow.</p>
-</div>
-<!-- Problem 5 -->
-<div class="p-6 bg-surface border border-outline hover:border-primary transition-all duration-300 group scroll-animate">
-<span class="font-headline-lg text-2xl text-primary mb-3 block">05</span>
-<h3 class="font-button text-sm uppercase text-on-surface mb-2 font-bold">Repetitive Tasks</h3>
-<p class="text-xs text-on-surface-variant leading-relaxed">Owner spends valuable hours answering the same basic questions over and over.</p>
-</div>
-</div>
-
-<div class="mt-10 p-6 bg-secondary-container border-2 border-on-surface text-center shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
-<p class="font-headline-lg text-xl md:text-2xl text-on-secondary-container">
-Nyxra connects these pieces into <span class="font-bold underline decoration-primary decoration-4">one simple digital system</span>.
-</p>
-</div>
-</div>
-</section>
-
-<!-- Core Services Section -->
-<section class="bg-on-surface text-surface py-section-gap px-gutter border-b border-surface">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-14 scroll-animate">
-<div>
-<p class="font-label-caps text-label-caps text-secondary-container uppercase mb-2 tracking-widest">Core Services</p>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-surface">
-Practical systems for visibility, <br>enquiries and follow-up.
-</h2>
-</div>
-<a href="services.html" class="mt-4 md:mt-0 font-button text-sm uppercase text-secondary-container hover:text-surface transition-colors flex items-center gap-2">
-View Detailed Deliverables <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-surface-variant/30">
-<!-- Service 1 -->
-<div class="p-8 border-b lg:border-r border-surface-variant/30 hover:bg-surface-variant/10 transition-colors group">
-<span class="material-symbols-outlined text-secondary-container text-4xl mb-5 group-hover:scale-110 transition-transform">web</span>
-<h3 class="font-button text-base uppercase text-surface mb-3">1. Websites & Landing Pages</h3>
-<p class="font-body-md text-sm text-surface-variant/80 mb-5 leading-relaxed">
-Fast, mobile-first websites designed to explain the business clearly and convert visitors into enquiries.
-</p>
-<ul class="space-y-2 text-xs text-surface-variant font-label-caps uppercase">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-secondary-container">check</span> Custom Responsive Design</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-secondary-container">check</span> WhatsApp & Call Click-to-Chat</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-secondary-container">check</span> Google Maps & Local SEO Setup</li>
-</ul>
-</div>
-
-<!-- Service 2 -->
-<div class="p-8 border-b lg:border-r border-surface-variant/30 hover:bg-surface-variant/10 transition-colors group">
-<span class="material-symbols-outlined text-primary-container text-4xl mb-5 group-hover:scale-110 transition-transform">filter_alt</span>
-<h3 class="font-button text-base uppercase text-surface mb-3">2. Lead Capture Systems</h3>
-<p class="font-body-md text-sm text-surface-variant/80 mb-5 leading-relaxed">
-Turn website visitors and social media interest into organised enquiries that are easy to follow up.
-</p>
-<ul class="space-y-2 text-xs text-surface-variant font-label-caps uppercase">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary-container">check</span> Custom High-Conversion Forms</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary-container">check</span> Google Sheets / CRM Sync</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary-container">check</span> Instant Lead Email/SMS Alerts</li>
-</ul>
-</div>
-
-<!-- Service 3 -->
-<div class="p-8 border-b border-surface-variant/30 hover:bg-surface-variant/10 transition-colors group">
-<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl mb-5 group-hover:scale-110 transition-transform">dashboard_customize</span>
-<h3 class="font-button text-base uppercase text-surface mb-3">3. CRM & Lead Management</h3>
-<p class="font-body-md text-sm text-surface-variant/80 mb-5 leading-relaxed">
-Keep prospect details, follow-up dates, notes and sales pipeline status in one organized place.
-</p>
-<ul class="space-y-2 text-xs text-surface-variant font-label-caps uppercase">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-tertiary-fixed-dim">check</span> Custom Lead Stages & Priority</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-tertiary-fixed-dim">check</span> Follow-up Reminders & Notes</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-tertiary-fixed-dim">check</span> Lightweight Reporting Dashboard</li>
-</ul>
-</div>
-
-<!-- Service 4 -->
-<div class="p-8 border-b lg:border-b-0 lg:border-r border-surface-variant/30 hover:bg-surface-variant/10 transition-colors group">
-<span class="material-symbols-outlined text-secondary-container text-4xl mb-5 group-hover:scale-110 transition-transform">calendar_month</span>
-<h3 class="font-button text-base uppercase text-surface mb-3">4. Appointment & Enquiry Systems</h3>
-<p class="font-body-md text-sm text-surface-variant/80 mb-5 leading-relaxed">
-Make it effortless for customers to request appointments, consultations, callbacks or bookings.
-</p>
-<ul class="space-y-2 text-xs text-surface-variant font-label-caps uppercase">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-secondary-container">check</span> Booking & Request Flow</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-secondary-container">check</span> Calendar Connection & Alerts</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-secondary-container">check</span> Confirmation Messaging</li>
-</ul>
-</div>
-
-<!-- Service 5 -->
-<div class="p-8 border-b lg:border-b-0 lg:border-r border-surface-variant/30 hover:bg-surface-variant/10 transition-colors group">
-<span class="material-symbols-outlined text-primary-container text-4xl mb-5 group-hover:scale-110 transition-transform">psychology</span>
-<h3 class="font-button text-base uppercase text-surface mb-3">5. AI Content Starter Systems</h3>
-<p class="font-body-md text-sm text-surface-variant/80 mb-5 leading-relaxed">
-A reusable system for creating consistent marketing content and responding quickly to customer queries.
-</p>
-<ul class="space-y-2 text-xs text-surface-variant font-label-caps uppercase">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary-container">check</span> 30-Day Content Calendar & Captions</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary-container">check</span> Business AI Prompt Library</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary-container">check</span> Customer Reply & FAQ Templates</li>
-</ul>
-</div>
-
-<!-- Service Highlight Box -->
-<div class="p-8 bg-surface-variant/10 flex flex-col justify-between">
-<div>
-<span class="font-label-caps text-xs uppercase tracking-widest text-secondary-container block mb-2">Need A Tailored Plan?</span>
-<h4 class="font-headline-lg text-2xl text-surface mb-3">Simple Project Scope</h4>
-<p class="text-xs text-surface-variant/80 leading-relaxed">
-Every package is scoped with transparent pricing, zero technical jargon, and client-owned tool accounts.
-</p>
-</div>
-<a href="contact.html" class="mt-6 inline-block bg-primary text-white font-button text-xs uppercase tracking-wider py-3 px-5 text-center hover:bg-primary-container transition-colors">
-Request Scope Review
-</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Solutions By Business Type Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
-<p class="font-label-caps text-label-caps text-primary uppercase mb-3 tracking-widest font-bold">Solutions By Industry</p>
-<h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface">
-Built around how small businesses actually operate.
-</h2>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- Clinic -->
-<div class="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
-<h3 class="font-headline-lg text-xl">Clinics & Diagnostics</h3>
-</div>
-<div class="space-y-3 text-xs leading-relaxed">
-<p><strong class="text-primary uppercase font-label-caps">Problem:</strong> Appointment requests arrive scattered across calls, messages, and counter visits.</p>
-<p><strong class="text-on-surface uppercase font-label-caps">System:</strong> Clinic website, appointment request flow, lead tracker and staff notification alert.</p>
-<p class="p-2.5 bg-surface-container-high border-l-2 border-primary"><strong class="font-bold text-on-surface">Outcome:</strong> Patients know what to do next; staff follows up with zero confusion.</p>
-</div>
-</div>
-
-<!-- Coaching -->
-<div class="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-primary text-3xl">school</span>
-<h3 class="font-headline-lg text-xl">Coaching & Institutes</h3>
-</div>
-<div class="space-y-3 text-xs leading-relaxed">
-<p><strong class="text-primary uppercase font-label-caps">Problem:</strong> Student queries lack context, counselling status, and admission follow-up.</p>
-<p><strong class="text-on-surface uppercase font-label-caps">System:</strong> Course landing pages, student enquiry form, course selection and admission pipeline.</p>
-<p class="p-2.5 bg-surface-container-high border-l-2 border-primary"><strong class="font-bold text-on-surface">Outcome:</strong> Every enquiry is qualified, tracked, and converted smoothly.</p>
-</div>
-</div>
-
-<!-- Consultants -->
-<div class="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-primary text-3xl">person_search</span>
-<h3 class="font-headline-lg text-xl">Consultants & Freelancers</h3>
-</div>
-<div class="space-y-3 text-xs leading-relaxed">
-<p><strong class="text-primary uppercase font-label-caps">Problem:</strong> Unqualified leads waste valuable time before a consultation even starts.</p>
-<p><strong class="text-on-surface uppercase font-label-caps">System:</strong> Personal-brand site, consultation request, lead qualification and proposal stage.</p>
-<p class="p-2.5 bg-surface-container-high border-l-2 border-primary"><strong class="font-bold text-on-surface">Outcome:</strong> High-intent conversations with clear offer positioning.</p>
-</div>
-</div>
-
-<!-- Salons / Gyms -->
-<div class="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-primary text-3xl">spa</span>
-<h3 class="font-headline-lg text-xl">Salons, Gyms & Wellness</h3>
-</div>
-<div class="space-y-3 text-xs leading-relaxed">
-<p><strong class="text-primary uppercase font-label-caps">Problem:</strong> Customers want instant service info and fast booking without calling.</p>
-<p><strong class="text-on-surface uppercase font-label-caps">System:</strong> Service landing pages, booking request, response templates & reminders.</p>
-<p class="p-2.5 bg-surface-container-high border-l-2 border-primary"><strong class="font-bold text-on-surface">Outcome:</strong> Cleaner conversion path from curiosity to confirmed visits.</p>
-</div>
-</div>
-
-<!-- Local Services -->
-<div class="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-primary text-3xl">home_repair_service</span>
-<h3 class="font-headline-lg text-xl">Local Service Businesses</h3>
-</div>
-<div class="space-y-3 text-xs leading-relaxed">
-<p><strong class="text-primary uppercase font-label-caps">Problem:</strong> Owners lose customer leads because follow-up depends on memory and chats.</p>
-<p><strong class="text-on-surface uppercase font-label-caps">System:</strong> Local website, enquiry form, Google Maps, WhatsApp path and lead tracker.</p>
-<p class="p-2.5 bg-surface-container-high border-l-2 border-primary"><strong class="font-bold text-on-surface">Outcome:</strong> Leads organised by status, priority, and next required action.</p>
-</div>
-</div>
-
-<!-- Startups -->
-<div class="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b] scroll-animate">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
-<h3 class="font-headline-lg text-xl">Early-Stage Startups</h3>
-</div>
-<div class="space-y-3 text-xs leading-relaxed">
-<p><strong class="text-primary uppercase font-label-caps">Problem:</strong> Founders need a credible first digital footprint without bloated enterprise costs.</p>
-<p><strong class="text-on-surface uppercase font-label-caps">System:</strong> Landing page, contact flow, analytics, CRM starter and content prompt library.</p>
-<p class="p-2.5 bg-surface-container-high border-l-2 border-primary"><strong class="font-bold text-on-surface">Outcome:</strong> Immediate market credibility with lightweight operating systems.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Pricing Packages Overview -->
-<section class="bg-surface-container-low py-section-gap px-gutter border-t border-outline">
-<div class="max-w-container-max mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 scroll-animate">
-<p class="font-label-caps text-label-caps text-primary uppercase mb-3 tracking-widest font-bold">Clear Pricing</p>
-<h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface">
-Productised packages with clear starting points.
-</h2>
-<p class="font-body-md text-on-surface-variant mt-3">Scope, third-party tools, and ongoing costs are confirmed before any work begins.</p>
-</div>
-
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-<!-- Plan 1 -->
-<div class="p-8 bg-surface border-2 border-on-surface flex flex-col justify-between scroll-animate">
-<div>
-<h3 class="font-headline-lg text-2xl mb-1">Digital Launch</h3>
-<p class="text-xs text-on-surface-variant mb-6">A professional online presence for small businesses that need clarity and trust.</p>
-<div class="mb-6 pb-6 border-b border-outline">
-<span class="font-label-caps text-xs uppercase tracking-widest text-on-surface-variant block">Starting at</span>
-<span class="font-display-lg text-4xl font-bold text-primary">₹10,000</span>
-</div>
-<ul class="space-y-3 text-xs text-on-surface mb-8">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Professional business website</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Mobile-responsive & fast loading</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Contact form & WhatsApp click-to-chat</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Google Maps integration & Basic SEO</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Hosting deployment support</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Two structured revision rounds</li>
-</ul>
-</div>
-<a href="contact.html" class="w-full text-center bg-on-surface text-surface py-3.5 font-button text-xs uppercase tracking-widest hover:bg-primary transition-colors">
-Launch My Business Online
-</a>
-</div>
-
-<!-- Plan 2 (Popular) -->
-<div class="p-8 bg-surface border-2 border-primary shadow-[6px_6px_0px_#b02f00] relative flex flex-col justify-between scroll-animate">
-<div class="absolute -top-3.5 right-6 bg-primary text-white text-[10px] uppercase font-bold font-label-caps px-3 py-1 tracking-widest">
-Most Popular
-</div>
-<div>
-<h3 class="font-headline-lg text-2xl mb-1">Lead Growth System</h3>
-<p class="text-xs text-on-surface-variant mb-6">The practical starting point for websites plus organised enquiry management.</p>
-<div class="mb-6 pb-6 border-b border-outline">
-<span class="font-label-caps text-xs uppercase tracking-widest text-on-surface-variant block">Starting at</span>
-<span class="font-display-lg text-4xl font-bold text-primary">₹15,000</span>
-</div>
-<ul class="space-y-3 text-xs text-on-surface mb-8">
-<li class="flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-primary text-sm">check</span> Everything in Digital Launch</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Advanced qualification enquiry form</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Lead tracker / basic CRM connection</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Appointment & callback workflow setup</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Email/SMS notification workflow</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Follow-up reply message templates</li>
-</ul>
-</div>
-<a href="contact.html" class="w-full text-center bg-primary text-white py-3.5 font-button text-xs uppercase tracking-widest hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#1c1b1b]">
-Build My Lead System
-</a>
-</div>
-
-<!-- Plan 3 -->
-<div class="p-8 bg-surface border-2 border-on-surface flex flex-col justify-between scroll-animate">
-<div>
-<h3 class="font-headline-lg text-2xl mb-1">AI Business Starter</h3>
-<p class="text-xs text-on-surface-variant mb-6">A stronger system for content, customer replies and simple business automation.</p>
-<div class="mb-6 pb-6 border-b border-outline">
-<span class="font-label-caps text-xs uppercase tracking-widest text-on-surface-variant block">Starting at</span>
-<span class="font-display-lg text-4xl font-bold text-primary">₹20,000</span>
-</div>
-<ul class="space-y-3 text-xs text-on-surface mb-8">
-<li class="flex items-center gap-2 font-bold"><span class="material-symbols-outlined text-primary text-sm">check</span> Everything in Lead Growth</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> 30-day content calendar & caption bank</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Branded social templates & prompt library</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> FAQ & customer-response automation</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Proposal & quotation template pack</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> 30 days of direct basic support</li>
-</ul>
-</div>
-<a href="contact.html" class="w-full text-center bg-on-surface text-surface py-3.5 font-button text-xs uppercase tracking-widest hover:bg-primary transition-colors">
-Request Custom Plan
-</a>
-</div>
-</div>
-
-<div class="mt-8 p-5 bg-surface border border-outline flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-<p class="text-on-surface-variant">
-<strong>Note:</strong> Domains, hosting, paid APIs and third-party tools are confirmed beforehand. Optional Website Care available from ₹1,999/month.
-</p>
-<a href="pricing.html" class="font-bold text-primary hover:underline whitespace-nowrap">View Complete Pricing Details →</a>
-</div>
-</div>
-</section>
-
-<!-- Founder Section -->
-<section class="py-section-gap px-gutter max-w-container-max mx-auto border-t border-outline">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-center">
-<div class="lg:col-span-5 flex justify-center scroll-animate">
-<div class="relative">
-<div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 border-on-surface overflow-hidden shadow-[8px_8px_0px_#1c1b1b] bg-surface-container-high">
-<img src="founder.jpg" alt="Rishi Srivastav, Founder of Nyxra" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAtdgss1W5xXArng7ZHIv4TJZdr8Bv1diEM-6KCJ46KZVuhyt-YvyJVxtf20ERioJhq2fFoJFazl2t96Mx1qZf2axm2sKOnA7xqmgB7nTTlEhMBhps7d9ghHtxJmRiRBTe4xh2uLVyBRhkvTStAaxwUDrLU4pR8Cw2J86exuGF4CcDaRzx3Nsb00IjbtOPWSJUwIFEy0FY2KTHWUu-y9sPQZeAWqmQhVcNFHalpw_65HvMxD729cm_zSQ'">
-</div>
-<div class="absolute bottom-2 right-2 bg-secondary-container border border-on-surface px-4 py-2 text-xs font-label-caps uppercase font-bold shadow-[2px_2px_0px_#1c1b1b]">
-Founder Led
-</div>
-</div>
-</div>
-<div class="lg:col-span-7 scroll-animate">
-<p class="font-label-caps text-label-caps text-primary uppercase mb-2 tracking-widest">About The Founder</p>
-<h2 class="font-headline-lg text-3xl sm:text-headline-lg text-on-surface mb-6">
-Rishi Srivastav
-</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
-Nyxra was founded by Rishi Srivastav to help small businesses use modern digital and AI tools without needing a large technical team. The goal is simple: build clear websites and practical systems that make businesses easier to discover, contact and operate.
-</p>
-<p class="font-serif italic text-3xl text-primary mb-6" style="font-family: 'Great Vibes', cursive;">
-Rishi Srivastav
-</p>
-<div class="flex items-center gap-4">
-<a href="about.html" class="inline-flex items-center gap-2 font-button text-xs uppercase border-b-2 border-on-surface pb-1 hover:text-primary hover:border-primary transition-colors">
-Read Our 7 Core Principles <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- FAQ Section -->
-<section class="bg-surface-container-lowest border-t border-outline py-section-gap">
-<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-gutter">
-<div class="md:col-span-4">
-<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tighter sticky top-24">
-Straight<br/>Answers<br/>Before<br/>You Start.
-</h2>
-</div>
-<div class="md:col-span-8 md:col-start-5 flex flex-col border-t border-outline">
-<!-- FAQ 1 -->
-<div class="accordion-item border-b border-outline py-5 cursor-pointer group active">
-<div class="flex justify-between items-center">
-<h3 class="font-headline-lg text-lg text-on-surface group-hover:text-primary transition-colors">What exactly does Nyxra build?</h3>
-<span class="material-symbols-outlined accordion-icon text-outline text-2xl">add</span>
-</div>
-<div class="accordion-content text-sm text-on-surface-variant pr-10 leading-relaxed">
-<p>Nyxra builds websites, landing pages, lead-capture systems, simple CRM trackers, appointment request workflows and reusable AI-assisted content systems for small businesses.</p>
-</div>
-</div>
-
-<!-- FAQ 2 -->
-<div class="accordion-item border-b border-outline py-5 cursor-pointer group">
-<div class="flex justify-between items-center">
-<h3 class="font-headline-lg text-lg text-on-surface group-hover:text-primary transition-colors">Do I need technical knowledge?</h3>
-<span class="material-symbols-outlined accordion-icon text-outline text-2xl">add</span>
-</div>
-<div class="accordion-content text-sm text-on-surface-variant pr-10 leading-relaxed">
-<p>No. The project is planned in plain language, and the handover includes straightforward guidance on managing your forms, leads, and website content.</p>
-</div>
-</div>
-
-<!-- FAQ 3 -->
-<div class="accordion-item border-b border-outline py-5 cursor-pointer group">
-<div class="flex justify-between items-center">
-<h3 class="font-headline-lg text-lg text-on-surface group-hover:text-primary transition-colors">How long does a project take?</h3>
-<span class="material-symbols-outlined accordion-icon text-outline text-2xl">add</span>
-</div>
-<div class="accordion-content text-sm text-on-surface-variant pr-10 leading-relaxed">
-<p>Most small projects can be planned and built in days to a few weeks depending on scope, content readiness and integrations.</p>
-</div>
-</div>
-
-<!-- FAQ 4 -->
-<div class="accordion-item border-b border-outline py-5 cursor-pointer group">
-<div class="flex justify-between items-center">
-<h3 class="font-headline-lg text-lg text-on-surface group-hover:text-primary transition-colors">Will I own my website and data?</h3>
-<span class="material-symbols-outlined accordion-icon text-outline text-2xl">add</span>
-</div>
-<div class="accordion-content text-sm text-on-surface-variant pr-10 leading-relaxed">
-<p>Where practical, client-owned accounts are used for hosting, domain, forms, analytics and connected business tools so you maintain 100% control.</p>
-</div>
-</div>
-
-<!-- FAQ 5 -->
-<div class="accordion-item border-b border-outline py-5 cursor-pointer group">
-<div class="flex justify-between items-center">
-<h3 class="font-headline-lg text-lg text-on-surface group-hover:text-primary transition-colors">Do you guarantee sales or revenue?</h3>
-<span class="material-symbols-outlined accordion-icon text-outline text-2xl">add</span>
-</div>
-<div class="accordion-content text-sm text-on-surface-variant pr-10 leading-relaxed">
-<p>No. Nyxra builds professional systems that improve clarity, enquiry capture and follow-up, but sales depend on your offer, market, pricing, traffic and business execution.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Final Audit CTA Banner -->
-<section class="bg-secondary-container text-on-secondary-container py-16 px-gutter border-t-2 border-on-surface relative overflow-hidden">
-<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center relative z-10">
-<div class="mb-8 md:mb-0">
-<p class="font-label-caps text-xs uppercase mb-2 tracking-widest font-bold">Start With A Free Review</p>
-<h2 class="font-display-lg text-3xl md:text-5xl leading-tight">
-Let's build a simpler system <br>for your business.
-</h2>
-</div>
-<div class="flex flex-col sm:flex-row gap-4">
-<a href="contact.html" class="bg-on-secondary-container text-secondary-container px-8 py-4 font-button text-button uppercase tracking-widest hover:bg-primary hover:text-white transition-colors duration-300 flex items-center gap-3">
-Get My Free Audit <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-<a href="mailto:supportnyxra@gmail.com" class="border-2 border-on-secondary-container px-6 py-4 font-button text-button uppercase tracking-wider hover:bg-on-secondary-container hover:text-secondary-container transition-colors">
-Email Nyxra
-</a>
-</div>
-</div>
-</section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-on-surface text-surface border-t border-outline-variant w-full">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg w-full px-gutter py-section-gap max-w-container-max mx-auto">
-<div>
-<a class="flex items-center gap-3 mb-4" href="index.html">
-<img src="logo.png" alt="Nyxra" class="h-8 w-8 object-contain rounded bg-surface p-0.5">
-<span class="font-display-lg text-2xl text-surface tracking-tighter">NYXRA</span>
-</a>
-<p class="font-body-md text-xs text-surface-variant max-w-xs leading-relaxed">
-Nyxra builds websites, lead systems and simple automations for growing businesses.
-</p>
-<p class="mt-4 text-xs font-mono text-secondary-container">supportnyxra@gmail.com</p>
-</div>
-
-<div>
-<h4 class="font-label-caps text-label-caps uppercase text-surface-variant mb-4 tracking-widest">Navigation</h4>
-<ul class="flex flex-col gap-2.5 font-body-md text-xs text-surface-variant">
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="index.html">Home</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="services.html">Services</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="pricing.html">Pricing Packages</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="portfolio.html">Demo Systems</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="about.html">About & Founder</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="contact.html">Free Audit & Contact</a></li>
-</ul>
-</div>
-
-<div>
-<h4 class="font-label-caps text-label-caps uppercase text-surface-variant mb-4 tracking-widest">Demo Systems</h4>
-<ul class="flex flex-col gap-2.5 font-body-md text-xs text-surface-variant">
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="clinic-demo.html">Clinic Appointment System (Live)</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="portfolio.html#coaching">Coaching Admission Pipeline</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="portfolio.html#consultant">Consultant Booking System</a></li>
-</ul>
-</div>
-
-<div>
-<h4 class="font-label-caps text-label-caps uppercase text-surface-variant mb-4 tracking-widest">Legal & Scope</h4>
-<ul class="flex flex-col gap-2.5 font-body-md text-xs text-surface-variant mb-4">
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="privacy.html">Privacy Policy</a></li>
-<li><a class="hover:text-secondary-fixed-dim hover:underline" href="terms.html">Terms of Service</a></li>
-</ul>
-<div class="border border-surface-variant/30 p-3 rounded-full inline-block">
-<p class="font-label-caps text-[9px] uppercase text-center flex flex-col items-center gap-0.5">
-<span>Practical Systems</span>
-<span class="text-primary font-bold">Real Outcomes</span>
-</p>
-</div>
-</div>
-</div>
-
-<div class="border-t border-surface-variant/20 px-gutter py-6 text-center md:flex md:justify-between max-w-container-max mx-auto text-xs font-label-caps text-surface-variant">
-<p>© 2026 NYXRA. Founder Rishi Srivastav. All rights reserved.</p>
-<p class="mt-2 md:mt-0">Scope, costs & third-party tools are confirmed in a written proposal.</p>
-</div>
-</footer>
-
-<script src="main.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/logo.png"/><link rel="preload" as="image" href="/sample-1.png"/><link rel="preload" as="image" href="/sample-2.png"/><link rel="preload" as="image" href="/founder.jpg"/><link rel="stylesheet" href="/_next/static/chunks/2pf8bb0ioc91j.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/1u5zan5bs9a7v.js"/><script src="/_next/static/chunks/0s8w3af4l-q85.js" async=""></script><script src="/_next/static/chunks/02fh7_m5mrih8.js" async=""></script><script src="/_next/static/chunks/turbopack-3q_wial4pwd-t.js" async=""></script><script src="/_next/static/chunks/3fntmmi971322.js" async="" crossorigin=""></script><script src="/_next/static/chunks/3lv5m-3meiav5.js" async="" crossorigin=""></script><script src="/_next/static/chunks/09hcha-zxg1rv.js" async="" crossorigin=""></script><link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" as="style"/><title>Nyxra | Websites, Lead Systems &amp; AI Automation for Small Businesses</title><meta name="description" content="Nyxra builds professional websites, lead-capture systems, appointment workflows and simple AI-powered automations that help small businesses grow."/><link rel="shortcut icon" href="/favicon.ico?v=2"/><link rel="icon" href="/favicon.ico?favicon.0frn9-j9ry_r7.ico" sizes="32x32" type="image/x-icon"/><link rel="icon" href="/favicon.ico?v=2"/><link rel="icon" href="/favicon-32.png?v=2" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon-48.png?v=2" sizes="48x48" type="image/png"/><link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2"/><link rel="icon" href="/favicon.ico?v=2" sizes="any"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2"/><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png?v=2"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script src="/tailwind.config.js"></script><script>
+              (function() {
+                try {
+                  const saved = localStorage.getItem('nyxra-theme');
+                  if (saved) {
+                    document.documentElement.setAttribute('data-theme', saved);
+                  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                  }
+                } catch (e) {}
+              })();
+            </script><script src="/_next/static/chunks/0cz1d0mv5g_q7.js" noModule=""></script></head><body class="bg-background text-foreground selection:bg-brand selection:text-foreground antialiased min-h-screen"><div hidden=""><!--$--><!--/$--></div><div class="h-[76px] w-full"></div><header class="fixed top-0 left-0 right-0 z-40 h-[76px] bg-background/95 backdrop-blur-md transition-all duration-300 ease-motion border-b border-b-transparent translate-y-0"><div class="container-significa h-full flex items-center justify-between"><a class="flex items-center gap-2.5 group" href="/"><div class="w-8 h-8 rounded-lg overflow-hidden border border-border bg-background-offset p-0.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-105"><img src="/logo.png" alt="Nyxra" class="w-full h-full object-contain"/></div><div class="flex flex-col"><span class="text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-brand">NYXRA</span></div></a><nav class="hidden lg:flex items-center gap-8 text-sm font-medium"><a class="relative py-1 transition-colors duration-200 text-foreground font-semibold" href="/">Home<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-brand rounded-full"></span></a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/services">Services</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/pricing">Pricing</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/portfolio">Demo Systems</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/about">About</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/contact">Audit &amp; Contact</a></nav><div class="flex items-center gap-3"><div class="w-[50px] h-[26px] rounded-full bg-background-offset border border-border opacity-50 "></div><div class="hidden sm:block"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-9 rounded-sm px-3.5 text-xs
+    bg-foreground text-background hover:bg-foreground/90" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Free Audit</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-3"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div><button type="button" aria-label="Open directory menu" class="w-9 h-9 rounded-md border border-border bg-transparent text-foreground flex items-center justify-center hover:border-border-active hover:bg-background-offset/50 transition-all duration-200 outline-none focus-visible:ring-2 ring-brand"><svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><circle cx="4" cy="10" r="1.75"></circle><circle cx="10" cy="10" r="1.75"></circle><circle cx="16" cy="10" r="1.75"></circle></svg></button></div></div></header><main class="min-h-screen"><section class="pt-12 sm:pt-20 pb-16"><div class="container-significa"><div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-offset border border-border text-xs font-semibold uppercase tracking-wider text-foreground mb-8"><span class="w-2 h-2 rounded-full bg-brand animate-ping"></span><span>Digital Growth &amp; Automation Studio</span></div><div class="mb-8"><h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-[-0.02em] leading-[1.08] max-w-5xl"><span style="opacity:0;transform:translateY(0.75ch)" class="mr-2.5 sm:mr-4 inline-block transition-all duration-500 ease-motion text-foreground">Websites.</span><span style="opacity:0;transform:translateY(0.75ch)" class="mr-2.5 sm:mr-4 inline-block transition-all duration-500 ease-motion text-foreground">Lead Systems.<span class="hidden sm:inline"><br/></span></span><span style="opacity:0;transform:translateY(0.75ch)" class="mr-2.5 sm:mr-4 inline-block transition-all duration-500 ease-motion text-foreground">Automations.</span><span style="opacity:0;transform:translateY(0.75ch)" class="mr-2.5 sm:mr-4 inline-block transition-all duration-500 ease-motion text-foreground">Growth.<span class="hidden sm:inline"><br/></span></span><span style="opacity:0;transform:translateY(0.75ch)" class="mr-2.5 sm:mr-4 inline-block transition-all duration-500 ease-motion text-foreground-secondary">Scale.</span></h1></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12"><div class="lg:col-span-8"><p class="text-xl sm:text-2xl text-foreground-secondary leading-relaxed font-normal max-w-3xl">Nyxra builds professional websites, lead-capture systems, and practical AI automations that help small businesses win more enquiries, follow up faster, and eliminate repetitive daily work.</p></div><div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-14 rounded-lg px-7 text-base
+    bg-brand text-foreground hover:brightness-105 font-semibold
+    w-full" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-3.5">Get Free Business Audit</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-6"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-14 rounded-lg px-7 text-base
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40
+    w-full" href="/services"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion ">Explore Solutions</span></a></div></div><div class="pt-8 border-t border-border"><p class="text-xs uppercase font-semibold tracking-wider text-foreground-secondary mb-4">Explore Studio Highlights</p><div class="relative -mx-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 "><div aria-hidden="true" style="opacity:0;transform:scale(0.95);left:0;top:0;width:0;height:0" class="pointer-events-none absolute -z-10 rounded-xl bg-background-offset border border-border/80 transition-all duration-300 ease-smooth"></div><a class="group flex flex-col justify-between p-4 rounded-xl border border-border/50 bg-background/50 hover:border-transparent transition-colors" href="/clinic-demo"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-medium uppercase tracking-wider text-foreground-secondary">From Demo Systems</span><span class="w-6 h-6 rounded-md bg-background-offset border border-border flex items-center justify-center text-foreground-secondary group-hover:text-foreground group-hover:border-brand transition-colors"><span class="material-symbols-outlined text-[15px]">medical_services</span></span></div><h3 class="text-base font-semibold text-foreground leading-snug mb-1 group-hover:text-foreground">Clinic Booking &amp; Patient Engine</h3><p class="text-xs text-foreground-secondary leading-relaxed">Live Interactive Simulator</p></div><div class="mt-4 pt-3 border-t border-border/40 flex items-center justify-between text-xs font-medium text-foreground-secondary group-hover:text-foreground"><span>Explore</span><span class="transform transition-transform duration-300 group-hover:translate-x-1"><svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></div></a><a class="group flex flex-col justify-between p-4 rounded-xl border border-border/50 bg-background/50 hover:border-transparent transition-colors" href="/about"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-medium uppercase tracking-wider text-foreground-secondary">Our Philosophy</span><span class="w-6 h-6 rounded-md bg-background-offset border border-border flex items-center justify-center text-foreground-secondary group-hover:text-foreground group-hover:border-brand transition-colors"><span class="material-symbols-outlined text-[15px]">handyman</span></span></div><h3 class="text-base font-semibold text-foreground leading-snug mb-1 group-hover:text-foreground">7 Core Principles That Guide Nyxra</h3><p class="text-xs text-foreground-secondary leading-relaxed">Practical Systems Over Hype</p></div><div class="mt-4 pt-3 border-t border-border/40 flex items-center justify-between text-xs font-medium text-foreground-secondary group-hover:text-foreground"><span>Explore</span><span class="transform transition-transform duration-300 group-hover:translate-x-1"><svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></div></a><a class="group flex flex-col justify-between p-4 rounded-xl border border-border/50 bg-background/50 hover:border-transparent transition-colors" href="/pricing"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-medium uppercase tracking-wider text-foreground-secondary">Pricing &amp; Scope</span><span class="w-6 h-6 rounded-md bg-background-offset border border-border flex items-center justify-center text-foreground-secondary group-hover:text-foreground group-hover:border-brand transition-colors"><span class="material-symbols-outlined text-[15px]">receipt_long</span></span></div><h3 class="text-base font-semibold text-foreground leading-snug mb-1 group-hover:text-foreground">Transparent Productised Pricing</h3><p class="text-xs text-foreground-secondary leading-relaxed">Clear scope from ₹10,000</p></div><div class="mt-4 pt-3 border-t border-border/40 flex items-center justify-between text-xs font-medium text-foreground-secondary group-hover:text-foreground"><span>Explore</span><span class="transform transition-transform duration-300 group-hover:translate-x-1"><svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></div></a><a class="group flex flex-col justify-between p-4 rounded-xl border border-border/50 bg-background/50 hover:border-transparent transition-colors" href="/contact"><div><div class="flex items-center justify-between mb-3"><span class="text-[11px] font-medium uppercase tracking-wider text-foreground-secondary">Complimentary Review</span><span class="w-6 h-6 rounded-md bg-background-offset border border-border flex items-center justify-center text-foreground-secondary group-hover:text-foreground group-hover:border-brand transition-colors"><span class="material-symbols-outlined text-[15px]">auto_awesome</span></span></div><h3 class="text-base font-semibold text-foreground leading-snug mb-1 group-hover:text-foreground">Free 20-Min Business Audit</h3><p class="text-xs text-foreground-secondary leading-relaxed">Identify your enquiry leaks</p></div><div class="mt-4 pt-3 border-t border-border/40 flex items-center justify-between text-xs font-medium text-foreground-secondary group-hover:text-foreground"><span>Explore</span><span class="transform transition-transform duration-300 group-hover:translate-x-1"><svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></div></a></div></div></div></section><section class="py-20 bg-background-panel border-y border-border transition-colors"><div class="container-significa"><div class="flex flex-col md:flex-row items-start md:items-end justify-between pb-12 border-b border-border gap-6"><div><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">The Friction We Eliminate</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground max-w-2xl">Your business may be losing customers before the conversation even starts.</h2></div><p class="text-sm text-foreground-secondary max-w-sm">Most small businesses don&#x27;t need complex enterprise software. They need clean communication, structured enquiry capture, and prompt follow-up.</p></div><div class="grid grid-cols-1 md:grid-cols-5 gap-4 mt-12"><div class="p-6 rounded-xl border border-border bg-background hover:border-brand transition-all duration-300 group shadow-xs flex flex-col justify-between"><div><span class="text-2xl font-bold font-mono text-brand mb-4 block">01</span><h3 class="text-base font-bold text-foreground mb-2 group-hover:text-foreground">No Professional Website</h3><p class="text-xs text-foreground-secondary leading-relaxed">Prospects cannot find you on Google or do not trust what they see, losing credibility instantly before enquiring.</p></div><div class="mt-6 pt-3 border-t border-border/40 text-[11px] font-medium text-foreground-secondary">Solved by Nyxra OS</div></div><div class="p-6 rounded-xl border border-border bg-background hover:border-brand transition-all duration-300 group shadow-xs flex flex-col justify-between"><div><span class="text-2xl font-bold font-mono text-brand mb-4 block">02</span><h3 class="text-base font-bold text-foreground mb-2 group-hover:text-foreground">Scattered Enquiries</h3><p class="text-xs text-foreground-secondary leading-relaxed">High-intent leads are lost across random WhatsApp chats, direct Instagram messages, and missed phone calls.</p></div><div class="mt-6 pt-3 border-t border-border/40 text-[11px] font-medium text-foreground-secondary">Solved by Nyxra OS</div></div><div class="p-6 rounded-xl border border-border bg-background hover:border-brand transition-all duration-300 group shadow-xs flex flex-col justify-between"><div><span class="text-2xl font-bold font-mono text-brand mb-4 block">03</span><h3 class="text-base font-bold text-foreground mb-2 group-hover:text-foreground">No Booking System</h3><p class="text-xs text-foreground-secondary leading-relaxed">Manual scheduling friction creates hesitation for patients, students, or high-ticket clients.</p></div><div class="mt-6 pt-3 border-t border-border/40 text-[11px] font-medium text-foreground-secondary">Solved by Nyxra OS</div></div><div class="p-6 rounded-xl border border-border bg-background hover:border-brand transition-all duration-300 group shadow-xs flex flex-col justify-between"><div><span class="text-2xl font-bold font-mono text-brand mb-4 block">04</span><h3 class="text-base font-bold text-foreground mb-2 group-hover:text-foreground">Poor Follow-Up</h3><p class="text-xs text-foreground-secondary leading-relaxed">Warm leads go cold because there is no organized pipeline, reminder schedule, or notification alert for staff.</p></div><div class="mt-6 pt-3 border-t border-border/40 text-[11px] font-medium text-foreground-secondary">Solved by Nyxra OS</div></div><div class="p-6 rounded-xl border border-border bg-background hover:border-brand transition-all duration-300 group shadow-xs flex flex-col justify-between"><div><span class="text-2xl font-bold font-mono text-brand mb-4 block">05</span><h3 class="text-base font-bold text-foreground mb-2 group-hover:text-foreground">Repetitive Tasks</h3><p class="text-xs text-foreground-secondary leading-relaxed">Business owners spend hours answering the same basic questions, pricing queries, and appointment requests.</p></div><div class="mt-6 pt-3 border-t border-border/40 text-[11px] font-medium text-foreground-secondary">Solved by Nyxra OS</div></div></div><div class="mt-8 p-6 rounded-xl bg-brand text-foreground flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-3xl">auto_fix_high</span><div><h4 class="text-lg font-bold">One Connected Digital System</h4><p class="text-xs opacity-90">Nyxra unifies website, enquiry form, notification alert, and lead tracker into a single flow.</p></div></div><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-9 rounded-sm px-3.5 text-xs
+    bg-foreground text-background hover:bg-foreground/90
+    flex-shrink-0" href="/portfolio"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">See Live Demos</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-3"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></section><section class="py-20"><div class="container-significa"><div class="max-w-2xl mb-12"><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Live System Architecture</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">How our practical digital systems operate.</h2><p class="text-sm text-foreground-secondary mt-3">Click any stage below to inspect the mechanics of Nyxra&#x27;s lead capture and follow-up architecture.</p></div><div class="w-full rounded-2xl border border-border bg-background-panel p-6 sm:p-8 shadow-sm"><div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-border gap-4"><div class="flex items-center gap-3"><span class="w-3 h-3 rounded-full bg-brand animate-pulse"></span><h3 class="text-lg font-bold uppercase tracking-tight text-foreground">The Nyxra Operating System (OS)</h3></div><span class="text-xs font-mono uppercase px-2.5 py-1 rounded bg-background-offset border border-border text-foreground-secondary">5-Stage Automated Architecture</span></div><div class="grid grid-cols-2 sm:grid-cols-5 gap-2 my-6"><button type="button" class="p-3 rounded-lg border text-left transition-all duration-200 outline-none bg-brand text-foreground border-foreground font-semibold shadow-xs"><span class="block text-[10px] font-mono uppercase opacity-75">01</span><span class="text-xs font-medium block truncate mt-0.5">Conversion-Focused<!-- --> Flow</span></button><button type="button" class="p-3 rounded-lg border text-left transition-all duration-200 outline-none bg-background-offset/50 border-border text-foreground-secondary hover:text-foreground hover:bg-background-offset"><span class="block text-[10px] font-mono uppercase opacity-75">02</span><span class="text-xs font-medium block truncate mt-0.5">Smart<!-- --> Flow</span></button><button type="button" class="p-3 rounded-lg border text-left transition-all duration-200 outline-none bg-background-offset/50 border-border text-foreground-secondary hover:text-foreground hover:bg-background-offset"><span class="block text-[10px] font-mono uppercase opacity-75">03</span><span class="text-xs font-medium block truncate mt-0.5">Centralised<!-- --> Flow</span></button><button type="button" class="p-3 rounded-lg border text-left transition-all duration-200 outline-none bg-background-offset/50 border-border text-foreground-secondary hover:text-foreground hover:bg-background-offset"><span class="block text-[10px] font-mono uppercase opacity-75">04</span><span class="text-xs font-medium block truncate mt-0.5">Instant<!-- --> Flow</span></button><button type="button" class="p-3 rounded-lg border text-left transition-all duration-200 outline-none bg-background-offset/50 border-border text-foreground-secondary hover:text-foreground hover:bg-background-offset"><span class="block text-[10px] font-mono uppercase opacity-75">05</span><span class="text-xs font-medium block truncate mt-0.5">Automated<!-- --> Flow</span></button></div><div class="p-6 rounded-xl bg-background-offset border border-border flex flex-col md:flex-row items-start md:items-center justify-between gap-6"><div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-background border border-border flex items-center justify-center text-foreground flex-shrink-0 shadow-xs"><span class="material-symbols-outlined text-2xl">language</span></div><div><div class="flex items-center gap-2 mb-1"><span class="text-xs font-mono font-bold text-brand">01</span><h4 class="text-lg font-bold text-foreground">Conversion-Focused Website</h4></div><p class="text-sm text-foreground-secondary leading-relaxed max-w-xl">Fast, mobile-first website designed to explain your offer clearly, establish immediate credibility, and eliminate friction.</p><p class="text-xs text-foreground font-medium mt-2 flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Clean typography, fast load speeds, WhatsApp click-to-chat, and local SEO configuration.</span></p></div></div><div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto"><a class="w-full md:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-md bg-foreground text-background text-xs font-medium hover:bg-foreground/90 transition-colors" href="/clinic-demo"><span>See Live Simulator</span><svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a></div></div><div class="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs text-foreground-secondary gap-2"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Client-owned tools: Google Sheets, Meta WhatsApp, Supabase, Airtable, Cal.com</span><span class="text-[11px]">No locked enterprise contracts</span></div></div></div></section><section class="py-20 bg-background-panel border-t border-border"><div class="container-significa"><div class="flex flex-col md:flex-row items-start md:items-end justify-between pb-12 border-b border-border gap-6"><div><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Core Solutions</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">Practical systems for visibility, enquiries &amp; follow-up.</h2></div><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40" href="/services"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">View Detailed Deliverables</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12"><div class="rounded-2xl border border-border bg-background p-6 sm:p-8 flex flex-col justify-between hover:border-brand/40 transition-colors shadow-xs"><div><div class="flex items-center justify-between mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">language</span></span><span class="text-xs font-mono font-bold text-foreground-secondary">01</span></div><h3 class="text-xl font-bold text-foreground mb-2">Websites &amp; Landing Pages</h3><p class="text-xs text-foreground-secondary leading-relaxed mb-6">Fast, mobile-first websites designed with Significa-level typographic precision to explain your offer clearly and convert visitors into enquiries.</p><div class="space-y-2 mb-6"><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Custom Responsive Design</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>WhatsApp &amp; Call Click-to-Chat</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Google Maps &amp; Local SEO Setup</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Zero Bloated Plugins</span></div></div></div><div class="pt-4 border-t border-border"><a class="text-xs font-semibold text-foreground hover:text-brand flex items-center gap-1 transition-colors" href="/services"><span>Learn more about <!-- -->Websites</span><svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a></div></div><div class="rounded-2xl border border-border bg-background p-6 sm:p-8 flex flex-col justify-between hover:border-brand/40 transition-colors shadow-xs"><div><div class="flex items-center justify-between mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">filter_alt</span></span><span class="text-xs font-mono font-bold text-foreground-secondary">02</span></div><h3 class="text-xl font-bold text-foreground mb-2">Lead Capture Systems</h3><p class="text-xs text-foreground-secondary leading-relaxed mb-6">Turn website visitors and social media interest into structured, qualified enquiries that are effortless to track.</p><div class="space-y-2 mb-6"><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Custom High-Conversion Forms</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Google Sheets / CRM Sync</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Instant Email &amp; SMS Staff Alerts</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Lead Stage Qualification</span></div></div></div><div class="pt-4 border-t border-border"><a class="text-xs font-semibold text-foreground hover:text-brand flex items-center gap-1 transition-colors" href="/services"><span>Learn more about <!-- -->Lead</span><svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a></div></div><div class="rounded-2xl border border-border bg-background p-6 sm:p-8 flex flex-col justify-between hover:border-brand/40 transition-colors shadow-xs"><div><div class="flex items-center justify-between mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">table_chart</span></span><span class="text-xs font-mono font-bold text-foreground-secondary">03</span></div><h3 class="text-xl font-bold text-foreground mb-2">CRM &amp; Lead Pipeline</h3><p class="text-xs text-foreground-secondary leading-relaxed mb-6">Keep prospect details, follow-up dates, call notes, and sales stages in one clean, client-owned pipeline.</p><div class="space-y-2 mb-6"><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Custom Lead Stages &amp; Priority</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Automated Follow-up Reminders</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Lightweight Dashboard View</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>100% Client Data Ownership</span></div></div></div><div class="pt-4 border-t border-border"><a class="text-xs font-semibold text-foreground hover:text-brand flex items-center gap-1 transition-colors" href="/services"><span>Learn more about <!-- -->CRM</span><svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a></div></div><div class="rounded-2xl border border-border bg-background p-6 sm:p-8 flex flex-col justify-between hover:border-brand/40 transition-colors shadow-xs"><div><div class="flex items-center justify-between mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">calendar_month</span></span><span class="text-xs font-mono font-bold text-foreground-secondary">04</span></div><h3 class="text-xl font-bold text-foreground mb-2">Appointment &amp; Booking Systems</h3><p class="text-xs text-foreground-secondary leading-relaxed mb-6">Make it effortless for customers to book consultations, clinic appointments, or callbacks without phone tag.</p><div class="space-y-2 mb-6"><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Interactive Date &amp; Time Selector</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Calendar Synchronization</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>SMS &amp; WhatsApp Confirmations</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Cancellation &amp; Rescheduling</span></div></div></div><div class="pt-4 border-t border-border"><a class="text-xs font-semibold text-foreground hover:text-brand flex items-center gap-1 transition-colors" href="/services"><span>Learn more about <!-- -->Appointment</span><svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a></div></div><div class="rounded-2xl border border-border bg-background p-6 sm:p-8 flex flex-col justify-between hover:border-brand/40 transition-colors shadow-xs"><div><div class="flex items-center justify-between mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">psychology</span></span><span class="text-xs font-mono font-bold text-foreground-secondary">05</span></div><h3 class="text-xl font-bold text-foreground mb-2">AI Content &amp; Reply Systems</h3><p class="text-xs text-foreground-secondary leading-relaxed mb-6">A reusable system for generating consistent social marketing content and responding in seconds to customer queries.</p><div class="space-y-2 mb-6"><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>30-Day Content Calendar &amp; Captions</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Business AI Prompt Library</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Pre-Written Reply &amp; FAQ Templates</span></div><div class="flex items-center gap-2 text-xs text-foreground"><span class="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0"></span><span>Proposal Template Pack</span></div></div></div><div class="pt-4 border-t border-border"><a class="text-xs font-semibold text-foreground hover:text-brand flex items-center gap-1 transition-colors" href="/services"><span>Learn more about <!-- -->AI</span><svg class="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a></div></div><div class="rounded-2xl border-2 border-brand bg-brand/10 p-6 sm:p-8 flex flex-col justify-between"><div><span class="text-[11px] uppercase font-bold tracking-wider text-foreground mb-2 block">Tailored Systems</span><h3 class="text-2xl font-bold text-foreground mb-2">Need a custom combination?</h3><p class="text-xs text-foreground-secondary leading-relaxed mb-6">Every package is scoped with transparent pricing, zero technical jargon, and complete client ownership of all tool accounts.</p></div><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-brand text-foreground hover:brightness-105 font-semibold" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Request Scope Review</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></div></section><section class="py-20 border-t border-border"><div class="container-significa"><div class="max-w-2xl mb-12"><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Industry-Specific Workflows</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">Built around how small businesses actually operate.</h2></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div class="rounded-2xl border border-border bg-background-panel p-6 flex flex-col justify-between shadow-xs hover:border-brand/40 transition-colors"><div><div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">medical_services</span></span><h3 class="text-lg font-bold text-foreground">Clinics &amp; Healthcare</h3></div><div class="space-y-3 text-xs leading-relaxed"><div><span class="font-semibold text-brand uppercase block text-[10px]">The Friction:</span><p class="text-foreground-secondary">Appointment requests scattered across calls and walk-in counter queues.</p></div><div><span class="font-semibold text-foreground uppercase block text-[10px]">Nyxra System:</span><p class="text-foreground-secondary">Clinic website, online appointment booking flow, lead tracker, and receptionist WhatsApp alerts.</p></div></div></div><div class="mt-6 pt-3 border-t border-border text-xs"><span class="font-semibold text-foreground">Outcome: </span><span class="text-foreground-secondary">Zero missed patient requests and seamless scheduling.</span></div></div><div class="rounded-2xl border border-border bg-background-panel p-6 flex flex-col justify-between shadow-xs hover:border-brand/40 transition-colors"><div><div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">school</span></span><h3 class="text-lg font-bold text-foreground">Coaching &amp; Institutes</h3></div><div class="space-y-3 text-xs leading-relaxed"><div><span class="font-semibold text-brand uppercase block text-[10px]">The Friction:</span><p class="text-foreground-secondary">Student queries arrive without course context or counselling status.</p></div><div><span class="font-semibold text-foreground uppercase block text-[10px]">Nyxra System:</span><p class="text-foreground-secondary">Course landing pages, qualification form, admission pipeline, and reminder flows.</p></div></div></div><div class="mt-6 pt-3 border-t border-border text-xs"><span class="font-semibold text-foreground">Outcome: </span><span class="text-foreground-secondary">Higher enrolment conversion and tracked follow-ups.</span></div></div><div class="rounded-2xl border border-border bg-background-panel p-6 flex flex-col justify-between shadow-xs hover:border-brand/40 transition-colors"><div><div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">person_search</span></span><h3 class="text-lg font-bold text-foreground">Consultants &amp; Freelancers</h3></div><div class="space-y-3 text-xs leading-relaxed"><div><span class="font-semibold text-brand uppercase block text-[10px]">The Friction:</span><p class="text-foreground-secondary">Unqualified leads waste hours on discovery calls before assessing fit.</p></div><div><span class="font-semibold text-foreground uppercase block text-[10px]">Nyxra System:</span><p class="text-foreground-secondary">Personal brand site, consultation request flow, and qualification gating.</p></div></div></div><div class="mt-6 pt-3 border-t border-border text-xs"><span class="font-semibold text-foreground">Outcome: </span><span class="text-foreground-secondary">Only high-intent, pre-qualified client conversations.</span></div></div><div class="rounded-2xl border border-border bg-background-panel p-6 flex flex-col justify-between shadow-xs hover:border-brand/40 transition-colors"><div><div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">spa</span></span><h3 class="text-lg font-bold text-foreground">Salons, Gyms &amp; Wellness</h3></div><div class="space-y-3 text-xs leading-relaxed"><div><span class="font-semibold text-brand uppercase block text-[10px]">The Friction:</span><p class="text-foreground-secondary">Customers demand instant service pricing and booking without calling.</p></div><div><span class="font-semibold text-foreground uppercase block text-[10px]">Nyxra System:</span><p class="text-foreground-secondary">Service landing pages, slot request calendar, and automated booking confirmations.</p></div></div></div><div class="mt-6 pt-3 border-t border-border text-xs"><span class="font-semibold text-foreground">Outcome: </span><span class="text-foreground-secondary">Frictionless conversion from curiosity to confirmed visits.</span></div></div><div class="rounded-2xl border border-border bg-background-panel p-6 flex flex-col justify-between shadow-xs hover:border-brand/40 transition-colors"><div><div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">home_repair_service</span></span><h3 class="text-lg font-bold text-foreground">Local Service Contractors</h3></div><div class="space-y-3 text-xs leading-relaxed"><div><span class="font-semibold text-brand uppercase block text-[10px]">The Friction:</span><p class="text-foreground-secondary">Enquiries forgotten in personal chat logs and memory.</p></div><div><span class="font-semibold text-foreground uppercase block text-[10px]">Nyxra System:</span><p class="text-foreground-secondary">Local SEO landing pages, quote request form, Google Maps integration, and lead tracker.</p></div></div></div><div class="mt-6 pt-3 border-t border-border text-xs"><span class="font-semibold text-foreground">Outcome: </span><span class="text-foreground-secondary">Every job lead logged, quoted, and followed up systematically.</span></div></div><div class="rounded-2xl border border-border bg-background-panel p-6 flex flex-col justify-between shadow-xs hover:border-brand/40 transition-colors"><div><div class="flex items-center gap-3 mb-4"><span class="w-10 h-10 rounded-xl bg-background-offset border border-border flex items-center justify-center text-foreground"><span class="material-symbols-outlined text-xl">rocket_launch</span></span><h3 class="text-lg font-bold text-foreground">Early-Stage Startups</h3></div><div class="space-y-3 text-xs leading-relaxed"><div><span class="font-semibold text-brand uppercase block text-[10px]">The Friction:</span><p class="text-foreground-secondary">Need immediate market credibility without expensive enterprise retainers.</p></div><div><span class="font-semibold text-foreground uppercase block text-[10px]">Nyxra System:</span><p class="text-foreground-secondary">High-impact product landing page, waitlist capture, CRM starter, and pitch deck templates.</p></div></div></div><div class="mt-6 pt-3 border-t border-border text-xs"><span class="font-semibold text-foreground">Outcome: </span><span class="text-foreground-secondary">Immediate investor and client trust from day one.</span></div></div></div></div></section><section class="py-20 bg-background-panel border-t border-border"><div class="container-significa"><div class="flex flex-col md:flex-row items-start md:items-end justify-between pb-12 border-b border-border gap-6"><div><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Working Prototypes</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">Explore working demo systems.</h2></div><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40" href="/portfolio"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">View All Demos</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12"><div class="group rounded-2xl border border-border bg-background-panel p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-brand/40 shadow-xs"><div><div class="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-background-offset border border-border mb-6"><img src="/sample-1.png" alt="Apex Health Clinic" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"/><div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/90 backdrop-blur-md border border-border text-[11px] font-semibold uppercase tracking-wider text-foreground">Healthcare &amp; Clinics</div><button type="button" aria-label="Previous preview" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/90 backdrop-blur-md border border-border flex items-center justify-center text-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background shadow-sm"><svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 12L3 8l4-4"></path></svg></button><button type="button" aria-label="Next preview" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/90 backdrop-blur-md border border-border flex items-center justify-center text-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background shadow-sm"><svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button><div class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-foreground text-background text-[11px] font-bold tracking-tight shadow-md">Live Interactive Simulator</div></div><h3 class="text-2xl sm:text-3xl font-bold text-foreground mb-2 leading-tight">Apex Health Clinic</h3><p class="text-sm sm:text-base text-foreground-secondary mb-4 leading-relaxed">Interactive patient appointment booking and instant receptionist lead tracker simulator.</p><div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">Appointment Request Flow</span><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">Instant Alert Workflow</span><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">Live Receptionist CRM Table</span><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">Date &amp; Slot Picker</span></div></div><div class="pt-4 border-t border-border flex items-center justify-between"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40" href="/clinic-demo"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Open Live Clinic Simulator</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div><div class="group rounded-2xl border border-border bg-background-panel p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 hover:border-brand/40 shadow-xs"><div><div class="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-background-offset border border-border mb-6"><img src="/sample-2.png" alt="Apex Institute &amp; Coaching" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"/><div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/90 backdrop-blur-md border border-border text-[11px] font-semibold uppercase tracking-wider text-foreground">Education &amp; Coaching</div><button type="button" aria-label="Previous preview" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/90 backdrop-blur-md border border-border flex items-center justify-center text-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background shadow-sm"><svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 12L3 8l4-4"></path></svg></button><button type="button" aria-label="Next preview" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/90 backdrop-blur-md border border-border flex items-center justify-center text-foreground opacity-0 group-hover:opacity-100 transition-opacity hover:bg-background shadow-sm"><svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></button><div class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-foreground text-background text-[11px] font-bold tracking-tight shadow-md">3.2x Faster Follow-up</div></div><h3 class="text-2xl sm:text-3xl font-bold text-foreground mb-2 leading-tight">Apex Institute &amp; Coaching</h3><p class="text-sm sm:text-base text-foreground-secondary mb-4 leading-relaxed">Student course qualification engine with centralized admission counselling pipeline.</p><div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">Course Detail Pages</span><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">Student Intent Form</span><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">Lead Status Dashboard</span><span class="px-2.5 py-1 rounded-md bg-background-offset border border-border text-[11px] font-medium text-foreground-secondary">WhatsApp Direct Channel</span></div></div><div class="pt-4 border-t border-border flex items-center justify-between"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40" href="/portfolio"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Inspect Architecture</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></div></div></section><section class="py-20 border-t border-border"><div class="container-significa"><div class="max-w-2xl mb-12"><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Transparent Pricing</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">Productised packages with clear starting points.</h2><p class="text-sm text-foreground-secondary mt-3">All third-party tools, hosting options, and ongoing costs are confirmed in writing before project kickoff.</p></div><div><div class="flex items-center justify-center gap-3 mb-12"><span class="text-xs uppercase font-semibold tracking-wider text-foreground-secondary">Display Currency:</span><div class="inline-flex p-1 rounded-full bg-background-offset border border-border"><button type="button" class="px-3.5 py-1 rounded-full text-xs font-semibold transition-all duration-200 bg-foreground text-background shadow-xs">INR (₹)</button><button type="button" class="px-3.5 py-1 rounded-full text-xs font-semibold transition-all duration-200 text-foreground-secondary hover:text-foreground">USD ($)</button></div></div><div class="grid grid-cols-1 lg:grid-cols-3 gap-6"><div class="relative rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 bg-background-panel border border-border hover:border-foreground/30 shadow-xs"><div><h3 class="text-2xl font-bold text-foreground mb-1">Digital Launch</h3><p class="text-xs text-foreground-secondary mb-6 leading-relaxed min-h-[36px]">Professional online presence for small businesses that need clarity and trust.</p><div class="mb-6 pb-6 border-b border-border"><span class="text-[11px] uppercase tracking-wider text-foreground-secondary block mb-1">Productised Starting At</span><div class="flex items-baseline gap-1.5"><span class="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">₹10,000</span><span class="text-xs text-foreground-secondary font-medium">/ project</span></div></div><p class="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">What is included:</p><ul class="space-y-3 text-xs text-foreground mb-8"><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Custom responsive business website</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Significa-grade modern typography &amp; speed</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">WhatsApp click-to-chat &amp; contact form</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Google Maps integration &amp; local SEO setup</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Client-owned hosting deployment support</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Two structured revision rounds</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Full source code and account handover</span></li></ul></div><div class="pt-4 border-t border-border"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40
+    w-full" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Launch My Website</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div><div class="relative rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 bg-background-panel border-2 border-brand shadow-lg ring-4 ring-brand/10"><div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-brand text-foreground text-[10px] font-bold uppercase tracking-wider shadow-xs">Most Popular</div><div><h3 class="text-2xl font-bold text-foreground mb-1">Lead Growth System</h3><p class="text-xs text-foreground-secondary mb-6 leading-relaxed min-h-[36px]">The practical starting point for high-converting websites plus organized lead management.</p><div class="mb-6 pb-6 border-b border-border"><span class="text-[11px] uppercase tracking-wider text-foreground-secondary block mb-1">Productised Starting At</span><div class="flex items-baseline gap-1.5"><span class="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">₹15,000</span><span class="text-xs text-foreground-secondary font-medium">/ project</span></div></div><p class="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">What is included:</p><ul class="space-y-3 text-xs text-foreground mb-8"><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Everything in Digital Launch</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Advanced qualification enquiry form</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Automated Google Sheets / CRM lead tracker</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Instant Email/SMS notification to staff</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Appointment &amp; callback request workflow</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Pre-written follow-up response templates</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Zero ongoing licensing fees required</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Priority founder onboarding</span></li></ul></div><div class="pt-4 border-t border-border"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-brand text-foreground hover:brightness-105 font-semibold
+    w-full" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Build My Lead System</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div><div class="relative rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 bg-background-panel border border-border hover:border-foreground/30 shadow-xs"><div><h3 class="text-2xl font-bold text-foreground mb-1">AI Business Starter</h3><p class="text-xs text-foreground-secondary mb-6 leading-relaxed min-h-[36px]">A stronger system for content, rapid customer replies, and simple business automation.</p><div class="mb-6 pb-6 border-b border-border"><span class="text-[11px] uppercase tracking-wider text-foreground-secondary block mb-1">Productised Starting At</span><div class="flex items-baseline gap-1.5"><span class="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">₹20,000</span><span class="text-xs text-foreground-secondary font-medium">/ project</span></div></div><p class="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">What is included:</p><ul class="space-y-3 text-xs text-foreground mb-8"><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Everything in Lead Growth System</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">30-day custom social content calendar &amp; captions</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Business-specific AI prompt library</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Automated customer FAQ response templates</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Proposal &amp; quotation template pack</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">30 days of direct founder technical support</span></li><li class="flex items-start gap-2.5"><span class="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0"><svg class="w-2.5 h-2.5" viewBox="0 0 16 16" fill="currentColor"><path d="M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z"></path></svg></span><span class="leading-snug">Quarterly growth recommendation checklist</span></li></ul></div><div class="pt-4 border-t border-border"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40
+    w-full" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Request Custom Plan</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></div><div class="mt-8 p-5 rounded-xl bg-background-offset border border-border flex flex-col md:flex-row items-start md:items-center justify-between text-xs text-foreground-secondary gap-4"><p><strong class="text-foreground">Scope Assurance:</strong> Every project starts with a written proposal defining all deliverables, tool costs, and revision milestones. No surprise add-ons.</p><span class="text-brand font-semibold whitespace-nowrap">Website Care from ₹1,999/mo ($25/mo)</span></div></div></div></section><section class="py-20 bg-background-panel border-t border-border"><div class="container-significa"><div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"><div class="lg:col-span-5 flex justify-center"><div class="relative"><div class="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl border-2 border-border overflow-hidden bg-background-offset shadow-md"><img src="/founder.jpg" alt="Rishi Srivastav, Founder of Nyxra" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"/></div><div class="absolute -bottom-3 -right-3 px-3.5 py-1.5 rounded-lg bg-brand text-foreground text-xs font-bold uppercase tracking-wider shadow-sm border border-foreground/20">Founder Led</div></div></div><div class="lg:col-span-7"><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">About The Founder</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">Rishi Srivastav</h2><p class="text-base text-foreground-secondary leading-relaxed mb-4">Nyxra was founded by Rishi Srivastav to help small businesses leverage modern web standards, lead systems, and AI automation without needing large technical teams or paying exorbitant monthly software fees.</p><p class="text-sm text-foreground-secondary leading-relaxed mb-6">Every project is founder-led from strategy to delivery. You communicate directly with the builder who designs your architecture and writes your code.</p><div class="flex flex-wrap items-center gap-6 text-xs text-foreground-secondary font-medium"><span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span>Based in India • Serving Global Businesses</span><span>•</span><span>100% Client-Owned Accounts</span></div><div class="mt-8"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-11 rounded-md px-5 text-sm
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40" href="/about"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Read Our 7 Core Principles</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-4"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div></div></div></div></section><section class="py-20 border-t border-border"><div class="container-significa"><div class="grid grid-cols-1 lg:grid-cols-12 gap-12"><div class="lg:col-span-4"><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Common Inquiries</p><h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground sticky top-24 leading-tight">Straight answers before you start.</h2></div><div class="lg:col-span-8"><div class="border-t border-border divide-y divide-border"><div class="py-5 transition-colors"><button type="button" class="w-full flex items-center justify-between text-left group outline-none"><h3 class="text-lg sm:text-xl font-semibold text-foreground group-hover:text-brand transition-colors pr-6">What exactly does Nyxra build?</h3><span class="w-8 h-8 rounded-full border border-border flex items-center justify-center text-foreground transition-transform duration-300 flex-shrink-0 rotate-45 bg-foreground text-background"><span class="text-lg leading-none font-light">+</span></span></button><div class="pt-3 pr-10 text-sm text-foreground-secondary leading-relaxed animate-in fade-in duration-200"><p>Nyxra builds professional, high-performing websites, landing pages, lead-capture forms, centralized CRM lead trackers (like Google Sheets / Airtable), appointment booking workflows, and reusable AI-assisted content and reply systems for small businesses.</p></div></div><div class="py-5 transition-colors"><button type="button" class="w-full flex items-center justify-between text-left group outline-none"><h3 class="text-lg sm:text-xl font-semibold text-foreground group-hover:text-brand transition-colors pr-6">Do I need technical knowledge to manage my website?</h3><span class="w-8 h-8 rounded-full border border-border flex items-center justify-center text-foreground transition-transform duration-300 flex-shrink-0 bg-background-offset group-hover:border-brand"><span class="text-lg leading-none font-light">+</span></span></button></div><div class="py-5 transition-colors"><button type="button" class="w-full flex items-center justify-between text-left group outline-none"><h3 class="text-lg sm:text-xl font-semibold text-foreground group-hover:text-brand transition-colors pr-6">How long does a typical project take?</h3><span class="w-8 h-8 rounded-full border border-border flex items-center justify-center text-foreground transition-transform duration-300 flex-shrink-0 bg-background-offset group-hover:border-brand"><span class="text-lg leading-none font-light">+</span></span></button></div><div class="py-5 transition-colors"><button type="button" class="w-full flex items-center justify-between text-left group outline-none"><h3 class="text-lg sm:text-xl font-semibold text-foreground group-hover:text-brand transition-colors pr-6">Will I own my website and business data?</h3><span class="w-8 h-8 rounded-full border border-border flex items-center justify-center text-foreground transition-transform duration-300 flex-shrink-0 bg-background-offset group-hover:border-brand"><span class="text-lg leading-none font-light">+</span></span></button></div><div class="py-5 transition-colors"><button type="button" class="w-full flex items-center justify-between text-left group outline-none"><h3 class="text-lg sm:text-xl font-semibold text-foreground group-hover:text-brand transition-colors pr-6">Do you guarantee sales or revenue?</h3><span class="w-8 h-8 rounded-full border border-border flex items-center justify-center text-foreground transition-transform duration-300 flex-shrink-0 bg-background-offset group-hover:border-brand"><span class="text-lg leading-none font-light">+</span></span></button></div><div class="py-5 transition-colors"><button type="button" class="w-full flex items-center justify-between text-left group outline-none"><h3 class="text-lg sm:text-xl font-semibold text-foreground group-hover:text-brand transition-colors pr-6">What ongoing costs should I expect?</h3><span class="w-8 h-8 rounded-full border border-border flex items-center justify-center text-foreground transition-transform duration-300 flex-shrink-0 bg-background-offset group-hover:border-brand"><span class="text-lg leading-none font-light">+</span></span></button></div></div></div></div></div></section></main><footer class="w-full bg-background-panel border-t border-border mt-20 transition-colors"><div class="border-b border-border py-16"><div class="container-significa flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"><div><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Start With A Free Review</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground leading-tight">Let&#x27;s build a simpler system <br class="hidden sm:inline"/>for your business.</h2><p class="text-sm text-foreground-secondary mt-3 max-w-xl">Get an actionable 20-minute video review of your current website, enquiry flow, and lead management with zero pressure.</p></div><div class="flex flex-wrap items-center gap-4"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-14 rounded-lg px-7 text-base
+    bg-brand text-foreground hover:brightness-105 font-semibold" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-3.5">Get Free Business Audit</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-6"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a href="mailto:supportnyxra@gmail.com" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-14 rounded-lg px-7 text-base
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion ">Email Founder</span></a></div></div></div><div class="container-significa py-16"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10"><div class="lg:col-span-2 pr-0 lg:pr-8"><a class="inline-flex items-center gap-2.5 mb-4 group" href="/"><div class="w-8 h-8 rounded-lg overflow-hidden border border-border bg-background-offset p-0.5"><img src="/logo.png" alt="Nyxra" class="w-full h-full object-contain"/></div><span class="text-2xl font-bold tracking-tight text-foreground">NYXRA</span></a><p class="text-sm text-foreground-secondary leading-relaxed max-w-sm mb-6">Nyxra is a digital and automation studio founded by Rishi Srivastav. We build high-converting websites, lead-capture systems, and practical AI workflows for ambitious businesses.</p><div class="inline-flex flex-col p-3 rounded-lg bg-background-offset border border-border text-xs"><span class="text-[11px] uppercase tracking-wider text-foreground-secondary font-medium flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>Studio Local Time (IST)</span><span class="font-mono text-base font-semibold text-foreground mt-1">12:00:00 PM</span><span class="text-[10px] text-foreground-secondary mt-0.5">India &amp; Global • Direct Founder Communication</span></div></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-4">Navigation</h4><ul class="space-y-2.5 text-sm font-medium"><li><a class="text-foreground hover:text-brand transition-colors" href="/">Home</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/services">Services &amp; Deliverables</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/pricing">Pricing Packages</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Demo Systems</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/about">About &amp; Founder</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/contact">Free Audit &amp; Contact</a></li></ul></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-4">Demo Systems</h4><ul class="space-y-2.5 text-sm font-medium"><li><a class="text-foreground hover:text-brand transition-colors flex items-center gap-1.5" href="/clinic-demo"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Clinic Booking (Live)</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Coaching Pipeline</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Consultant Booking Flow</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Local Service Engine</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/services">AI Content Starters</a></li></ul></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-4">Legal &amp; Theme</h4><ul class="space-y-2.5 text-sm font-medium mb-6"><li><a class="text-foreground hover:text-brand transition-colors" href="/privacy">Privacy Policy</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/terms">Terms of Service</a></li><li><a href="mailto:supportnyxra@gmail.com" class="text-foreground hover:text-brand transition-colors font-mono text-xs">supportnyxra@gmail.com</a></li></ul><div class="flex items-center gap-3"><span class="text-xs text-foreground-secondary">Theme:</span><div class="w-[50px] h-[26px] rounded-full bg-background-offset border border-border opacity-50 "></div></div></div></div><div class="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between text-xs text-foreground-secondary gap-4"><p>© 2026 NYXRA. Founded by Rishi Srivastav. All rights reserved.</p><p>Client-owned accounts. Clear written scope. No proprietary lock-in.</p></div></div></footer><!--$--><!--/$--><script src="/_next/static/chunks/1u5zan5bs9a7v.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/3fntmmi971322.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/3fntmmi971322.js\"],\"default\"]\n4:I[47257,[\"/_next/static/chunks/3fntmmi971322.js\"],\"ClientPageRoot\"]\n5:I[29615,[\"/_next/static/chunks/3fntmmi971322.js\",\"/_next/static/chunks/3lv5m-3meiav5.js\",\"/_next/static/chunks/09hcha-zxg1rv.js\"],\"default\"]\n8:I[97367,[\"/_next/static/chunks/3fntmmi971322.js\"],\"OutletBoundary\"]\n9:\"$Sreact.suspense\"\nb:I[97367,[\"/_next/static/chunks/3fntmmi971322.js\"],\"ViewportBoundary\"]\nd:I[97367,[\"/_next/static/chunks/3fntmmi971322.js\"],\"MetadataBoundary\"]\nf:I[68027,[\"/_next/static/chunks/3fntmmi971322.js\"],\"default\",1]\n:HL[\"/_next/static/chunks/2pf8bb0ioc91j.css\",\"style\"]\n:HL[\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1\u0026display=swap\",\"style\"]\n0:{\"P\":null,\"c\":[\"\",\"\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{},\"$undefined\",\"$undefined\",4608]},\"$undefined\",\"$undefined\",4624],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/2pf8bb0ioc91j.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/3fntmmi971322.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"data-theme\":\"light\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"icon\",\"href\":\"/favicon.ico?v=2\",\"sizes\":\"any\"}],[\"$\",\"link\",null,{\"rel\":\"icon\",\"type\":\"image/png\",\"sizes\":\"32x32\",\"href\":\"/favicon-32.png?v=2\"}],[\"$\",\"link\",null,{\"rel\":\"icon\",\"type\":\"image/png\",\"sizes\":\"48x48\",\"href\":\"/favicon-48.png?v=2\"}],[\"$\",\"link\",null,{\"rel\":\"apple-touch-icon\",\"sizes\":\"180x180\",\"href\":\"/apple-touch-icon.png?v=2\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1\u0026display=swap\",\"rel\":\"stylesheet\"}],[\"$\",\"script\",null,{\"src\":\"https://cdn.tailwindcss.com?plugins=forms,container-queries\"}],[\"$\",\"script\",null,{\"src\":\"/tailwind.config.js\"}],[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"\\n              (function() {\\n                try {\\n                  const saved = localStorage.getItem('nyxra-theme');\\n                  if (saved) {\\n                    document.documentElement.setAttribute('data-theme', saved);\\n                  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {\\n                    document.documentElement.setAttribute('data-theme', 'dark');\\n                  }\\n                } catch (e) {}\\n              })();\\n            \"}}]]}],[\"$\",\"body\",null,{\"className\":\"bg-background text-foreground selection:bg-brand selection:text-foreground antialiased min-h-screen\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L4\",null,{\"Component\":\"$5\",\"serverProvidedParams\":{\"searchParams\":{},\"params\":{},\"promises\":[\"$@6\",\"$@7\"]}}],[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/3lv5m-3meiav5.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/09hcha-zxg1rv.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L8\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@a\"}]}]]}],{},null,false,null]},null,false,null],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Lb\",null,{\"children\":\"$Lc\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$Ld\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.Metadata\",\"children\":\"$Le\"}]}]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$f\",[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/2pf8bb0ioc91j.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]]],\"S\":true,\"h\":null,\"r\":\"$undefined\",\"s\":\"$undefined\",\"a\":\"$undefined\",\"l\":\"$undefined\",\"p\":\"$undefined\",\"d\":\"$undefined\",\"b\":\"k4rrcuTNyZ3KyNR1riOKY\"}\n6:{}\n7:\"$0:f:0:1:1:children:0:props:children:0:props:serverProvidedParams:params\"\nc:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n10:I[27201,[\"/_next/static/chunks/3fntmmi971322.js\"],\"IconMark\"]\na:null\ne:[[\"$\",\"title\",\"0\",{\"children\":\"Nyxra | Websites, Lead Systems \u0026 AI Automation for Small Businesses\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Nyxra builds professional websites, lead-capture systems, appointment workflows and simple AI-powered automations that help small businesses grow.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"shortcut icon\",\"href\":\"/favicon.ico?v=2\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?favicon.0frn9-j9ry_r7.ico\",\"sizes\":\"32x32\",\"type\":\"image/x-icon\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?v=2\"}],[\"$\",\"link\",\"5\",{\"rel\":\"icon\",\"href\":\"/favicon-32.png?v=2\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"6\",{\"rel\":\"icon\",\"href\":\"/favicon-48.png?v=2\",\"sizes\":\"48x48\",\"type\":\"image/png\"}],[\"$\",\"link\",\"7\",{\"rel\":\"apple-touch-icon\",\"href\":\"/apple-touch-icon.png?v=2\"}],[\"$\",\"$L10\",\"8\",{}]]\n"])</script></body></html>

@@ -1,108 +1,172 @@
 "use client";
 
 import Header from "../components/Header";
-import Link from "next/link";
+import Footer from "../components/Footer";
+import PricingCardGrid from "../components/PricingCardGrid";
+import SignificaButton from "../components/SignificaButton";
+import FaqAccordion from "../components/FaqAccordion";
+import { CheckIcon } from "../components/Icons";
 
 export default function PricingPage() {
+  const carePlans = [
+    {
+      name: "Starter Care",
+      price: "₹1,999 / mo ($25)",
+      desc: "For small businesses that need reliable uptime, monthly backups, and minor text/image updates.",
+      features: [
+        "Monthly security & dependency updates",
+        "Automated weekly cloud backups",
+        "Up to 2 hours of content & image edits",
+        "Uptime & domain renewal monitoring",
+        "Direct WhatsApp technical support"
+      ]
+    },
+    {
+      name: "Growth Care & Optimization",
+      price: "₹3,999 / mo ($50)",
+      desc: "For active clinics and service businesses that want monthly conversion tuning and pipeline support.",
+      features: [
+        "Everything in Starter Care",
+        "Up to 5 hours of design & workflow adjustments",
+        "Monthly enquiry volume & conversion report",
+        "Form & CRM integration health audits",
+        "Priority 4-hour response turnaround",
+        "A/B headline & CTA experiments"
+      ]
+    }
+  ];
+
   return (
     <>
       <Header />
 
-      <main className="max-w-container-max mx-auto px-gutter py-12 sm:py-16">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <p className="font-label-caps text-label-caps text-primary uppercase mb-3 tracking-widest font-bold">Transparent Scope</p>
-          <h1 className="font-display-xl text-[40px] sm:text-[60px] md:text-display-xl tracking-tighter leading-none mb-4">
-            Productised <span className="italic text-primary font-light">pricing</span>.
-          </h1>
-          <p className="font-body-md text-sm text-on-surface-variant">
-            Clear package starting points. Scope, third-party software, and timeline are confirmed before project commencement.
-          </p>
-        </div>
+      <main className="min-h-screen">
+        {/* Page Hero */}
+        <section className="pt-12 sm:pt-20 pb-16">
+          <div className="container-significa">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-offset border border-border text-xs font-semibold uppercase tracking-wider text-foreground mb-6">
+              <span className="w-2 h-2 rounded-full bg-brand" />
+              <span>Transparent Scoping & Costs</span>
+            </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Plan 1 */}
-          <div className="p-6 sm:p-8 bg-surface border-2 border-on-surface flex flex-col justify-between">
-            <div>
-              <span className="font-label-caps text-xs text-on-surface-variant uppercase tracking-widest block mb-2 font-bold">Foundation</span>
-              <h2 className="font-headline-lg text-2xl sm:text-3xl mb-2 text-on-surface">Digital Launch</h2>
-              <p className="text-xs text-on-surface-variant mb-6 leading-relaxed">
-                A professional online presence for small businesses that need clarity and trust.
-              </p>
-              <div className="mb-6 pb-6 border-b border-outline">
-                <span className="font-label-caps text-[11px] uppercase tracking-widest text-on-surface-variant block">Starting at</span>
-                <span className="font-display-lg text-4xl sm:text-5xl font-bold text-primary">₹10,000</span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 border-b border-border">
+              <div className="lg:col-span-8">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.08]">
+                  Productised pricing. <br />
+                  <span className="text-foreground-secondary">Clear starting points.</span>
+                </h1>
               </div>
-              <ul className="space-y-3 text-xs text-on-surface mb-8">
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Professional business website</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Mobile-responsive design</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Contact form & WhatsApp button</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Google Maps & Basic SEO</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Two structured revision rounds</span></li>
-              </ul>
+              <div className="lg:col-span-4">
+                <p className="text-base text-foreground-secondary leading-relaxed">
+                  Every package is scoped with transparent deliverables. Third-party tool costs, hosting choices, and delivery timelines are established in writing before any work begins.
+                </p>
+              </div>
             </div>
-            <Link href="/contact" className="w-full text-center bg-on-surface text-surface py-4 font-button text-xs uppercase tracking-widest hover:bg-primary transition-colors">
-              Launch My Business Online
-            </Link>
           </div>
+        </section>
 
-          {/* Plan 2 */}
-          <div className="p-6 sm:p-8 bg-surface border-2 border-primary shadow-[8px_8px_0px_#b02f00] relative flex flex-col justify-between">
-            <div className="absolute -top-3.5 right-6 bg-primary text-white text-[10px] uppercase font-bold font-label-caps px-4 py-1 tracking-widest border border-on-surface">
-              MOST POPULAR
-            </div>
-            <div>
-              <span className="font-label-caps text-xs text-primary uppercase tracking-widest block mb-2 font-bold">Growth Engine</span>
-              <h2 className="font-headline-lg text-2xl sm:text-3xl mb-2 text-on-surface">Lead Growth System</h2>
-              <p className="text-xs text-on-surface-variant mb-6 leading-relaxed">
-                The practical starting point for websites plus organised enquiry management.
-              </p>
-              <div className="mb-6 pb-6 border-b border-outline">
-                <span className="font-label-caps text-[11px] uppercase tracking-widest text-on-surface-variant block">Starting at</span>
-                <span className="font-display-lg text-4xl sm:text-5xl font-bold text-primary">₹15,000</span>
-              </div>
-              <ul className="space-y-3 text-xs text-on-surface mb-8">
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span><strong>Everything in Digital Launch</strong> included</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Advanced qualification enquiry form</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Lead tracker / basic CRM connection</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Appointment & callback workflow setup</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Instant team notification workflow</span></li>
-              </ul>
-            </div>
-            <Link href="/contact" className="w-full text-center bg-primary text-white py-4 font-button text-xs uppercase tracking-widest hover:bg-primary-container transition-colors">
-              Build My Lead System
-            </Link>
+        {/* Pricing Cards Section */}
+        <section className="py-12">
+          <div className="container-significa">
+            <PricingCardGrid />
           </div>
+        </section>
 
-          {/* Plan 3 */}
-          <div className="p-6 sm:p-8 bg-surface border-2 border-on-surface flex flex-col justify-between">
-            <div>
-              <span className="font-label-caps text-xs text-on-surface-variant uppercase tracking-widest block mb-2 font-bold">Automation</span>
-              <h2 className="font-headline-lg text-2xl sm:text-3xl mb-2 text-on-surface">AI Business Starter</h2>
-              <p className="text-xs text-on-surface-variant mb-6 leading-relaxed">
-                A stronger system for content, customer replies and simple business automation.
+        {/* Website Care & Maintenance Retainers */}
+        <section className="py-20 bg-background-panel border-t border-border">
+          <div className="container-significa">
+            <div className="max-w-2xl mb-12">
+              <p className="text-xs uppercase font-semibold tracking-wider text-brand mb-2">
+                Optional Ongoing Peace of Mind
               </p>
-              <div className="mb-6 pb-6 border-b border-outline">
-                <span className="font-label-caps text-[11px] uppercase tracking-widest text-on-surface-variant block">Starting at</span>
-                <span className="font-display-lg text-4xl sm:text-5xl font-bold text-primary">₹20,000</span>
-              </div>
-              <ul className="space-y-3 text-xs text-on-surface mb-8">
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span><strong>Everything in Lead Growth</strong> included</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>30-day content calendar & caption bank</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>Branded social templates & prompt library</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>FAQ & customer-response system</span></li>
-                <li className="flex items-start gap-2.5"><span className="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span> <span>30 days of direct basic support</span></li>
-              </ul>
+              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-foreground">
+                Website Care & Growth Retainers
+              </h2>
+              <p className="text-sm text-foreground-secondary mt-3">
+                Completely optional. You always own your source code and accounts with zero lock-in.
+              </p>
             </div>
-            <Link href="/contact" className="w-full text-center bg-on-surface text-surface py-4 font-button text-xs uppercase tracking-widest hover:bg-primary transition-colors">
-              Request Custom Plan
-            </Link>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {carePlans.map((plan, idx) => (
+                <div
+                  key={idx}
+                  className="p-8 rounded-2xl border border-border bg-background flex flex-col justify-between shadow-xs hover:border-brand/40 transition-colors"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-2xl font-bold text-foreground">{plan.name}</h3>
+                      <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-background-offset border border-border text-foreground">
+                        {plan.price}
+                      </span>
+                    </div>
+                    <p className="text-xs text-foreground-secondary mb-6 leading-relaxed">
+                      {plan.desc}
+                    </p>
+
+                    <div className="space-y-3 mb-8">
+                      {plan.features.map((feat, fIdx) => (
+                        <div key={fIdx} className="flex items-start gap-2.5 text-xs text-foreground">
+                          <span className="mt-0.5 w-4 h-4 rounded-full bg-brand/20 text-foreground flex items-center justify-center flex-shrink-0">
+                            <CheckIcon className="w-2.5 h-2.5" />
+                          </span>
+                          <span>{feat}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-border">
+                    <SignificaButton href="/contact" variant="secondary" size="md" arrow className="w-full">
+                      Add {plan.name}
+                    </SignificaButton>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Pricing FAQs */}
+        <section className="py-20 border-t border-border">
+          <div className="container-significa">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+              <div className="lg:col-span-4">
+                <p className="text-xs uppercase font-semibold tracking-wider text-brand mb-2">
+                  Pricing Clarity
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground sticky top-24 leading-tight">
+                  Everything you need to know about our billing & scopes.
+                </h2>
+              </div>
+              <div className="lg:col-span-8">
+                <FaqAccordion
+                  items={[
+                    {
+                      q: "How does payment scheduling work?",
+                      a: "For project packages, we work on a straightforward 50% upfront deposit to initiate planning, design, and architecture, with the remaining 50% due upon staging review and before live DNS deployment."
+                    },
+                    {
+                      q: "Are third-party tool fees included?",
+                      a: "Third-party software (such as custom domain registration at ~$12/year, hosting, or specialized SMS gateways) are maintained on accounts owned directly by you. We specify every estimated monthly cost in your written proposal."
+                    },
+                    {
+                      q: "What if I need custom features outside these packages?",
+                      a: "We regularly build custom configurations. Request a free audit or message us, and we will prepare a modular breakdown tailored to your exact operational requirements."
+                    },
+                    {
+                      q: "Can I upgrade my package later?",
+                      a: "Yes. You can start with Digital Launch and upgrade to Lead Growth or AI Business Starter at any point. Our systems are built modularly so new capabilities plug in seamlessly."
+                    }
+                  ]}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <footer className="bg-on-surface text-surface border-t border-outline-variant py-12 text-center text-xs">
-        <p>© 2026 NYXRA. All rights reserved. <Link href="/" className="underline text-secondary-container">Back to Home</Link></p>
-      </footer>
+      <Footer />
     </>
   );
 }
