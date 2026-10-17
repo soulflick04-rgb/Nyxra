@@ -1,312 +1,39 @@
-<!DOCTYPE html>
-<html class="light" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Free Business Audit & Direct Contact - Nyxra</title>
-<meta name="description" content="Request a free business audit from Nyxra. Tell us what your business needs and we'll send a practical starting proposal directly to your email.">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
-
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script src="tailwind.config.js"></script>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
-<div class="texture-overlay"></div>
-
-<!-- Top Navigation -->
-<nav id="main-nav" class="bg-surface border-b border-outline z-50 sticky top-0 w-full transition-all duration-300">
-<div class="flex justify-between items-center w-full px-gutter py-3.5 max-w-container-max mx-auto">
-<a class="flex items-center gap-3" href="index.html">
-<img src="logo.png" alt="Nyxra" class="h-10 w-10 object-contain rounded-lg border border-outline bg-surface-container-low p-1" onerror="this.style.display='none'">
-<span class="font-headline-lg text-headline-lg-mobile tracking-tighter text-on-surface uppercase hover:text-primary transition-colors">NYXRA</span>
-</a>
-<ul class="hidden lg:flex gap-7 items-center font-label-caps text-label-caps uppercase">
-<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="index.html">Home</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="services.html">Services</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="pricing.html">Pricing</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="portfolio.html">Demo Systems</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="about.html">About</a></li>
-<li><a class="text-primary border-b-2 border-primary pb-1" href="contact.html">Audit & Contact</a></li>
-</ul>
-<a class="hidden lg:inline-block font-button text-button bg-on-surface text-surface px-6 py-2.5 hover:bg-primary transition-colors duration-200 shadow-[2px_2px_0px_#1c1b1b]" href="contact.html">
-Free Audit
-</a>
-<button id="mobile-menu-btn" class="lg:hidden text-on-surface p-2" aria-label="Open menu">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="hidden lg:hidden bg-surface border-t border-outline">
-<div class="flex flex-col px-gutter py-6 gap-3 font-label-caps text-label-caps uppercase">
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="index.html">Home</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="services.html">Services</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="pricing.html">Pricing</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="portfolio.html">Demo Systems</a>
-<a class="text-on-surface-variant py-2 border-b border-outline-variant hover:text-primary" href="about.html">About & Founder</a>
-<a class="text-primary py-2 border-b border-outline-variant" href="contact.html">Audit & Contact</a>
-</div>
-</div>
-</nav>
-
-<!-- Main Content -->
-<main>
-<!-- Hero Header -->
-<section class="pt-12 pb-8 px-gutter max-w-container-max mx-auto relative">
-<p class="font-label-caps text-xs text-primary uppercase font-bold tracking-widest mb-2">Initiate Contact</p>
-<h1 class="font-display-xl text-[40px] sm:text-[60px] md:text-display-xl uppercase tracking-tighter text-on-surface leading-none md:w-3/4 break-words">
-Tell Us What Your <br/>
-<span class="text-primary relative inline-block scribble-underline">
-Business Needs.
-</span>
-</h1>
-<p class="font-body-md text-base sm:text-lg text-on-surface-variant mt-5 max-w-2xl">
-Share a few details about your current website, enquiry process, or repetitive tasks. Every submission sends an instant notification directly to our founder's inbox at <strong class="text-on-surface">supportnyxra@gmail.com</strong>.
-</p>
-</section>
-
-<!-- Form & Details Section -->
-<section class="px-gutter max-w-container-max mx-auto pb-20 grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-start">
-<!-- Left: Free Business Audit Form (Guaranteed 100% Visible & Direct Email Delivery) -->
-<div class="lg:col-span-8 bg-surface p-6 sm:p-10 border-2 border-on-surface shadow-[6px_6px_0px_#1c1b1b] relative z-10">
-<div class="flex items-center justify-between border-b border-outline pb-4 mb-6">
-<div class="flex items-center gap-2 text-primary font-label-caps text-xs uppercase font-bold">
-<span class="material-symbols-outlined text-base">mail</span>
-<span>Direct Email Audit Form (To: supportnyxra@gmail.com)</span>
-</div>
-<span class="text-[10px] font-mono uppercase bg-secondary-container text-on-secondary-container px-2 py-0.5 font-bold">ACTIVE FORM</span>
-</div>
-
-<form id="audit-form" class="flex flex-col gap-6" name="nyxra-business-audit">
-<div id="form-error-alert" class="hidden p-4 bg-red-100 border border-red-400 text-red-800 text-xs font-bold"></div>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="fullName">Your Full Name *</label>
-<input class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none transition-colors" id="fullName" name="full-name" placeholder="e.g. Rishi Srivastav" type="text" required/>
-</div>
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="businessName">Business / Brand Name *</label>
-<input class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none transition-colors" id="businessName" name="business-name" placeholder="e.g. Apex Health / Studio X" type="text" required/>
-</div>
-</div>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="email">Your Email Address *</label>
-<input class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none transition-colors" id="email" name="email" placeholder="e.g. yourname@gmail.com" type="email" required/>
-</div>
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="phone">WhatsApp or Phone Number *</label>
-<input class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none transition-colors" id="phone" name="phone" placeholder="e.g. +91 98765 43210" type="tel" required/>
-</div>
-</div>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="businessCategory">Business Category *</label>
-<select class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" id="businessCategory" name="business-category" required>
-<option value="" disabled selected>Select an option</option>
-<option value="Clinic or diagnostics">Clinic or diagnostics</option>
-<option value="Coaching or education">Coaching or education</option>
-<option value="Consultant or freelancer">Consultant or freelancer</option>
-<option value="Salon, gym or wellness">Salon, gym or wellness</option>
-<option value="Local service business">Local service business</option>
-<option value="Startup">Early-stage Startup</option>
-<option value="Other">Other</option>
-</select>
-</div>
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="city">City / Location *</label>
-<input class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none transition-colors" id="city" name="city" placeholder="e.g. Mumbai, Delhi, Bengaluru" type="text" required/>
-</div>
-</div>
-
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="websiteOrSocial">Current Website or Social Profile (Optional)</label>
-<input class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none transition-colors" id="websiteOrSocial" name="website-or-social" placeholder="https://instagram.com/yourbusiness or existing site URL" type="text"/>
-</div>
-
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="mainProblem">Main Current Problem / Bottleneck *</label>
-<textarea class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none resize-none transition-colors" id="mainProblem" name="main-current-problem" placeholder="Example: enquiries are scattered across WhatsApp messages, website is outdated, follow-up is hard to manage..." rows="3" required></textarea>
-</div>
-
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="desiredResult">Desired Result / Goals *</label>
-<textarea class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none resize-none transition-colors" id="desiredResult" name="desired-result" placeholder="Example: high-converting website, automated lead capture in Google Sheets, appointment booking flow..." rows="3" required></textarea>
-</div>
-
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="budgetRange">Budget Range *</label>
-<select class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" id="budgetRange" name="budget-range" required>
-<option value="" disabled selected>Select Budget Range</option>
-<option value="₹10,000 - ₹15,000">₹10,000 - ₹15,000 (Digital Launch)</option>
-<option value="₹15,000 - ₹20,000">₹15,000 - ₹20,000 (Lead Growth System)</option>
-<option value="₹20,000 - ₹35,000">₹20,000 - ₹35,000 (AI Business Starter)</option>
-<option value="₹35,000+">₹35,000+ (Custom Scope)</option>
-<option value="Not sure yet">Not sure yet (Need Recommendation)</option>
-</select>
-</div>
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="contactMethod">Preferred Contact Method *</label>
-<select class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none cursor-pointer" id="contactMethod" name="preferred-contact-method" required>
-<option value="WhatsApp">WhatsApp Message</option>
-<option value="Email">Email</option>
-<option value="Phone call">Phone Call</option>
-</select>
-</div>
-</div>
-
-<div>
-<label class="font-label-caps text-xs text-on-surface uppercase block mb-1 font-bold" for="message">Optional Additional Notes</label>
-<textarea class="w-full bg-surface-container-low border border-outline px-4 py-3 text-sm text-on-surface focus:border-primary outline-none resize-none transition-colors" id="message" name="message" placeholder="Share any other context that helps us understand your business." rows="2"></textarea>
-</div>
-
-<div class="pt-2 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">* All asterisk fields are required</span>
-<button id="audit-submit-btn" class="w-full sm:w-auto font-button text-xs bg-primary text-white px-8 py-4 uppercase tracking-widest hover:bg-primary-container transition-colors shadow-[2px_2px_0px_#1c1b1b] flex items-center justify-center gap-2 cursor-pointer" type="submit">
-<span>Submit Audit & Send To Email</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</form>
-</div>
-
-<!-- Right: Direct Contact & Guarantees -->
-<div class="lg:col-span-4 flex flex-col gap-6">
-<!-- Direct Email Box -->
-<div class="p-6 bg-surface border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b]">
-<span class="font-label-caps text-xs text-primary uppercase font-bold block mb-2">Direct Inbox</span>
-<h3 class="font-headline-lg text-xl text-on-surface mb-2">Founder Direct Email</h3>
-<p class="text-xs text-on-surface-variant mb-4">All audit submissions forward directly to:</p>
-<a class="font-mono text-sm font-bold text-primary hover:underline block break-all p-2.5 bg-surface-container-high border border-outline" href="mailto:supportnyxra@gmail.com">
-supportnyxra@gmail.com
-</a>
-</div>
-
-<!-- What Happens Next Box -->
-<div class="p-6 bg-surface-container-high border-2 border-on-surface shadow-[4px_4px_0px_#1c1b1b]">
-<span class="font-label-caps text-xs text-primary uppercase font-bold block mb-2">Review Process</span>
-<h3 class="font-headline-lg text-lg text-on-surface mb-3">What Happens Next:</h3>
-<ul class="text-xs space-y-3 text-on-surface">
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
-<span><strong>1. Instant Email Dispatch:</strong> Form sends full audit parameters to supportnyxra@gmail.com in real-time.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
-<span><strong>2. Founder Review:</strong> Rishi Srivastav reviews your current business model, bottlenecks, and enquiry flow.</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span>
-<span><strong>3. Direct Reply:</strong> You receive a tailored scope & timeline proposal within 24 hours.</span>
-</li>
-</ul>
-</div>
-
-<!-- Honest Scope Promise -->
-<div class="p-6 bg-secondary-container border-2 border-on-surface text-on-secondary-container shadow-[4px_4px_0px_#1c1b1b]">
-<h4 class="font-headline-lg text-base mb-2">Zero Pressure Guarantee</h4>
-<p class="text-xs leading-relaxed">
-If your business only needs a clean 1-page site or Google Sheets setup, we will tell you honestly without upselling unnecessary enterprise software.
-</p>
-</div>
-</div>
-</section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-on-surface text-surface border-t border-outline-variant">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-stack-lg w-full px-gutter py-16 max-w-container-max mx-auto">
-<div>
-<a class="font-display-lg text-2xl text-surface block mb-3" href="index.html">NYXRA</a>
-<p class="font-body-md text-xs text-surface-variant max-w-xs">
-Websites, lead systems and simple automations for small businesses.
-</p>
-</div>
-<div>
-<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Navigation</h4>
-<ul class="space-y-2 text-xs text-surface-variant">
-<li><a class="hover:text-secondary" href="index.html">Home</a></li>
-<li><a class="hover:text-secondary" href="services.html">Services</a></li>
-<li><a class="hover:text-secondary" href="pricing.html">Pricing</a></li>
-<li><a class="hover:text-secondary" href="portfolio.html">Demo Systems</a></li>
-<li><a class="hover:text-secondary" href="about.html">About & Founder</a></li>
-<li><a class="hover:text-secondary font-bold text-secondary-container" href="contact.html">Audit & Contact</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Contact</h4>
-<p class="text-xs text-surface-variant">supportnyxra@gmail.com</p>
-</div>
-<div>
-<h4 class="font-label-caps text-xs uppercase text-surface-variant mb-4">Legal</h4>
-<ul class="space-y-2 text-xs text-surface-variant">
-<li><a class="hover:text-secondary" href="privacy.html">Privacy Policy</a></li>
-<li><a class="hover:text-secondary" href="terms.html">Terms of Service</a></li>
-</ul>
-</div>
-</div>
-</footer>
-
-<script src="main.js"></script>
-<script>
-// Contact Audit Form Submission - Dispatches to FormSubmit (Direct Email to supportnyxra@gmail.com) and Google Apps Script
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('audit-form');
-    const submitBtn = document.getElementById('audit-submit-btn');
-    const errorAlert = document.getElementById('form-error-alert');
-    const googleEndpoint = 'https://script.google.com/macros/s/AKfycby9rUlv7CSat0B4j5TLU1TdSChYgMGZSq8vccMM9KT-8Ms25Mh_qbjParGswH84K8nmaw/exec';
-    const emailEndpoint = 'https://formsubmit.co/ajax/supportnyxra@gmail.com';
-
-    if (form) {
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            errorAlert.classList.add('hidden');
-            
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span>Sending Message to Email...</span> <span class="material-symbols-outlined text-sm animate-spin">progress_activity</span>';
-
-            const formData = new FormData(form);
-            const dataObj = {};
-            formData.forEach((value, key) => { dataObj[key] = value; });
-            dataObj['_subject'] = `New Nyxra Business Audit Request from ${dataObj['full-name'] || 'Lead'}`;
-            dataObj['_template'] = 'table';
-
-            try {
-                // 1. Send direct email to supportnyxra@gmail.com
-                await fetch(emailEndpoint, {
-                    method: 'POST',
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(dataObj)
-                }).catch(err => console.log('Email forward note:', err));
-
-                // 2. Also log to Google Apps Script Sheet
-                await fetch(googleEndpoint, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    body: formData
-                }).catch(err => console.log('Sheet log note:', err));
-
-                // Redirect to Thank You page
-                window.location.href = 'thank-you.html';
-            } catch (err) {
-                console.error(err);
-                // Even on edge network errors, redirect to thank-you
-                window.location.href = 'thank-you.html';
-            }
-        });
-    }
-});
-</script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/logo.png"/><link rel="stylesheet" href="/_next/static/chunks/2pf8bb0ioc91j.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/1u5zan5bs9a7v.js"/><script src="/_next/static/chunks/0s8w3af4l-q85.js" async=""></script><script src="/_next/static/chunks/02fh7_m5mrih8.js" async=""></script><script src="/_next/static/chunks/turbopack-3q_wial4pwd-t.js" async=""></script><script src="/_next/static/chunks/3fntmmi971322.js" async="" crossorigin=""></script><script src="/_next/static/chunks/1oatvd9wpc6ww.js" async="" crossorigin=""></script><script src="/_next/static/chunks/09hcha-zxg1rv.js" async="" crossorigin=""></script><link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" as="style"/><title>Nyxra | Websites, Lead Systems &amp; AI Automation for Small Businesses</title><meta name="description" content="Nyxra builds professional websites, lead-capture systems, appointment workflows and simple AI-powered automations that help small businesses grow."/><link rel="shortcut icon" href="/favicon.ico?v=2"/><link rel="icon" href="/favicon.ico?favicon.0frn9-j9ry_r7.ico" sizes="32x32" type="image/x-icon"/><link rel="icon" href="/favicon.ico?v=2"/><link rel="icon" href="/favicon-32.png?v=2" sizes="32x32" type="image/png"/><link rel="icon" href="/favicon-48.png?v=2" sizes="48x48" type="image/png"/><link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2"/><link rel="icon" href="/favicon.ico?v=2" sizes="any"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2"/><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png?v=2"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script src="/tailwind.config.js"></script><script>
+              (function() {
+                try {
+                  const saved = localStorage.getItem('nyxra-theme');
+                  if (saved) {
+                    document.documentElement.setAttribute('data-theme', saved);
+                  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                  }
+                } catch (e) {}
+              })();
+            </script><script src="/_next/static/chunks/0cz1d0mv5g_q7.js" noModule=""></script></head><body class="bg-background text-foreground selection:bg-brand selection:text-foreground antialiased min-h-screen"><div hidden=""><!--$--><!--/$--></div><div class="h-[76px] w-full"></div><header class="fixed top-0 left-0 right-0 z-40 h-[76px] bg-background/95 backdrop-blur-md transition-all duration-300 ease-motion border-b border-b-transparent translate-y-0"><div class="container-significa h-full flex items-center justify-between"><a class="flex items-center gap-2.5 group" href="/"><div class="w-8 h-8 rounded-lg overflow-hidden border border-border bg-background-offset p-0.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-105"><img src="/logo.png" alt="Nyxra" class="w-full h-full object-contain"/></div><div class="flex flex-col"><span class="text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-brand">NYXRA</span></div></a><nav class="hidden lg:flex items-center gap-8 text-sm font-medium"><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/">Home</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/services">Services</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/pricing">Pricing</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/portfolio">Demo Systems</a><a class="relative py-1 transition-colors duration-200 text-foreground-secondary hover:text-foreground" href="/about">About</a><a class="relative py-1 transition-colors duration-200 text-foreground font-semibold" href="/contact">Audit &amp; Contact<span class="absolute bottom-0 left-0 right-0 h-[2px] bg-brand rounded-full"></span></a></nav><div class="flex items-center gap-3"><div class="w-[50px] h-[26px] rounded-full bg-background-offset border border-border opacity-50 "></div><div class="hidden sm:block"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-9 rounded-sm px-3.5 text-xs
+    bg-foreground text-background hover:bg-foreground/90" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-2.5">Free Audit</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-3"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a></div><button type="button" aria-label="Open directory menu" class="w-9 h-9 rounded-md border border-border bg-transparent text-foreground flex items-center justify-center hover:border-border-active hover:bg-background-offset/50 transition-all duration-200 outline-none focus-visible:ring-2 ring-brand"><svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><circle cx="4" cy="10" r="1.75"></circle><circle cx="10" cy="10" r="1.75"></circle><circle cx="16" cy="10" r="1.75"></circle></svg></button></div></div></header><main class="min-h-screen"><section class="pt-12 sm:pt-20 pb-16"><div class="container-significa"><div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-offset border border-border text-xs font-semibold uppercase tracking-wider text-foreground mb-6"><span class="w-2 h-2 rounded-full bg-brand"></span><span>Complimentary Video Audit &amp; Proposal</span></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 border-b border-border"><div class="lg:col-span-8"><h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.08]">Tell us what your <br/><span class="text-foreground-secondary">business needs.</span></h1></div><div class="lg:col-span-4"><p class="text-base text-foreground-secondary leading-relaxed">Share a few details about your current customer flow, bottlenecks, or website requirements. Rishi Srivastav personally reviews every submission and sends a 20-minute action video within 24 hours.</p></div></div></div></section><section class="py-12"><div class="container-significa"><div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start"><div class="lg:col-span-8"><form class="p-8 sm:p-12 rounded-3xl border border-border bg-background-panel shadow-xs space-y-6"><div><h3 class="text-2xl font-bold text-foreground mb-1">Submit Audit Request</h3><p class="text-xs text-foreground-secondary">Fill in as much detail as you have. All fields marked with * are required.</p></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">Full Name *</label><input type="text" placeholder="e.g. Rishi Srivastav" class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors" required="" value=""/></div><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">Business / Brand Name *</label><input type="text" placeholder="e.g. Apex Health Clinic" class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors" required="" value=""/></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">Email Address *</label><input type="email" placeholder="e.g. contact@business.com" class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors" required="" value=""/></div><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">WhatsApp / Phone Number *</label><input type="tel" placeholder="e.g. +91 98765 43210" class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors" required="" value=""/></div></div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">Business Industry *</label><select class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors"><option value="Clinic or diagnostics" selected="">Clinic or diagnostics</option><option value="Coaching or education">Coaching or education</option><option value="Consultant or freelancer">Consultant or freelancer</option><option value="Salon, gym or wellness">Salon, gym or wellness</option><option value="Local service business">Local service business</option><option value="Startup">Early-stage Startup</option><option value="Other">Other Business</option></select></div><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">City / State</label><input type="text" placeholder="e.g. Mumbai, Bengaluru, Global" class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors" value=""/></div></div><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">Current Website or Social URL (Optional)</label><input type="text" placeholder="e.g. https://instagram.com/mybusiness or None" class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors" value=""/></div><div><label class="block text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-1.5">Tell Us About Your Goals &amp; Current Bottleneck</label><textarea rows="3" placeholder="What is your biggest operational pain point? (e.g. losing leads on WhatsApp, manual scheduling, no modern website...)" class="w-full bg-background-offset border border-border rounded-lg px-4 py-3 text-sm text-foreground focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-colors resize-none"></textarea></div><button type="submit" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-14 rounded-lg px-7 text-base
+    bg-brand text-foreground hover:brightness-105 font-semibold
+    w-full text-base"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-3.5">Submit Business Audit Request</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-6"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></button></form></div><div class="lg:col-span-4 space-y-6"><div class="p-6 rounded-2xl border border-border bg-background-panel shadow-xs space-y-6"><div><span class="text-xs font-semibold uppercase tracking-wider text-brand block mb-1">Direct Communication</span><h4 class="text-xl font-bold text-foreground">Studio Contact</h4></div><div class="space-y-4 text-xs"><div><span class="text-foreground-secondary block">Founder:</span><strong class="text-foreground text-sm">Rishi Srivastav</strong></div><div><span class="text-foreground-secondary block">Direct Email:</span><a href="mailto:supportnyxra@gmail.com" class="text-foreground hover:underline font-mono text-sm">supportnyxra@gmail.com</a></div><div><span class="text-foreground-secondary block">Location:</span><span class="text-foreground font-medium">India • Global Remote Services</span></div><div><span class="text-foreground-secondary block">Response Time:</span><span class="text-foreground font-medium">Guaranteed under 24 hours</span></div></div><div class="pt-4 border-t border-border"><a href="mailto:supportnyxra@gmail.com" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-9 rounded-sm px-3.5 text-xs
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40
+    w-full"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion ">Open Email Client</span></a></div></div><div class="p-6 rounded-2xl border border-border bg-background-panel shadow-xs"><h4 class="text-sm font-bold text-foreground uppercase tracking-wider mb-3">What You Receive in the Audit:</h4><ul class="space-y-2.5 text-xs text-foreground-secondary"><li class="flex items-start gap-2"><span class="text-brand font-bold">•</span><span>20-minute tailored video Loom analysis of your current presence</span></li><li class="flex items-start gap-2"><span class="text-brand font-bold">•</span><span>Identification of 3 specific friction points losing you enquiries</span></li><li class="flex items-start gap-2"><span class="text-brand font-bold">•</span><span>Proposed system architecture diagram with fixed pricing scope</span></li><li class="flex items-start gap-2"><span class="text-brand font-bold">•</span><span>100% free with zero obligation to hire</span></li></ul></div></div></div></div></section></main><footer class="w-full bg-background-panel border-t border-border mt-20 transition-colors"><div class="border-b border-border py-16"><div class="container-significa flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"><div><p class="text-xs uppercase font-semibold tracking-wider text-brand mb-2">Start With A Free Review</p><h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-foreground leading-tight">Let&#x27;s build a simpler system <br class="hidden sm:inline"/>for your business.</h2><p class="text-sm text-foreground-secondary mt-3 max-w-xl">Get an actionable 20-minute video review of your current website, enquiry flow, and lead management with zero pressure.</p></div><div class="flex flex-wrap items-center gap-4"><a class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-14 rounded-lg px-7 text-base
+    bg-brand text-foreground hover:brightness-105 font-semibold" href="/contact"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion group-hover:-translate-x-3.5">Get Free Business Audit</span><span class="absolute transition-all duration-300 ease-motion opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 right-6"><svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a><a href="mailto:supportnyxra@gmail.com" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center gap-2 overflow-hidden whitespace-nowrap
+    font-medium leading-none outline-none transition-all duration-300 ease-motion
+    hover:ring-4 focus-visible:ring-4 ring-outline active:scale-[0.98] active:ring-2
+    disabled:pointer-events-none disabled:opacity-60
+    h-14 rounded-lg px-7 text-base
+    bg-transparent text-foreground border border-border hover:border-border-active hover:bg-background-offset/40"><span class="inline-flex items-center gap-1.5 transition-transform duration-300 ease-motion ">Email Founder</span></a></div></div></div><div class="container-significa py-16"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10"><div class="lg:col-span-2 pr-0 lg:pr-8"><a class="inline-flex items-center gap-2.5 mb-4 group" href="/"><div class="w-8 h-8 rounded-lg overflow-hidden border border-border bg-background-offset p-0.5"><img src="/logo.png" alt="Nyxra" class="w-full h-full object-contain"/></div><span class="text-2xl font-bold tracking-tight text-foreground">NYXRA</span></a><p class="text-sm text-foreground-secondary leading-relaxed max-w-sm mb-6">Nyxra is a digital and automation studio founded by Rishi Srivastav. We build high-converting websites, lead-capture systems, and practical AI workflows for ambitious businesses.</p><div class="inline-flex flex-col p-3 rounded-lg bg-background-offset border border-border text-xs"><span class="text-[11px] uppercase tracking-wider text-foreground-secondary font-medium flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>Studio Local Time (IST)</span><span class="font-mono text-base font-semibold text-foreground mt-1">12:00:00 PM</span><span class="text-[10px] text-foreground-secondary mt-0.5">India &amp; Global • Direct Founder Communication</span></div></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-4">Navigation</h4><ul class="space-y-2.5 text-sm font-medium"><li><a class="text-foreground hover:text-brand transition-colors" href="/">Home</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/services">Services &amp; Deliverables</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/pricing">Pricing Packages</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Demo Systems</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/about">About &amp; Founder</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/contact">Free Audit &amp; Contact</a></li></ul></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-4">Demo Systems</h4><ul class="space-y-2.5 text-sm font-medium"><li><a class="text-foreground hover:text-brand transition-colors flex items-center gap-1.5" href="/clinic-demo"><span class="w-1.5 h-1.5 rounded-full bg-brand"></span>Clinic Booking (Live)</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Coaching Pipeline</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Consultant Booking Flow</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/portfolio">Local Service Engine</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/services">AI Content Starters</a></li></ul></div><div><h4 class="text-xs font-semibold uppercase tracking-wider text-foreground-secondary mb-4">Legal &amp; Theme</h4><ul class="space-y-2.5 text-sm font-medium mb-6"><li><a class="text-foreground hover:text-brand transition-colors" href="/privacy">Privacy Policy</a></li><li><a class="text-foreground hover:text-brand transition-colors" href="/terms">Terms of Service</a></li><li><a href="mailto:supportnyxra@gmail.com" class="text-foreground hover:text-brand transition-colors font-mono text-xs">supportnyxra@gmail.com</a></li></ul><div class="flex items-center gap-3"><span class="text-xs text-foreground-secondary">Theme:</span><div class="w-[50px] h-[26px] rounded-full bg-background-offset border border-border opacity-50 "></div></div></div></div><div class="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between text-xs text-foreground-secondary gap-4"><p>© 2026 NYXRA. Founded by Rishi Srivastav. All rights reserved.</p><p>Client-owned accounts. Clear written scope. No proprietary lock-in.</p></div></div></footer><!--$--><!--/$--><script src="/_next/static/chunks/1u5zan5bs9a7v.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/3fntmmi971322.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/3fntmmi971322.js\"],\"default\"]\n4:I[47257,[\"/_next/static/chunks/3fntmmi971322.js\"],\"ClientPageRoot\"]\n5:I[30805,[\"/_next/static/chunks/3fntmmi971322.js\",\"/_next/static/chunks/1oatvd9wpc6ww.js\",\"/_next/static/chunks/09hcha-zxg1rv.js\"],\"default\"]\n8:I[97367,[\"/_next/static/chunks/3fntmmi971322.js\"],\"OutletBoundary\"]\n9:\"$Sreact.suspense\"\nc:I[97367,[\"/_next/static/chunks/3fntmmi971322.js\"],\"ViewportBoundary\"]\ne:I[97367,[\"/_next/static/chunks/3fntmmi971322.js\"],\"MetadataBoundary\"]\n10:I[68027,[\"/_next/static/chunks/3fntmmi971322.js\"],\"default\",1]\n:HL[\"/_next/static/chunks/2pf8bb0ioc91j.css\",\"style\"]\n:HL[\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1\u0026display=swap\",\"style\"]\nb:X\n0:{\"P\":null,\"c\":[\"\",\"contact\"],\"q\":\"\",\"i\":false,\"f\":[[[\"\",{\"children\":[\"contact\",{\"children\":[\"__PAGE__\",{},\"$undefined\",\"$undefined\",4608]},\"$undefined\",\"$undefined\",4608]},\"$undefined\",\"$undefined\",4624],[[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/2pf8bb0ioc91j.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/3fntmmi971322.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"data-theme\":\"light\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"icon\",\"href\":\"/favicon.ico?v=2\",\"sizes\":\"any\"}],[\"$\",\"link\",null,{\"rel\":\"icon\",\"type\":\"image/png\",\"sizes\":\"32x32\",\"href\":\"/favicon-32.png?v=2\"}],[\"$\",\"link\",null,{\"rel\":\"icon\",\"type\":\"image/png\",\"sizes\":\"48x48\",\"href\":\"/favicon-48.png?v=2\"}],[\"$\",\"link\",null,{\"rel\":\"apple-touch-icon\",\"sizes\":\"180x180\",\"href\":\"/apple-touch-icon.png?v=2\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1\u0026display=swap\",\"rel\":\"stylesheet\"}],[\"$\",\"script\",null,{\"src\":\"https://cdn.tailwindcss.com?plugins=forms,container-queries\"}],[\"$\",\"script\",null,{\"src\":\"/tailwind.config.js\"}],[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"\\n              (function() {\\n                try {\\n                  const saved = localStorage.getItem('nyxra-theme');\\n                  if (saved) {\\n                    document.documentElement.setAttribute('data-theme', saved);\\n                  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {\\n                    document.documentElement.setAttribute('data-theme', 'dark');\\n                  }\\n                } catch (e) {}\\n              })();\\n            \"}}]]}],[\"$\",\"body\",null,{\"className\":\"bg-background text-foreground selection:bg-brand selection:text-foreground antialiased min-h-screen\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L3\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L4\",null,{\"Component\":\"$5\",\"serverProvidedParams\":{\"searchParams\":{},\"params\":{},\"promises\":[\"$@6\",\"$@7\"]}}],[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/1oatvd9wpc6ww.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/09hcha-zxg1rv.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$L8\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@a\"}]}]]}],{},null,false,null]},null,false,\"$b\"]},null,false,null],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Lc\",null,{\"children\":\"$Ld\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$Le\",null,{\"children\":[\"$\",\"$9\",null,{\"name\":\"Next.Metadata\",\"children\":\"$Lf\"}]}]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$10\",[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/2pf8bb0ioc91j.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]]],\"S\":true,\"h\":null,\"r\":\"$undefined\",\"s\":\"$undefined\",\"a\":\"$undefined\",\"l\":\"$undefined\",\"p\":\"$undefined\",\"d\":\"$undefined\",\"b\":\"k4rrcuTNyZ3KyNR1riOKY\"}\nb:C\n6:{}\n7:\"$0:f:0:1:1:children:1:children:0:props:children:0:props:serverProvidedParams:params\"\nd:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n11:I[27201,[\"/_next/static/chunks/3fntmmi971322.js\"],\"IconMark\"]\na:null\nf:[[\"$\",\"title\",\"0\",{\"children\":\"Nyxra | Websites, Lead Systems \u0026 AI Automation for Small Businesses\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Nyxra builds professional websites, lead-capture systems, appointment workflows and simple AI-powered automations that help small businesses grow.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"shortcut icon\",\"href\":\"/favicon.ico?v=2\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?favicon.0frn9-j9ry_r7.ico\",\"sizes\":\"32x32\",\"type\":\"image/x-icon\"}],[\"$\",\"link\",\"4\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?v=2\"}],[\"$\",\"link\",\"5\",{\"rel\":\"icon\",\"href\":\"/favicon-32.png?v=2\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"6\",{\"rel\":\"icon\",\"href\":\"/favicon-48.png?v=2\",\"sizes\":\"48x48\",\"type\":\"image/png\"}],[\"$\",\"link\",\"7\",{\"rel\":\"apple-touch-icon\",\"href\":\"/apple-touch-icon.png?v=2\"}],[\"$\",\"$L11\",\"8\",{}]]\n"])</script></body></html>
