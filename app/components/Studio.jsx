@@ -773,6 +773,14 @@ export function Contact() {
       );
       const result = await response.json();
       if (
+        result.success !== true &&
+        result.success !== "true" &&
+        /needs activation/i.test(result.message || "")
+      ) {
+        setState("unavailable");
+        return;
+      }
+      if (
         !response.ok ||
         (result.success !== true && result.success !== "true")
       )
@@ -907,10 +915,11 @@ export function Contact() {
                 review it. This is not an order or booking confirmation.
               </p>
             )}
-            {state === "error" && (
+            {(state === "error" || state === "unavailable") && (
               <p className="form-status error" role="alert">
-                We couldn’t confirm delivery. Your details are still here.
-                Please try again or email{" "}
+                {state === "unavailable"
+                  ? "Online enquiries are temporarily unavailable. Your details are still here. Please email "
+                  : "We couldn’t confirm delivery. Your details are still here. Please try again or email "}
                 <a href="mailto:supportnyxra@gmail.com">
                   supportnyxra@gmail.com
                 </a>
