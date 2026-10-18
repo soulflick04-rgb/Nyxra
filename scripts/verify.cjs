@@ -60,12 +60,16 @@ const path = require("node:path");
         .getAttribute("aria-pressed"),
       "true",
     );
-    if (name === "Clinic") {
+    if (name === "Clinic" || name === "Gym") {
       assert.equal(
         await page
-          .getByRole("link", { name: "Open the live clinic website demo" })
+          .getByRole("link", {
+            name: `Open the live ${name.toLowerCase()} website demo`,
+          })
           .getAttribute("href"),
-        "https://clinicwebsitedemo22.netlify.app/",
+        name === "Clinic"
+          ? "https://clinicwebsitedemo22.netlify.app/"
+          : "https://elevate-functional-fitness.lovable.app/",
       );
       continue;
     }

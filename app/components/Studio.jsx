@@ -11,6 +11,8 @@ const sectors = {
     label: "Clinic",
     demoUrl: "https://clinicwebsitedemo22.netlify.app/",
     preview: "/demos/clinic-preview.jpg",
+    previewAlt:
+      "CarePlus clinic website demo showing its homepage, doctors and appointment options",
     name: "THE CARE ROOM",
     title: "Good care starts\nwith a conversation.",
     category: "A neighbourhood clinic",
@@ -21,6 +23,10 @@ const sectors = {
   },
   gym: {
     label: "Gym",
+    demoUrl: "https://elevate-functional-fitness.lovable.app/",
+    preview: "/demos/gym-preview.jpg",
+    previewAlt:
+      "IronForge gym website demo showing its strength training homepage and class links",
     name: "FORM / FITNESS",
     title: "Make room\nfor stronger days.",
     category: "Movement for every day",
@@ -248,12 +254,12 @@ export function Concept({ interactive = false, initial = "clinic" }) {
             src={s.preview}
             width="1440"
             height="800"
-            alt="CarePlus clinic website demo showing its homepage, doctors and appointment options"
+            alt={s.previewAlt}
             loading="lazy"
             decoding="async"
           />
           <div className="live-demo-footer">
-            <span>Explore the clinic website</span>
+            <span>Explore the {s.label.toLowerCase()} website</span>
             <span>
               Open live demo <b aria-hidden="true">↗</b>
             </span>
