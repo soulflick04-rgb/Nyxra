@@ -34,7 +34,12 @@ const assert = require("node:assert/strict");
         "https://elevate-functional-fitness.lovable.app/",
       );
       await page.getByRole("button", { name: "Coaching", exact: true }).click();
-      assert.equal(await page.locator(".concept-browser.coaching").count(), 1);
+      assert.equal(
+        await page
+          .getByRole("link", { name: "Open the live coaching website demo" })
+          .getAttribute("href"),
+        "https://scholarspace-india-learning-hub.lovable.app/",
+      );
       await page.getByRole("button", { name: "Gym", exact: true }).click();
       await link.waitFor();
       if (route === "/")

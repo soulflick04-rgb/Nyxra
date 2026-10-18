@@ -60,24 +60,19 @@ const path = require("node:path");
         .getAttribute("aria-pressed"),
       "true",
     );
-    if (name === "Clinic" || name === "Gym") {
-      assert.equal(
-        await page
-          .getByRole("link", {
-            name: `Open the live ${name.toLowerCase()} website demo`,
-          })
-          .getAttribute("href"),
-        name === "Clinic"
-          ? "https://clinicwebsitedemo22.netlify.app/"
-          : "https://elevate-functional-fitness.lovable.app/",
-      );
-      continue;
-    }
-    await page.locator(".mock-cta").click();
-    await page
-      .getByRole("status")
-      .filter({ hasText: "No request was sent" })
-      .waitFor();
+    const urls = {
+      Clinic: "https://clinicwebsitedemo22.netlify.app/",
+      Gym: "https://elevate-functional-fitness.lovable.app/",
+      Coaching: "https://scholarspace-india-learning-hub.lovable.app/",
+    };
+    assert.equal(
+      await page
+        .getByRole("link", {
+          name: `Open the live ${name.toLowerCase()} website demo`,
+        })
+        .getAttribute("href"),
+      urls[name],
+    );
   }
   await page.goto("http://127.0.0.1:3000/");
   await page

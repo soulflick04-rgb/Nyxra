@@ -12,7 +12,7 @@ export const metadata = {
     siteName: "Nyxra",
     type: "website",
   },
-  icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
+  icons: { icon: "/nyxra-mark.svg", apple: "/apple-touch-icon.png?v=violet" },
 };
 export default function RootLayout({ children }) {
   return (

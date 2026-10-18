@@ -1,4 +1,10 @@
 /* Original Nyxra styling informed by the MeetUI main-site design system. */
+.brand-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
 .live-demo-preview {
   display: block;
   overflow: hidden;

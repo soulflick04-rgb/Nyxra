@@ -37,6 +37,10 @@ const sectors = {
   },
   coaching: {
     label: "Coaching",
+    demoUrl: "https://scholarspace-india-learning-hub.lovable.app/",
+    preview: "/demos/coaching-preview.jpg",
+    previewAlt:
+      "Vidya Sadan coaching website demo showing its courses and admission enquiry options",
     name: "NEXT CHAPTER",
     title: "Big ambitions.\nA clear next step.",
     category: "A place to keep learning",
@@ -88,10 +92,14 @@ export function Header() {
   return (
     <header className="header">
       <Link className="wordmark" href="/" aria-label="Nyxra home">
+        <img
+          className="brand-mark"
+          src="/nyxra-mark.svg"
+          width="36"
+          height="36"
+          alt=""
+        />
         nyxra
-        <span className="brand-star" aria-hidden="true">
-          ✳
-        </span>
       </Link>
       <button
         className="menu-button"
@@ -142,8 +150,15 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-top">
-        <Link className="wordmark" href="/">
-          nyxra<span aria-hidden="true">✳</span>
+        <Link className="wordmark" href="/" aria-label="Nyxra home">
+          <img
+            className="brand-mark"
+            src="/nyxra-mark.svg"
+            width="36"
+            height="36"
+            alt=""
+          />
+          nyxra
         </Link>
         <p>
           Built around your business.
