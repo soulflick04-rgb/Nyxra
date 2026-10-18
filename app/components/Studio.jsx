@@ -9,6 +9,8 @@ import { usePathname } from "next/navigation";
 const sectors = {
   clinic: {
     label: "Clinic",
+    demoUrl: "https://clinicwebsitedemo22.netlify.app/",
+    preview: "/demos/clinic-preview.jpg",
     name: "THE CARE ROOM",
     title: "Good care starts\nwith a conversation.",
     category: "A neighbourhood clinic",
@@ -230,49 +232,78 @@ export function Concept({ interactive = false, initial = "clinic" }) {
           </button>
         ))}
       </div>
-      <div className={`concept-browser ${s.color}`}>
-        <div className="browser-bar">
-          <span aria-hidden="true">● ● ●</span>
-          <span>DESIGN CONCEPT / NOT A CLIENT PROJECT</span>
-          <span aria-hidden="true">↗</span>
-        </div>
-        <div className="mock-nav">
-          <b>{s.name}</b>
-          <span aria-hidden="true">☰</span>
-        </div>
-        <div className="mock-body">
-          <div>
-            <p className="mock-category">{s.category}</p>
-            <h3>{s.title}</h3>
-            {interactive ? (
-              <button className="mock-cta" onClick={() => setRequested(true)}>
-                {s.action} ↗
-              </button>
-            ) : (
-              <span className="mock-cta">{s.action} ↗</span>
-            )}
+      {s.demoUrl ? (
+        <a
+          className="concept-browser live-demo-preview"
+          href={s.demoUrl}
+          aria-label={`Open the live ${s.label.toLowerCase()} website demo`}
+        >
+          <div className="browser-bar">
+            <span aria-hidden="true">● ● ●</span>
+            <span>LIVE WEBSITE DEMO / NOT A CLIENT PROJECT</span>
+            <span aria-hidden="true">↗</span>
           </div>
-          <div className="concept-art" aria-hidden="true">
-            <div className="art-ring" />
-            <div className="art-disc" />
+          <img
+            className="live-demo-image"
+            src={s.preview}
+            width="1440"
+            height="800"
+            alt="CarePlus clinic website demo showing its homepage, doctors and appointment options"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="live-demo-footer">
+            <span>Explore the clinic website</span>
             <span>
-              {sector === "clinic" ? "+" : sector === "gym" ? "↑" : "a"}
+              Open live demo <b aria-hidden="true">↗</b>
             </span>
           </div>
+        </a>
+      ) : (
+        <div className={`concept-browser ${s.color}`}>
+          <div className="browser-bar">
+            <span aria-hidden="true">● ● ●</span>
+            <span>DESIGN CONCEPT / NOT A CLIENT PROJECT</span>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div className="mock-nav">
+            <b>{s.name}</b>
+            <span aria-hidden="true">☰</span>
+          </div>
+          <div className="mock-body">
+            <div>
+              <p className="mock-category">{s.category}</p>
+              <h3>{s.title}</h3>
+              {interactive ? (
+                <button className="mock-cta" onClick={() => setRequested(true)}>
+                  {s.action} ↗
+                </button>
+              ) : (
+                <span className="mock-cta">{s.action} ↗</span>
+              )}
+            </div>
+            <div className="concept-art" aria-hidden="true">
+              <div className="art-ring" />
+              <div className="art-disc" />
+              <span>
+                {sector === "clinic" ? "+" : sector === "gym" ? "↑" : "a"}
+              </span>
+            </div>
+          </div>
+          <div className="mock-tags">
+            {s.tags.map((t) => (
+              <span key={t}>{t} ↗</span>
+            ))}
+          </div>
+          {interactive && (
+            <p className="demo-feedback" role="status">
+              {requested
+                ? "Demo only: this is where an enquiry would begin. No request was sent or booking made."
+                : "Try the enquiry button. This concept does not collect or send information."}
+            </p>
+          )}
         </div>
-        <div className="mock-tags">
-          {s.tags.map((t) => (
-            <span key={t}>{t} ↗</span>
-          ))}
-        </div>
-        {interactive && (
-          <p className="demo-feedback" role="status">
-            {requested
-              ? "Demo only: this is where an enquiry would begin. No request was sent or booking made."
-              : "Try the enquiry button. This concept does not collect or send information."}
-          </p>
-        )}
-      </div>
+      )}
       <p className="concept-caption">
         <span>{s.note}</span>
         <span>01 / 03 DIRECTIONS</span>

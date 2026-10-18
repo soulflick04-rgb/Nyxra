@@ -60,6 +60,15 @@ const path = require("node:path");
         .getAttribute("aria-pressed"),
       "true",
     );
+    if (name === "Clinic") {
+      assert.equal(
+        await page
+          .getByRole("link", { name: "Open the live clinic website demo" })
+          .getAttribute("href"),
+        "https://clinicwebsitedemo22.netlify.app/",
+      );
+      continue;
+    }
     await page.locator(".mock-cta").click();
     await page
       .getByRole("status")
@@ -122,10 +131,22 @@ const path = require("node:path");
   assert.equal(requests, 4);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("http://127.0.0.1:3000/");
-  assert.equal(await page.locator('.particle').first().evaluate(el => getComputedStyle(el).animationName), 'particle-drift');
-  await page.emulateMedia({ reducedMotion: 'reduce' });
+  assert.equal(
+    await page
+      .locator(".particle")
+      .first()
+      .evaluate((el) => getComputedStyle(el).animationName),
+    "particle-drift",
+  );
+  await page.emulateMedia({ reducedMotion: "reduce" });
   await page.reload();
-  assert.equal(await page.locator('.particle').first().evaluate(el => getComputedStyle(el).animationName), 'none');
+  assert.equal(
+    await page
+      .locator(".particle")
+      .first()
+      .evaluate((el) => getComputedStyle(el).animationName),
+    "none",
+  );
   await page.emulateMedia({ reducedMotion: "no-preference" });
   for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });

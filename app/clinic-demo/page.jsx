@@ -7,8 +7,9 @@ export default function Page() {
         eyebrow="Interactive concept"
         title="A clearer first step for patients."
       >
-        Illustrative clinic design. This demonstration does not collect patient
-        information or make appointments.
+        Explore the clinic website demo. Click the preview to open the external
+        sample site. This is demonstration work, not a real clinic or client
+        project.
       </Intro>
       <section className="wrap portfolio-stage">
         <Concept interactive />

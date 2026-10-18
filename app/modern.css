@@ -1,4 +1,55 @@
 /* Original Nyxra styling informed by the MeetUI main-site design system. */
+.live-demo-preview {
+  display: block;
+  overflow: hidden;
+  border-color: #a88ada40;
+  background: #13101d;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+.live-demo-preview:hover {
+  border-color: #b99aff;
+  box-shadow: 0 8px 32px #7350c12b;
+}
+.live-demo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9/5;
+  object-fit: contain;
+  background: #edf7fa;
+}
+.live-demo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  color: #d6cce8;
+  font-size: 11px;
+  background: #17121f;
+}
+.live-demo-footer > span:last-child {
+  color: #c6b2ff;
+  white-space: nowrap;
+}
+.live-demo-footer b {
+  margin-left: 5px;
+  font-size: 15px;
+}
+@media (max-width: 760px) {
+  .live-demo-footer {
+    padding: 12px;
+    font-size: 9px;
+    gap: 8px;
+  }
+  .live-demo-preview .browser-bar {
+    font-size: 6px;
+    gap: 6px;
+    padding: 10px;
+  }
+}
 :root {
   --paper: #09090e;
   --ink: #f4f3fa;
